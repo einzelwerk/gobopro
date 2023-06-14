@@ -1,0 +1,134 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.header-1-4 {
+  position: relative;
+  z-index: 20;
+  background-color: var(--clr-dark);
+  font-family: "Poppins";
+
+  &__nav-item {
+    color: var(--clr-light);
+    font-weight: 400;
+  }
+
+  &__inner {
+
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background: var(--white);
+
+    @media (max-width: vars.$lg) {
+      height: 72px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    // gap: 48px;
+    align-items: center;
+
+    @media (max-width: vars.$xl) {
+      gap: 24px;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+    flex: none;
+    height: minmax(32px, 36px);
+
+    @media (max-width: vars.$lg) {
+      margin-right: auto;
+    }
+  }
+
+  &__nav {
+    margin-left: 48px;
+
+    &-list {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+
+      @media (max-width: vars.$xl) {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: vars.$lg) {
+      display: none;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 8px;
+
+    &-communication {
+      margin-left: 30px;
+    }
+
+    &-lang {
+      padding: 12px;
+      color: var(--clr-white);
+      font-weight: 500;
+      border: 1px solid var(--clr-light);
+      border-radius: 50%;
+    }
+
+    &-info {
+      color: var(--clr-white);
+    }
+
+    &-btn {
+      color: var(--clr-dark);
+      background-color: var(--clr-accent);
+      border-radius: 20px;
+      padding: 8px 30px;
+
+      svg {
+        @media (min-width: vars.$min-lg) {
+          display: none;
+        }
+      }
+
+      &_mobile {
+        @media (min-width: vars.$min-lg) {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: vars.$lg) {
+      display: none;
+    }
+  }
+}
+
+.nav-popup__content {
+  display: none;
+}
+
+.menu__nav-item {
+  color: var(--clr-light);
+  font-weight: 400;
+}
+
+.menu__more-item {
+  display: none;
+}
+
+// BURGER
+
+.menu__content {
+  display: none;
+}
