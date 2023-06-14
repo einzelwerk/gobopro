@@ -12,17 +12,35 @@
   justify-content: space-between;
   gap: 24px;
 
+  @media (max-width: vars.$xl) {
+    padding-block: 50px 60px;
+  }
+
+  @media (max-width: vars.$lg) {
+    flex-direction: column;
+  }
+
   &__text {
-    width: 45%;
+    max-width: 550px;
     font-weight: 400;
     line-height: 60px;
     color: var(--clr-white);
+    padding-block: 60px;
+
+    @media (max-width: vars.$lg) {
+      order: 2;
+    }
 
     &-title {
       font-size: 48px;
+
+      @media (max-width: vars.$xl) {
+        font-size: 40px;
+      }
     }
 
     &-subtitle {
+      width: 55ch;
       margin-top: 20px;
       font-weight: 400;
       font-size: 16px;
@@ -46,7 +64,7 @@
       margin-bottom: 14px;
 
       &:not(:last-child) {
-        margin-right: 14px;
+        margin-right: 20px;
       }
     }
   }
@@ -60,8 +78,10 @@
       border: 1px solid var(--clr-accent);
       background-color: transparent;
       color: var(--clr-accent);
-      padding: 14px 24px;
+      padding-inline: 24px;
       border-radius: 10px;
+      font-weight: 500;
+      font-size: 16px;
 
       :first-of-type {
         background-color: var(--clr-accent);
@@ -71,8 +91,19 @@
   }
 
   &__image {
-    width: 55%;
+    max-width: 720px;
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: vars.$lg) {
+      order: 1;
+      justify-content: center;
+    }
+
+    &>img {
+      @media (min-width: vars.$lg) and (max-width: vars.$xxl) {
+        object-fit: contain;
+      }
+    }
   }
 }

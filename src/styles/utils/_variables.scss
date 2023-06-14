@@ -54,12 +54,12 @@ $sm: $min-sm - 0.02px;
 
   // UTILITY CLASSES
 
-  .fd-col {
-    display: flex;
-    flex-direction: column;
-  }
-
   .text-accent {
     color: var(--clr-accent);
+  }
+
+  .btn-accent {
+    background-color: var(--clr-accent);
+    color: var(--clr-black);
   }
 }

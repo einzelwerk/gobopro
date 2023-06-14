@@ -27,7 +27,6 @@
 
   &__container {
     display: flex;
-    // gap: 48px;
     align-items: center;
 
     @media (max-width: vars.$xl) {
@@ -48,13 +47,22 @@
   &__nav {
     margin-left: 48px;
 
+    @media (max-width: vars.$xl) {
+      margin-left: 0px;
+      font-size: 14px;
+    }
+
     &-list {
       display: flex;
       gap: 30px;
       align-items: center;
 
-      @media (max-width: vars.$xl) {
+      @media (max-width: vars.$xxl) {
         gap: 15px;
+      }
+
+      @media (max-width: vars.$xl) {
+        gap: 10px;
       }
     }
 
@@ -73,8 +81,40 @@
     display: flex;
     gap: 8px;
 
+    &-mobile {
+      display: none;
+      margin-left: 16px;
+
+      @media (max-width: vars.$xl) {
+        display: flex;
+        gap: 8px;
+      }
+
+      &__button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid var(--clr-accent);
+
+        &>svg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
     &-communication {
       margin-left: 30px;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: vars.$xl) {
+        display: none;
+      }
     }
 
     &-lang {
@@ -94,6 +134,10 @@
       background-color: var(--clr-accent);
       border-radius: 20px;
       padding: 8px 30px;
+
+      @media (max-width: vars.$xl) {
+        padding: 8px 10px;
+      }
 
       svg {
         @media (min-width: vars.$min-lg) {
@@ -131,4 +175,8 @@
 
 .menu__content {
   display: none;
+
+  @media (max-width: vars.$lg) {
+    display: block;
+  }
 }
