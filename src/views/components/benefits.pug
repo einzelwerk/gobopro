@@ -1,0 +1,40 @@
+section#benefits.benefits.section 
+    .benefits__container.container 
+        .benefits__title-wrap
+            h2.benefits__title.section__title Warum wir auf Licht setzen?
+            p.benefits__subtitle Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users.
+        -
+            const benefitsList = [
+                {
+                    name: 'Sparsamkeit',
+                    desc: 'Günstiger als herkömmliche Informationsträger oder Werbeschilder. Niedriger Energieverbrauch.​',
+                },
+                {
+                    name: 'Erlaubnisse',
+                    desc: 'Benötigt keine besonderen Zustimmungen.',
+                },
+                {
+                    name: 'Sichtbarkeit',
+                    desc: 'Mit GoboPro bekommen Sie dank sehr starken Lichtstrahlung immer klares und großes Bild.',
+                },
+                {
+                    name: 'Einzigartigkeit',
+                    desc: 'Es gibt keine analogen Produkte, die solche Voraussetzungen erfüllen.',
+                },
+                {
+                    name: 'Allwettertauglich',
+                    desc: 'GoboPro hält Temperaturen zwischen +50 und -40 Grad aus. Hat keine Angst vor Wind, Regen, Schnee, Staub, Überhitzung und Wetterumschwung.​',
+                },
+                {
+                    name: 'Montage',
+                    desc: 'Dank der mitgelieferten Fernbedienung können Sie jederzeit entscheiden wann der Projektor läuft',
+                },
+            ];
+        ul.benefits__list
+            each benefit in benefitsList 
+                li.benefits__item
+                    <svg class="benefits__icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 30H12L26 2V18H36L22 46V30Z" fill="#F2F4F7"/>
+                    </svg>
+                    h3.benefits__name=benefit.name
+                    p.benefits__desc=benefit.desc

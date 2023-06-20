@@ -1,0 +1,35 @@
+section.howitworks
+    .container
+        h6.howitworks__subtitle
+            | How it works
+        h2.howitworks__title
+            | Der Weg zu Ihrer eigenen Gobo-Projektion
+        -
+            const stepsList = [
+                {
+                    id: '1',
+                    name: 'Beratungsgespräch',
+                    desc: 'Uns ist wichtig unseren Kunden die Lösung anzubieten, die für ihr Vorhaben am besten geeignet ist. In einem kurzen Gespräch schauen wir uns an, wo und wie wir Ihnen helfen können und zeigen Ihnen welches Produkt das beste für Sie ist.​',
+                },
+                {
+                    id: '2',
+                    name: 'Individuelles Angebot',
+                    desc: 'Auf Basis der individuellen Beratung erstellen wir ein einzigartiges Angebot, das auf Ihren Anwendungsfall angepasst ist. In der Regel ist das Angebot so entwickelt, dass nur noch Ihr Einverständnis nötig ist. Haben Sie allerdings weitere Wünsche, so passen wir dieses an.',
+                },
+                {
+                    id: '3',
+                    name: 'Start der Produktion',
+                    desc: 'Dank der individuellen Beratung wissen wir ab diesem Punkt was genau Sie benötigen. Wir beginnen die Produktion der individuellen Gobos auf Basis Ihrer Anforderungen.',
+                },
+                {
+                    id: '4',
+                    name: 'Installation',
+                    desc: 'Die Montage unserer Gobo-Projektoren läuft sehr einfach ab. Sie benötigen kein spezielles Wissen oder Kenntnisse zur Installation. Ebenfalls werden keine Fassaden oder Innenwände beschädigt. Auf Wunsch kommen wir persönlich bei Ihnen vorbei und helfen bei der Montage.',
+                },
+            ];
+        ul.howitworks__container
+            each step in stepsList 
+                li.howitworks__container__item
+                    .howitworks__container__item__icon=step.id
+                    h3.howitworks__container__item__name=step.name
+                    p.howitworks__container__item__desc=step.desc

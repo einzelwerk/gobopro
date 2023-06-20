@@ -1,0 +1,97 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.benefits {
+    font-family: "Poppins";
+    padding-top: 120px;
+    padding-bottom: 60px;
+
+    @media (max-width: vars.$sm) {
+        padding-bottom: 40px;
+    }
+
+    &__container {
+        display: flex;
+        gap: minmax(32px, 40px);
+
+        @media (max-width: vars.$xxl) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        color: var(--clr-white);
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 46px;
+
+        &-wrap {
+            flex: none;
+            max-width: 450px;
+            margin-right: 80px;
+            margin-bottom: 60px;
+        }
+
+        position: sticky;
+        top: 100px;
+        left: 0;
+    }
+
+    &__subtitle {
+        width: 30ch;
+        margin-top: 20px;
+        color: #BABABB;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 32px;
+
+        @media (max-width: vars.$md) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding-right: 24px;
+        background: radial-gradient(128.11% 128.11% at 50% -32.4%, rgba(108, 234, 189, 0.32) 0%, rgba(108, 234, 189, 0.1152) 43.11%, rgba(108, 234, 189, 0) 100%);
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px 20px 24px;
+        border: 1px solid #3F4146;
+        border-radius: 20px;
+
+        @media (max-width: vars.$xxl) {
+            padding-right: 0;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        margin-bottom: 68px;
+    }
+
+    &__name {
+        color: var(--clr-white);
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -.05px;
+        margin-bottom: 16px;
+    }
+
+    &__desc {
+        color: #BABABB;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+}

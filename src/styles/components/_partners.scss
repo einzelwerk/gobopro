@@ -1,0 +1,44 @@
+// Utils
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.partners-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: "Poppins";
+    justify-content: center;
+    margin-block: 60px;
+
+    @media (max-width: vars.$lg) {
+        margin-block: 0;
+        margin-bottom: 60px;
+    }
+
+    &__heading {
+        width: 100%;
+        color: var(--clr-light);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        gap: 48px;
+        margin-top: 30px;
+
+        &-item {
+            @media (max-width: vars.$sm) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

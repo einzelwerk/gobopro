@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: vars.$xl) {
+    @media (min-width: vars.$lg) and (max-width: vars.$xl) {
       gap: 24px;
     }
   }
@@ -176,7 +176,7 @@
 .menu__content {
   display: none;
 
-  @media (max-width: vars.$lg) {
-    display: block;
-  }
+  // @media (max-width: vars.$lg) {
+  //   display: block;
+  // }
 }
