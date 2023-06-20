@@ -1,0 +1,42 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.faq-1 {
+    font-family: "Poppins";
+    padding-top: 60px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: min(32px, 64px);
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        gap: min(12px, 20px);
+        text-align: center;
+    }
+
+    &__title {
+        color: var(--clr-white);
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 46px;
+    }
+}
+
+.acc {
+
+    &__title {
+        color: var(--clr-white);
+    }
+
+    &__content {
+        color: var(--clr-light);
+    }
+}
