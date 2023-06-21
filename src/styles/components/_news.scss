@@ -1,0 +1,147 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.blog-3-3 {
+    font-family: "Poppins";
+    padding-block: 60px 180px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @media (max-width: vars.$sm) {
+            align-self: flex-start;
+            text-align: left;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 46px;
+
+        &-block {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        color: var(--clr-white);
+    }
+
+
+    &__desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: vars.$md) {
+            display: none;
+        }
+    }
+
+    &__mobile {
+        align-self: stretch;
+
+        @media (min-width: vars.$min-md) {
+            display: none;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        height: auto;
+
+        &-btn-block {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        margin-top: 70px;
+    }
+
+    &__item {
+        max-width: 410px;
+        height: 100%;
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-text-block {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    &__info {
+        color: #BABABB;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+    }
+
+    &__img {
+
+        &-wrap,
+        & {
+            width: 100%;
+        }
+
+        border-radius: 20px;
+    }
+
+
+    &__name {
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        color: var(--clr-white);
+
+        &_icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #BABABB;
+    }
+
+    &__badge {
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+        }
+    }
+}

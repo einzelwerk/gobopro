@@ -2,7 +2,7 @@
 @use './base/reset';
 @use './base/grid';
 
-// @use './base/typography';
+@use './base/typography';
 
 //  Vendor
 @use './vendor/swiper';
@@ -23,4 +23,5 @@
 @use './components/howitworks';
 @use './components/cta';
 @use './components/faq';
+@use './components/news';
 //  Pages

@@ -1,3 +1,134 @@
+// Utils
 @use '../utils/variables' as vars;
 @use '../utils/mixins' as mix;
 @use '../utils/functions' as fn;
+
+footer {
+    font-family: "Poppins";
+    background-color: var(--clr-dark);
+    overflow-y: hidden;
+}
+
+.footer-3 {
+
+    &__left {
+
+        &__socials {
+            display: flex;
+            justify-content: space-between;
+            width: 160px;
+            margin-top: 144px;
+
+            &__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+
+                &>svg {
+                    fill: var(--clr-dark);
+                }
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-block: 120px 64px;
+
+        @media (max-width: vars.$xl) {
+            gap: 15px;
+        }
+    }
+
+    &__item {
+
+        @media (max-width: vars.$xl) {
+            width: 30%;
+        }
+
+        @media (max-width: vars.$lg) {
+            width: 47%;
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--clr-light);
+            margin-bottom: 24px;
+        }
+    }
+
+    &__nav {
+        &-link {
+            margin-bottom: 16px;
+            color: var(--clr-white);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+
+        }
+    }
+
+    &__contacts {
+
+        &-title {
+            display: flex;
+            align-items: center;
+            color: var(--clr-light);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 12px;
+
+            &_icon {
+                width: 20px;
+                height: 20px;
+                color: var(--clr-light);
+                margin-right: 16px;
+            }
+        }
+
+        &-item {
+            margin-bottom: 24px;
+        }
+
+        &-link {
+            color: var(--clr-white);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__quiz {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 8px 39px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-top: 32px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        color: var(--clr-light);
+        border-top: 1px solid var(--clr-light);
+        padding-block: 32px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__links {
+        display: flex;
+        gap: 16px;
+    }
+}

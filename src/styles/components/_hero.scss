@@ -20,6 +20,10 @@
     flex-direction: column;
   }
 
+  &__link:hover {
+    text-decoration: var(--clr-accent) underline;
+  }
+
   &__text {
     display: flex;
     flex-direction: column;

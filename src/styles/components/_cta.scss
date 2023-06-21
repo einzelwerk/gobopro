@@ -13,13 +13,27 @@
         display: flex;
         flex-direction: column;
         padding: 100px 60px;
-        color: var(--clr-black);
+        color: var(--clr-cta);
         border-radius: 20px;
         background: linear-gradient(90deg, #6CEABD 0%, #1A1B1F 100%);
 
         @media (max-width: vars.$xl) {
-            height: 506px;
             padding: minmax(24px, 48px) max(12px, 24px);
+        }
+
+        @media (max-width: vars.$lg) {
+            padding: 40px 16px;
+        }
+
+        @media (max-width: vars.$md) {
+            height: 506px;
+            background: url('../../assets/images/cta-2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media (max-width: vars.$sm) {
+            background-position: 0% 100%;
         }
 
         &-inner {
@@ -28,6 +42,11 @@
             gap: min(24px, 48px);
             max-width: 630px;
             height: 100%;
+
+            @media (max-width: vars.$md) {
+                gap: 0;
+                justify-content: space-between;
+            }
         }
     }
 
@@ -41,6 +60,11 @@
         height: 100%;
         border-radius: 20px;
 
+        @media (max-width: vars.$md) {
+            position: static;
+            display: none;
+        }
+
         &-wrap {
             position: absolute;
             z-index: -1;
@@ -50,6 +74,11 @@
             width: 45%;
             height: 100%;
             border-radius: 20px;
+
+            @media (max-width: vars.$md) {
+                position: static;
+                display: none;
+            }
         }
     }
 
@@ -57,16 +86,46 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+
+        @media (max-width: vars.$md) {
+            width: 100%;
+            display: flex;
+            gap: 12px;
+        }
+    }
+
+    &__title {
+        width: 20ch;
+
+        @media (max-width: vars.$xl) {
+            width: 15ch;
+        }
+
+        @media (max-width: vars.$lg) {
+            width: 20ch;
+            font-size: 28px;
+            line-height: 36px;
+            letter-spacing: -.02em;
+        }
+
+        @media (max-width: vars.$md) {
+            width: auto;
+        }
+
     }
 
     &__title-block {
         display: flex;
         flex-direction: column;
-        width: 20ch;
+        text-align: left;
         gap: 12px;
         font-weight: 400;
         font-size: 36px;
         line-height: 46px;
+
+        @media (max-width: vars.$md) {
+            width: 100%;
+        }
     }
 
     &__desc {
@@ -74,21 +133,59 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 30px;
+
+        @media (max-width: vars.$xl) {
+            width: 35ch;
+        }
+
+        @media (max-width: vars.$lg) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media (max-width: vars.$md) {
+            width: 100%;
+        }
+
     }
 
-    &__btn-block>a {
+    &__btn-block {
+        display: block;
+        max-width: 285px;
 
-        background-color: #222222;
-        padding: 14px 32px;
-        color: var(--clr-white);
-        border-radius: 10px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
+        @media (max-width: vars.$md) {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto;
+        }
 
-        &>svg {
-            width: 24px;
-            height: 24px;
+        &>a {
+            display: flex;
+            background-color: #222222;
+            padding: 14px 32px;
+            color: var(--clr-white);
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            justify-content: space-between;
+
+            &>svg {
+                width: 24px;
+                height: 24px;
+
+                @media (max-width: vars.$sm) {
+                    margin-left: 4px;
+                }
+            }
+
+            @media (max-width: vars.$sm) {
+                width: 296px;
+                padding: 8px 10px;
+                justify-content: center;
+            }
         }
     }
 }
