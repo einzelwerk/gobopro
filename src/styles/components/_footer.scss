@@ -162,29 +162,29 @@ footer {
 }
 
 @media (max-width: vars.$md) {
-    #footer-left {
-        order: 1;
-    }
+    // .footer-3__item:first-child {
+    //     order: -2;
+    // }
 
-    #footer-contacts {
-        order: 2;
-        border-top: none;
-    }
+    // .footer-3__item:nth-of-type(6) {
+    //     order: -1;
+    //     border-top: none;
+    // }
 
-    #footer-cases {
-        order: 3;
-    }
+    // #footer-cases {
+    //     order: 3;
+    // }
 
-    #footer-products {
-        order: 4;
-    }
+    // #footer-products {
+    //     order: 4;
+    // }
 
-    #footer-company {
-        order: 5;
-    }
+    // #footer-company {
+    //     order: 5;
+    // }
 
-    #footer-details {
-        order: 6;
-    }
+    // #footer-details {
+    //     order: 6;
+    // }
 
 }
