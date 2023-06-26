@@ -162,29 +162,12 @@ footer {
 }
 
 @media (max-width: vars.$md) {
-    // .footer-3__item:first-child {
-    //     order: -2;
-    // }
+    .footer-3__item:first-child {
+        order: -2;
+    }
 
-    // .footer-3__item:nth-of-type(6) {
-    //     order: -1;
-    //     border-top: none;
-    // }
-
-    // #footer-cases {
-    //     order: 3;
-    // }
-
-    // #footer-products {
-    //     order: 4;
-    // }
-
-    // #footer-company {
-    //     order: 5;
-    // }
-
-    // #footer-details {
-    //     order: 6;
-    // }
-
+    .footer-3__item:nth-of-type(6) {
+        order: -1;
+        border-top: none;
+    }
 }
