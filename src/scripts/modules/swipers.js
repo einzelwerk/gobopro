@@ -1,4 +1,4 @@
-import Swiper, { Scrollbar } from 'swiper';
+import Swiper, { Navigation, Scrollbar } from 'swiper';
 import 'swiper/swiper.css';
 
 export function initPartnersSwiper() {
@@ -36,20 +36,22 @@ export function initPartnersSwiper() {
 
 export function initBlogSwiper() {
     const blogSwiper = new Swiper('.blog-swiper', {
+        modules: [Navigation],
         autoplay: {
             delay: 5000,
         },
         navigation: {
-            nextEl: '.blog-3-1__slider-btn_next',
-            prevEl: '.blog-3-1__slider-btn_prev',
+            nextEl: '.blog-swiper-btn_next',
+            prevEl: '.blog-swiper-btn_prev',
         },
         breakpoints: {
             576: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 20,
                 enabled: true,
             },
             768: {
+                slidesPerView: 2,
                 rows: 2,
                 enabled: true,
             },

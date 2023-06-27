@@ -4,6 +4,25 @@
 @use '../utils/functions' as fn;
 
 
+.swiper-btn-block {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    margin-left: 10px;
+}
+
+.swiper-btn {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--clr-light);
+}
+
+
 @media (min-width: vars.$lg) {
 
     .partners-swiper,
