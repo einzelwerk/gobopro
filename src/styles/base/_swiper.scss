@@ -3,11 +3,15 @@
 @use '../utils/variables' as vars;
 @use '../utils/functions' as fn;
 
-.swiper,
-.partners-swiper,
-.swiper-scrollbar,
-.swiper-scrollbar-drag {
-    display: none;
+
+@media (min-width: vars.$lg) {
+
+    .partners-swiper,
+    .partners-swiper,
+    .swiper-scrollbar,
+    .swiper-scrollbar-drag {
+        display: none;
+    }
 }
 
 @media (max-width: vars.$lg) {

@@ -54,7 +54,7 @@
         gap: minmax(32px, 64px);
         align-items: center;
 
-        @media (max-width: vars.$md) {
+        @media (max-width: vars.$lg) {
             display: none;
         }
     }
@@ -62,9 +62,9 @@
     &__mobile {
         align-self: stretch;
 
-        // @media (min-width: vars.$min-md) {
-        //     display: none;
-        // }
+        &__item {
+            padding: 10px;
+        }
     }
 
     &__slider {
