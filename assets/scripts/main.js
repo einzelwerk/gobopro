@@ -45,6 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initBenefitsSwiper: () => (/* binding */ initBenefitsSwiper),
 /* harmony export */   initBlogSwiper: () => (/* binding */ initBlogSwiper),
+/* harmony export */   initGallerySwiper: () => (/* binding */ initGallerySwiper),
 /* harmony export */   initPartnersSwiper: () => (/* binding */ initPartnersSwiper)
 /* harmony export */ });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
@@ -120,12 +121,37 @@ function initBenefitsSwiper() {
       },
       576: {
         slidesPerView: 2,
-        spaceBetween: 40,
+        spaceBetween: 10,
         enabled: true
       }
     }
   });
   return benefitsSwiper;
+}
+function initGallerySwiper() {
+  var gallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery-swiper', {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
+    autoplay: {
+      delay: 5000
+    },
+    navigation: {
+      nextEl: '.gallery-swiper-btn_next',
+      prevEl: '.gallery-swiper-btn_prev'
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        enabled: true
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        enabled: true
+      }
+    }
+  });
+  return gallerySwiper;
 }
 
 /***/ }),
@@ -10772,6 +10798,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initPartnersSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initBlogSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initBenefitsSwiper)();
+(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initGallerySwiper)();
 })();
 
 /******/ })()
