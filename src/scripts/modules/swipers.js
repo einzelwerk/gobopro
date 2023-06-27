@@ -109,3 +109,25 @@ export function initGallerySwiper() {
 
     return gallerySwiper;
 }
+
+export function initReviewsSwiper() {
+    const reviewsSwiper = new Swiper('.reviews-swiper', {
+        modules: [Navigation],
+        autoplay: {
+            delay: 5000,
+        },
+        navigation: {
+            nextEl: '.reviews-swiper-btn_next',
+            prevEl: '.reviews-swiper-btn_prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                enabled: true,
+            },
+        }
+    });
+
+    return reviewsSwiper;
+}

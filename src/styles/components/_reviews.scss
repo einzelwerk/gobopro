@@ -19,29 +19,12 @@
     }
 
     &__title {
-        width: 50ch;
         color: var(--clr-white);
         font-weight: 400;
         font-size: 36px;
         line-height: 46px;
         text-align: center;
         margin-bottom: 32px;
-
-        @media (max-width: vars.$xl) {
-            width: 40ch;
-        }
-
-        @media (max-width: vars.$lg) {
-            width: 30ch;
-        }
-
-        @media (max-width: vars.$md) {
-            width: 24ch;
-        }
-
-        @media (max-width: vars.$md) {
-            width: 15ch;
-        }
     }
 
     &__name {
