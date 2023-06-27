@@ -22,6 +22,16 @@
         flex-wrap: wrap;
         gap: 30px;
 
+        @media (max-width: vars.$md) {
+            display: none;
+        }
+
+        &__mobile {
+            @media (min-width: vars.$md) {
+                display: none;
+            }
+        }
+
         &__left {
             display: flex;
             width: 47%;
@@ -63,6 +73,17 @@
                 height: 300px;
                 cursor: pointer;
 
+                @media (max-width: vars.$md) {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                &>img {
+                    @media (max-width: vars.$md) {
+                        width: 450px;
+                    }
+                }
+
                 @media (max-width: vars.$xl) {
                     display: flex;
                     width: 48.4%;
@@ -72,6 +93,12 @@
                 @media (max-width: vars.$lg) {
                     display: flex;
                     justify-content: flex-start;
+                }
+
+                &>img {
+                    @media (max-width: vars.$md) {
+                        border-radius: 12px;
+                    }
                 }
             }
 
@@ -85,6 +112,14 @@
                     justify-content: flex-start;
                 }
 
+            }
+
+            @media (max-width: vars.$md) {
+
+                &__item:nth-of-type(odd),
+                &__item:nth-of-type(even) {
+                    justify-content: center;
+                }
             }
 
         }

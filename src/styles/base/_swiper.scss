@@ -19,7 +19,7 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    border: 1px solid var(--clr-light);
+    border: 1px solid #475467;
 }
 
 
@@ -61,4 +61,14 @@
         height: 100%;
         background-color: var(--clr-white);
     }
+}
+
+// GALLERY SWIPER
+
+.gallery__swiper-btn-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 24px;
 }

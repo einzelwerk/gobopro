@@ -74,11 +74,38 @@ export function initBenefitsSwiper() {
             },
             576: {
                 slidesPerView: 2,
-                spaceBetween: 40,
+                spaceBetween: 10,
                 enabled: true,
             },
         }
     });
 
     return benefitsSwiper;
+}
+
+export function initGallerySwiper() {
+    const gallerySwiper = new Swiper('.gallery-swiper', {
+        modules: [Navigation],
+        autoplay: {
+            delay: 5000,
+        },
+        navigation: {
+            nextEl: '.gallery-swiper-btn_next',
+            prevEl: '.gallery-swiper-btn_prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                enabled: true,
+            },
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+                enabled: true,
+            },
+        }
+    });
+
+    return gallerySwiper;
 }
