@@ -53,14 +53,18 @@
         display: flex;
         gap: minmax(32px, 64px);
         align-items: center;
+
+        @media (max-width: vars.$md) {
+            display: none;
+        }
     }
 
     &__mobile {
         align-self: stretch;
 
-        @media (min-width: vars.$min-md) {
-            display: none;
-        }
+        // @media (min-width: vars.$min-md) {
+        //     display: none;
+        // }
     }
 
     &__slider {
