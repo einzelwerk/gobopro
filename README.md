@@ -1,2 +1,2 @@
-# Name - https://einzelwerk.github.io/
+# Name - https://einzelwerk.github.io/gobopro/
 
