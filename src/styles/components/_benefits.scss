@@ -53,8 +53,20 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 30px 32px;
 
+        @media (max-width: vars.$lg) {
+            display: none;
+        }
+
         @media (max-width: vars.$md) {
             grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__mobile {
+            display: flex;
+
+            @media (min-width: vars.$lg) {
+                display: none;
+            }
         }
     }
 
@@ -71,6 +83,10 @@
 
         @media (max-width: vars.$xxl) {
             padding-right: 0;
+        }
+
+        @media (max-width: vars.$lg) {
+            height: 300px;
         }
     }
 

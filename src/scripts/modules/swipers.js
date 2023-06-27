@@ -60,3 +60,25 @@ export function initBlogSwiper() {
 
     return blogSwiper;
 }
+
+export function initBenefitsSwiper() {
+    const benefitsSwiper = new Swiper('.benefits-swiper', {
+        autoplay: {
+            delay: 5000,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                enabled: true,
+            },
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+                enabled: true,
+            },
+        }
+    });
+
+    return benefitsSwiper;
+}

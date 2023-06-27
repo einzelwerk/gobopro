@@ -38,3 +38,12 @@ section#benefits.benefits.section
                     </svg>
                     h3.benefits__name=benefit.name
                     p.benefits__desc=benefit.desc
+    ul.swiper.benefits-swiper.benefits__list__mobile.container
+        .swiper-wrapper
+            each benefit in benefitsList 
+                li.swiper-slide.benefits-swiper-slide.benefits__item
+                    <svg class="benefits__icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 30H12L26 2V18H36L22 46V30Z" fill="#F2F4F7"/>
+                    </svg>
+                    h3.benefits__name=benefit.name
+                    p.benefits__desc=benefit.desc

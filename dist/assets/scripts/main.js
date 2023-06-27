@@ -43,6 +43,7 @@ function initAcc() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initBenefitsSwiper: () => (/* binding */ initBenefitsSwiper),
 /* harmony export */   initBlogSwiper: () => (/* binding */ initBlogSwiper),
 /* harmony export */   initPartnersSwiper: () => (/* binding */ initPartnersSwiper)
 /* harmony export */ });
@@ -105,6 +106,26 @@ function initBlogSwiper() {
     }
   });
   return blogSwiper;
+}
+function initBenefitsSwiper() {
+  var benefitsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.benefits-swiper', {
+    autoplay: {
+      delay: 5000
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        enabled: true
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        enabled: true
+      }
+    }
+  });
+  return benefitsSwiper;
 }
 
 /***/ }),
@@ -10750,6 +10771,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_acc__WEBPACK_IMPORTED_MODULE_1__.initAcc)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initPartnersSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initBlogSwiper)();
+(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initBenefitsSwiper)();
 })();
 
 /******/ })()
