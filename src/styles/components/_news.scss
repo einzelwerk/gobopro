@@ -7,6 +7,10 @@
     font-family: "Poppins";
     padding-block: 60px 180px;
 
+    @media (max-width: vars.$md) {
+        padding-block: 60px 68px;
+    }
+
     &__container {
         display: flex;
         flex-direction: column;

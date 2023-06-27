@@ -1,0 +1,40 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.swiper,
+.partners-swiper,
+.swiper-scrollbar,
+.swiper-scrollbar-drag {
+    display: none;
+}
+
+@media (max-width: vars.$lg) {
+
+    .partners-swiper {
+        display: block;
+        width: 100%;
+        margin-block: 24px 32px;
+    }
+
+    .partners-swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .swiper-scrollbar {
+        display: block;
+        background-color: var(--clr-light);
+        height: 4px;
+        border-radius: 2px;
+    }
+
+    .swiper-scrollbar-drag {
+        display: block;
+        height: 100%;
+        background-color: var(--clr-white);
+    }
+}

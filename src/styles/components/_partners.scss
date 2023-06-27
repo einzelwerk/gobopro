@@ -4,16 +4,11 @@
 @use '../utils/functions' as fn;
 
 .partners-2 {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
     font-family: "Poppins";
-    justify-content: center;
     margin-block: 60px;
 
-    @media (max-width: vars.$lg) {
-        margin-block: 0;
-        margin-bottom: 60px;
+    &__block {
+        display: none;
     }
 
     &__heading {
@@ -24,20 +19,35 @@
         line-height: 20px;
         text-align: center;
     }
+}
 
-    &__block {
+@media (min-width: vars.$lg) {
+
+    .partners-2 {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         width: 100%;
-        gap: 48px;
-        margin-top: 30px;
+        justify-content: center;
 
-        &-item {
-            @media (max-width: vars.$sm) {
-                width: 100%;
-                display: flex;
-                justify-content: center;
+        @media (max-width: vars.$lg) {
+            margin-block: 0;
+            margin-bottom: 60px;
+        }
+
+        &__block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            gap: 40px;
+            margin-top: 30px;
+
+            &-item {
+                @media (max-width: vars.$sm) {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
             }
         }
     }

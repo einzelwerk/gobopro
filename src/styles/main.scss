@@ -5,11 +5,11 @@
 @use './base/typography';
 
 //  Vendor
-@use './vendor/swiper';
 @use './vendor/select';
 
 //  Partials
 @use './base/base';
+@use './base/swiper';
 
 //  Components
 @use './components/header';
@@ -24,4 +24,5 @@
 @use './components/cta';
 @use './components/faq';
 @use './components/news';
+
 //  Pages

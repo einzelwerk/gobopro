@@ -53,10 +53,6 @@
         display: flex;
         gap: minmax(32px, 64px);
         align-items: center;
-
-        @media (max-width: vars.$md) {
-            display: none;
-        }
     }
 
     &__mobile {
