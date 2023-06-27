@@ -83,20 +83,22 @@ function initPartnersSwiper() {
 }
 function initBlogSwiper() {
   var blogSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.blog-swiper', {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
     autoplay: {
       delay: 5000
     },
     navigation: {
-      nextEl: '.blog-3-1__slider-btn_next',
-      prevEl: '.blog-3-1__slider-btn_prev'
+      nextEl: '.blog-swiper-btn_next',
+      prevEl: '.blog-swiper-btn_prev'
     },
     breakpoints: {
       576: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20,
         enabled: true
       },
       768: {
+        slidesPerView: 2,
         rows: 2,
         enabled: true
       }
