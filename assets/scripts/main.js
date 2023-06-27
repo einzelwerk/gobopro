@@ -56,7 +56,6 @@ function initPartnersSwiper() {
     autoplay: {
       delay: 5000
     },
-    loop: true,
     scrollbar: {
       el: '.swiper-scrollbar',
       hide: false,
@@ -64,13 +63,18 @@ function initPartnersSwiper() {
       enabled: true
     },
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 100,
+        enabled: true
+      },
       576: {
         slidesPerView: 2,
         spaceBetween: 20,
         enabled: true
       },
       768: {
-        rows: 2,
+        spaceBetween: 40,
         enabled: true
       }
     }
@@ -82,7 +86,6 @@ function initBlogSwiper() {
     autoplay: {
       delay: 5000
     },
-    loop: true,
     navigation: {
       nextEl: '.blog-3-1__slider-btn_next',
       prevEl: '.blog-3-1__slider-btn_prev'
