@@ -34,3 +34,11 @@ section.howitworks
                     div
                         h3.howitworks__container__item__name=step.name
                         p.howitworks__container__item__desc=step.desc
+        ul.howitworks__container__mobile.swiper.instructions-swiper
+            .swiper-wrapper
+                each step in stepsList
+                    li.howitworks__container__item.swiper-slide.instructions-swiper-slide
+                        .howitworks__container__item__icon=step.id
+                        div
+                            h3.howitworks__container__item__name=step.name
+                            p.howitworks__container__item__desc=step.desc

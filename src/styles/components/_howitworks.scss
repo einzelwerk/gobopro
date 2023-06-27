@@ -35,6 +35,18 @@
             justify-content: center;
         }
 
+        @media (max-width: vars.$md) {
+            display: none;
+        }
+
+        &__mobile {
+            margin-top: 64px;
+
+            @media (min-width: vars.$md) {
+                display: none;
+            }
+        }
+
         &__item {
             display: flex;
             flex-direction: column;
@@ -51,10 +63,12 @@
 
             @media (max-width: vars.$lg) {
                 max-width: 320px;
+                height: 390px;
             }
 
             @media (max-width: vars.$md) {
                 max-width: 100%;
+                height: 465px;
             }
 
             &__icon {

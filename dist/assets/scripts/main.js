@@ -46,6 +46,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initBenefitsSwiper: () => (/* binding */ initBenefitsSwiper),
 /* harmony export */   initBlogSwiper: () => (/* binding */ initBlogSwiper),
 /* harmony export */   initGallerySwiper: () => (/* binding */ initGallerySwiper),
+/* harmony export */   initInstructionsSwiper: () => (/* binding */ initInstructionsSwiper),
 /* harmony export */   initPartnersSwiper: () => (/* binding */ initPartnersSwiper),
 /* harmony export */   initReviewsSwiper: () => (/* binding */ initReviewsSwiper)
 /* harmony export */ });
@@ -173,6 +174,26 @@ function initReviewsSwiper() {
     }
   });
   return reviewsSwiper;
+}
+function initInstructionsSwiper() {
+  var instructionsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.instructions-swiper', {
+    autoplay: {
+      delay: 5000
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        enabled: true
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        enabled: true
+      }
+    }
+  });
+  return instructionsSwiper;
 }
 
 /***/ }),
@@ -10821,6 +10842,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initBenefitsSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initGallerySwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initReviewsSwiper)();
+(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initInstructionsSwiper)();
 })();
 
 /******/ })()
