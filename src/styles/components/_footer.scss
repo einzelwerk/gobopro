@@ -45,7 +45,7 @@ footer {
         margin-block: 120px 64px;
 
         @media (max-width: vars.$xl) {
-            gap: 15px;
+            gap: 16px;
         }
 
         @media (max-width: vars.$md) {
@@ -74,15 +74,29 @@ footer {
 
 
         &__title {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
             font-weight: 500;
             font-size: 14px;
             line-height: 20px;
             color: var(--clr-light);
-            margin-bottom: 24px;
+
+            &>button {
+                @media (min-width: vars.$md) {
+                    display: none;
+                }
+            }
         }
     }
 
     &__nav {
+        padding-top: 16px;
+
+        @media (max-width: vars.$md) {
+            display: none;
+        }
+
         &-link {
             margin-bottom: 16px;
             color: var(--clr-white);

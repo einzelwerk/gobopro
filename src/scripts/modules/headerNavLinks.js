@@ -9,7 +9,7 @@ export function navLinksToggle() {
             const linkDropdownIcon = link.children[1];
 
             if (link.children.length > 1) {
-                if (!link.children[2].style.display || link.children[2].style.display === "none") {
+                if (!linkDropdownContent.style.display || linkDropdownContent.style.display === "none") {
                     linkDropdownContent.style.display = "flex";
                     linkDropdownIcon.style.transform = `rotate(180deg)`;
                 } else {

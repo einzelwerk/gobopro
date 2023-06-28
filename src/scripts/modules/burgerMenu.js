@@ -1,7 +1,7 @@
-function toggleMenu() {
+export function toggleMenu() {
     const menu = document.querySelector(".menu");
     const openBtn = document.querySelector(".menu__burger");
-    const menuContent = document.querySelector(".menu__content")
+
     if (!menu || !openBtn) return;
 
     openBtn.addEventListener('click', () => {

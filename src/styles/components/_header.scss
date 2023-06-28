@@ -201,23 +201,32 @@
   }
 }
 
-.menu__nav-item {
-  color: var(--clr-light);
-  font-weight: 400;
-}
+// BURGER MENU
 
-.menu__more-item {
-  display: none;
-}
+.menu {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 24px;
 
-// BURGER
+  @media (min-width: vars.$lg) {
+    display: none;
+  }
 
-.menu__content {
-  display: none;
+  &__nav-item {
+    color: var(--clr-light);
+    font-weight: 400;
+  }
 
-  // @media (max-width: vars.$lg) {
-  //   display: block;
-  // }
+  &__more-item {
+    display: none;
+  }
+
+  &__content {
+    display: none;
+  }
 }
 
 .header-language {

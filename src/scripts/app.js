@@ -3,15 +3,18 @@ import { initAcc } from './modules/acc';
 import { initBenefitsSwiper, initBlogSwiper, initGallerySwiper, initInstructionsSwiper, initNewsSwiper, initPartnersSwiper, initReviewsSwiper } from './modules/swipers';
 import { chooseLanguage } from './modules/languages';
 import { navLinksToggle } from './modules/headerNavLinks';
+import { footerLinksToggle } from './modules/footerNavLinks';
+import { toggleMenu } from './modules/burgerMenu';
 
-// HEADER LANGUAGE
+// HEADER-RELATED
 
 chooseLanguage();
-
-// HEADER NAV LINKS
-
 navLinksToggle();
+toggleMenu();
 
+// FOOTER-RELATED
+
+footerLinksToggle();
 
 // SWIPERS
 
@@ -23,3 +26,4 @@ initGallerySwiper();
 initReviewsSwiper();
 initInstructionsSwiper();
 initNewsSwiper();
+
