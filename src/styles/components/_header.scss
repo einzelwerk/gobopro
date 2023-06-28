@@ -69,6 +69,33 @@
     @media (max-width: vars.$lg) {
       display: none;
     }
+
+    &-item {
+      position: relative;
+
+      &__popup__content {
+        display: none;
+        position: absolute;
+        width: 125px;
+        top: 150%;
+        background-color: transparent;
+        border: 1px solid var(--clr-light);
+        border-radius: 12px;
+        padding: 10px;
+      }
+
+      &__popup__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &>li>a {
+          &:hover {
+            color: var(--clr-white);
+          }
+        }
+      }
+    }
   }
 
   &__right {
@@ -172,10 +199,6 @@
       display: none;
     }
   }
-}
-
-.nav-popup__content {
-  display: none;
 }
 
 .menu__nav-item {

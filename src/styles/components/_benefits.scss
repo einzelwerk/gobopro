@@ -84,7 +84,11 @@
             padding-right: 0;
         }
 
-        @media (max-width: vars.$lg) {
+        @media (min-width: vars.$sm) and (max-width: vars.$lg) {
+            height: 350px;
+        }
+
+        @media (max-width: vars.$sm) {
             height: 300px;
         }
     }
