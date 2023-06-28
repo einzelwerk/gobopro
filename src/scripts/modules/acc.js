@@ -1,24 +1,24 @@
 export function initAcc() {
-  document.querySelectorAll('.acc').forEach((acc) => {
-    acc.querySelectorAll('.acc__item').forEach((accItem) => {
-      const accTriggerCol = accItem.querySelectorAll(['.acc__trigger']);
-      const accBody = accItem.querySelector('.acc__body');
+  const acc = document.querySelectorAll('.acc__head');
 
-      accTriggerCol.forEach((accTrigger) => {
-        accTrigger.addEventListener('click', () => {
-          acc.querySelectorAll('.acc__item_active').forEach((activeAccItem) => {
-            if (accItem === activeAccItem) return;
+  if (!acc) return;
 
-            const activeAccBody = activeAccItem.querySelector('.acc__body');
+  acc.forEach(accItem => {
+    accItem.addEventListener("click", () => {
+      const panel = accItem.nextElementSibling;
+      const accTrigger = accItem.children[2];
 
-            activeAccItem.classList.remove('acc__item_active');
-            activeAccBody.style.maxHeight = null;
-          });
-
-          accItem.classList.toggle('acc__item_active');
-          accBody.style.maxHeight = accBody.style.maxHeight ? null : `${accBody.scrollHeight}px`;
-        });
-      });
-    });
-  });
+      if (panel.classList.contains("acc__body-closed") && !accTrigger.classList.contains("acc__trigger-open")) {
+        accTrigger.classList.add("acc__trigger-open");
+        accTrigger.children[0].style.display = "none";
+        accTrigger.children[1].style.display = "block";
+        panel.classList.remove("acc__body-closed");
+      } else {
+        accTrigger.classList.remove("acc__trigger-open");
+        accTrigger.children[0].style.display = "block";
+        accTrigger.children[1].style.display = "none";
+        panel.classList.add("acc__body-closed");
+      }
+    })
+  })
 }

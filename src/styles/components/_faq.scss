@@ -37,19 +37,27 @@
         display: flex;
         width: 100%;
         align-items: center;
+        justify-content: space-between;
+    }
+
+    &__body-closed {
+        display: none;
     }
 
     &__title {
-        width: 92%;
+        width: 100%;
         color: var(--clr-white);
         font-weight: 500;
         font-size: 20px;
         line-height: 30px;
 
-
         @media (max-width: vars.$md) {
             width: 85%;
         }
+    }
+
+    &__item {
+        margin-bottom: 24px;
     }
 
     &__item:where(:not(:first-of-type)) {
@@ -64,12 +72,11 @@
         color: var(--clr-light);
 
         &__desc {
-            padding-block: 16px 32px;
+            padding-top: 16px;
         }
     }
 
     &__trigger {
-        margin-left: auto;
 
         &>svg {
             width: 24px;
@@ -78,4 +85,7 @@
         }
     }
 
+    &__icon_close {
+        display: none;
+    }
 }
