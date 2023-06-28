@@ -36,6 +36,31 @@ function initAcc() {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/languages.js":
+/*!******************************************!*\
+  !*** ./src/scripts/modules/languages.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   chooseLanguage: () => (/* binding */ chooseLanguage)
+/* harmony export */ });
+function chooseLanguage() {
+  var langMenu = document.querySelector(".header-1-4__contacts-lang");
+  var langMenuDropdown = document.querySelector(".header-1-4__contacts-lang__dropdown");
+  if (!langMenu) return;
+  langMenu.addEventListener("click", function () {
+    if (window.getComputedStyle(langMenuDropdown).getPropertyValue('display') === "none") {
+      langMenuDropdown.style.display = "flex";
+    } else {
+      langMenuDropdown.style.display = "none";
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/swipers.js":
 /*!****************************************!*\
   !*** ./src/scripts/modules/swipers.js ***!
@@ -10865,8 +10890,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
 /* harmony import */ var _modules_acc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/acc */ "./src/scripts/modules/acc.js");
 /* harmony import */ var _modules_swipers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swipers */ "./src/scripts/modules/swipers.js");
+/* harmony import */ var _modules_languages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/languages */ "./src/scripts/modules/languages.js");
 
 
+
+
+
+// HEADER LANGUAGE
+
+(0,_modules_languages__WEBPACK_IMPORTED_MODULE_3__.chooseLanguage)();
+
+// SWIPERS
 
 (0,_modules_acc__WEBPACK_IMPORTED_MODULE_1__.initAcc)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initPartnersSwiper)();
