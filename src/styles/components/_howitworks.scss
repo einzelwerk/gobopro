@@ -62,8 +62,11 @@
             }
 
             @media (max-width: vars.$lg) {
-                max-width: 320px;
                 height: 390px;
+            }
+
+            @media (min-width: vars.$md) and (max-width: vars.$lg) {
+                max-width: 320px;
             }
 
             @media (min-width: vars.$sm) and (max-width: vars.$md) {
