@@ -36,6 +36,38 @@ function initAcc() {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/headerNavLinks.js":
+/*!***********************************************!*\
+  !*** ./src/scripts/modules/headerNavLinks.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   navLinksToggle: () => (/* binding */ navLinksToggle)
+/* harmony export */ });
+function navLinksToggle() {
+  var links = document.querySelectorAll('.header-1-4__nav-item');
+  if (!links) return;
+  links.forEach(function (link) {
+    link.addEventListener("click", function () {
+      var linkDropdownContent = link.children[2];
+      var linkDropdownIcon = link.children[1];
+      if (link.children.length > 1) {
+        if (!link.children[2].style.display || link.children[2].style.display === "none") {
+          linkDropdownContent.style.display = "flex";
+          linkDropdownIcon.style.transform = "rotate(180deg)";
+        } else {
+          linkDropdownContent.style.display = "none";
+          linkDropdownIcon.style.transform = "rotate(0deg)";
+        }
+      }
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/languages.js":
 /*!******************************************!*\
   !*** ./src/scripts/modules/languages.js ***!
@@ -10891,6 +10923,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_acc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/acc */ "./src/scripts/modules/acc.js");
 /* harmony import */ var _modules_swipers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swipers */ "./src/scripts/modules/swipers.js");
 /* harmony import */ var _modules_languages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/languages */ "./src/scripts/modules/languages.js");
+/* harmony import */ var _modules_headerNavLinks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/headerNavLinks */ "./src/scripts/modules/headerNavLinks.js");
+
 
 
 
@@ -10899,6 +10933,10 @@ __webpack_require__.r(__webpack_exports__);
 // HEADER LANGUAGE
 
 (0,_modules_languages__WEBPACK_IMPORTED_MODULE_3__.chooseLanguage)();
+
+// HEADER NAV LINKS
+
+(0,_modules_headerNavLinks__WEBPACK_IMPORTED_MODULE_4__.navLinksToggle)();
 
 // SWIPERS
 
