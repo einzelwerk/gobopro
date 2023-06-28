@@ -153,3 +153,35 @@ export function initInstructionsSwiper() {
 
     return instructionsSwiper;
 }
+
+export function initNewsSwiper() {
+    const newsSwiper = new Swiper('.news-swiper', {
+        modules: [Navigation],
+        autoplay: {
+            delay: 5000,
+        },
+        navigation: {
+            nextEl: '.news-swiper-btn_next',
+            prevEl: '.news-swiper-btn_prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                enabled: true,
+            },
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                enabled: true,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                enabled: true,
+            },
+        }
+    });
+
+    return newsSwiper;
+}
