@@ -13,22 +13,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initAcc: () => (/* binding */ initAcc)
 /* harmony export */ });
 function initAcc() {
-  document.querySelectorAll('.acc').forEach(function (acc) {
-    acc.querySelectorAll('.acc__item').forEach(function (accItem) {
-      var accTriggerCol = accItem.querySelectorAll(['.acc__trigger']);
-      var accBody = accItem.querySelector('.acc__body');
-      accTriggerCol.forEach(function (accTrigger) {
-        accTrigger.addEventListener('click', function () {
-          acc.querySelectorAll('.acc__item_active').forEach(function (activeAccItem) {
-            if (accItem === activeAccItem) return;
-            var activeAccBody = activeAccItem.querySelector('.acc__body');
-            activeAccItem.classList.remove('acc__item_active');
-            activeAccBody.style.maxHeight = null;
-          });
-          accItem.classList.toggle('acc__item_active');
-          accBody.style.maxHeight = accBody.style.maxHeight ? null : "".concat(accBody.scrollHeight, "px");
-        });
-      });
+  var acc = document.querySelectorAll('.acc__head');
+  if (!acc) return;
+  acc.forEach(function (accItem) {
+    accItem.addEventListener("click", function () {
+      var panel = accItem.nextElementSibling;
+      var accTrigger = accItem.children[2];
+      if (panel.classList.contains("acc__body-closed") && !accTrigger.classList.contains("acc__trigger-open")) {
+        accTrigger.classList.add("acc__trigger-open");
+        accTrigger.children[0].style.display = "none";
+        accTrigger.children[1].style.display = "block";
+        panel.classList.remove("acc__body-closed");
+      } else {
+        accTrigger.classList.remove("acc__trigger-open");
+        accTrigger.children[0].style.display = "block";
+        accTrigger.children[1].style.display = "none";
+        panel.classList.add("acc__body-closed");
+      }
     });
   });
 }
