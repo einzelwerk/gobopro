@@ -5,12 +5,14 @@ import { chooseLanguage } from './modules/languages';
 import { navLinksToggle } from './modules/headerNavLinks';
 import { footerLinksToggle } from './modules/footerNavLinks';
 import { toggleMenu } from './modules/burgerMenu';
+import { initHeaderAcc } from './modules/headerAcc';
 
 // HEADER-RELATED
 
 chooseLanguage();
 navLinksToggle();
 toggleMenu();
+initHeaderAcc();
 
 // FOOTER-RELATED
 

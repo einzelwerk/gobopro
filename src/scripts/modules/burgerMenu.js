@@ -1,18 +1,24 @@
 export function toggleMenu() {
     const menu = document.querySelector(".menu");
-    const openBtn = document.querySelector(".menu__burger");
+    const content = document.querySelector(".menu__content");
 
-    if (!menu || !openBtn) return;
+    if (!menu || !content) return;
 
-    openBtn.addEventListener('click', () => {
+    menu.addEventListener('click', () => {
         if (menu.classList.contains('menu_active')) {
             menu.classList.remove('menu_active');
-            openBtn.classList.remove('menu__burger_active');
+            content.style.display = "none";
+            content.style.transform = `translateX(-200px)`;
             document.body.style.overflow = "auto";
             return;
         }
         menu.classList.add('menu_active');
-        openBtn.classList.add('menu__burger_active');
+        content.style.display = "flex";
+        content.style.transform = `translateX(0px)`;
         document.body.style.overflow = 'hidden';
     });
+
+    content.addEventListener('click', (event) => {
+        event.stopPropagation();
+    })
 }
