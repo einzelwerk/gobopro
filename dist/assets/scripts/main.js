@@ -134,7 +134,6 @@ function initHeaderAcc() {
     accItem.addEventListener("click", function () {
       var panel = accItem.nextElementSibling;
       var accTrigger = accItem.children[1];
-      console.log(accTrigger);
       if (panel.classList.contains("header-acc__body-closed") && !accTrigger.classList.contains("acc__trigger-open")) {
         accTrigger.classList.add("acc__trigger-open");
         accTrigger.style.transform = "rotate(180deg)";
@@ -222,11 +221,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initBenefitsSwiper: () => (/* binding */ initBenefitsSwiper),
 /* harmony export */   initBlogSwiper: () => (/* binding */ initBlogSwiper),
+/* harmony export */   initCatalogueSwiper: () => (/* binding */ initCatalogueSwiper),
 /* harmony export */   initGallerySwiper: () => (/* binding */ initGallerySwiper),
 /* harmony export */   initInstructionsSwiper: () => (/* binding */ initInstructionsSwiper),
 /* harmony export */   initNewsSwiper: () => (/* binding */ initNewsSwiper),
 /* harmony export */   initPartnersSwiper: () => (/* binding */ initPartnersSwiper),
-/* harmony export */   initReviewsSwiper: () => (/* binding */ initReviewsSwiper)
+/* harmony export */   initReviewsSwiper: () => (/* binding */ initReviewsSwiper),
+/* harmony export */   initUsageSwiper: () => (/* binding */ initUsageSwiper)
 /* harmony export */ });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 /* harmony import */ var swiper_swiper_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/swiper.css */ "./node_modules/swiper/swiper.css");
@@ -402,6 +403,61 @@ function initNewsSwiper() {
     }
   });
   return newsSwiper;
+}
+function initUsageSwiper() {
+  var usageSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.usage-swiper', {
+    autoplay: {
+      delay: 5000
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        enabled: true
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        enabled: true
+      },
+      1360: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        enabled: true
+      },
+      1440: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        enabled: true
+      }
+    }
+  });
+  return usageSwiper;
+}
+function initCatalogueSwiper() {
+  var catalogueSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.catalogue-swiper', {
+    autoplay: {
+      delay: 5000
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        enabled: true
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        enabled: true
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        enabled: true
+      }
+    }
+  });
+  return catalogueSwiper;
 }
 
 /***/ }),
@@ -11076,6 +11132,8 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initReviewsSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initInstructionsSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initNewsSwiper)();
+(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initUsageSwiper)();
+(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initCatalogueSwiper)();
 })();
 
 /******/ })()

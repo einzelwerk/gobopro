@@ -1,0 +1,85 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.usage {
+    font-family: "Poppins";
+    margin-block: 60px;
+
+    &__heading {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__container {
+        &__title {
+            width: 768px;
+            text-align: center;
+            color: var(--clr-white);
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 46px;
+            letter-spacing: -0.36px;
+            margin-bottom: 64px;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                width: 235px;
+                height: 190px;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 20px 20px 24px;
+                border: 1px solid #3F4146;
+                border-radius: 20px;
+                background: radial-gradient(128.11% 128.11% at 50.00% -32.40%, rgba(108, 234, 189, 0.32) 0%, rgba(108, 234, 189, 0.12) 43.11%, rgba(108, 234, 189, 0.00) 100%);
+
+
+                &-icon {
+                    display: flex;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-bottom: 50px;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    min-height: 40px;
+                }
+
+                &-title {
+                    color: #F2F4F7;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 30px;
+                    letter-spacing: -.05px;
+                    margin-bottom: 16px;
+
+                    @media (max-width: vars.$md) {
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 24px;
+                    }
+
+                    @media (max-width: vars.$sm) {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                    }
+
+                }
+            }
+        }
+
+
+    }
+}

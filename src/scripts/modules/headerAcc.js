@@ -8,8 +8,6 @@ export function initHeaderAcc() {
             const panel = accItem.nextElementSibling;
             const accTrigger = accItem.children[1];
 
-            console.log(accTrigger)
-
             if (panel.classList.contains("header-acc__body-closed") && !accTrigger.classList.contains("acc__trigger-open")) {
                 accTrigger.classList.add("acc__trigger-open");
                 accTrigger.style.transform = `rotate(180deg)`;

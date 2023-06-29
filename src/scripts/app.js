@@ -1,6 +1,6 @@
 import 'normalize.css';
 import { initAcc } from './modules/acc';
-import { initBenefitsSwiper, initBlogSwiper, initGallerySwiper, initInstructionsSwiper, initNewsSwiper, initPartnersSwiper, initReviewsSwiper } from './modules/swipers';
+import { initBenefitsSwiper, initBlogSwiper, initCatalogueSwiper, initGallerySwiper, initInstructionsSwiper, initNewsSwiper, initPartnersSwiper, initReviewsSwiper, initUsageSwiper } from './modules/swipers';
 import { chooseLanguage } from './modules/languages';
 import { navLinksToggle } from './modules/headerNavLinks';
 import { footerLinksToggle } from './modules/footerNavLinks';
@@ -28,4 +28,6 @@ initGallerySwiper();
 initReviewsSwiper();
 initInstructionsSwiper();
 initNewsSwiper();
+initUsageSwiper();
+initCatalogueSwiper();
 

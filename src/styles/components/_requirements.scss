@@ -1,0 +1,88 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.requirements {
+    font-family: "Poppins";
+    margin-block: 60px;
+
+    &__heading {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__container {
+
+        &__title {
+            width: 768px;
+            text-align: center;
+            color: var(--clr-white);
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 46px;
+            letter-spacing: -0.36px;
+            margin-bottom: 64px;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+
+            &__item {
+                max-width: 410px;
+
+                @media (max-width: vars.$xxl) {
+                    max-width: 360px;
+                }
+
+                @media (min-width: vars.$lg) and (max-width: vars.$xl) {
+                    max-width: 280px;
+                }
+
+                @media (min-width: vars.$md) and (max-width: vars.$lg) {
+                    max-width: 300px;
+                }
+
+                @media (max-width: vars.$md) {
+                    max-width: 100%;
+                }
+
+                &-picture {
+                    @media (max-width: vars.$md) {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                &-title {
+                    margin-top: 20px;
+                    color: var(--clr-white);
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 32px;
+                    letter-spacing: -0.5px;
+
+                    @media (min-width: vars.$sm) and (max-width: vars.$md) {
+                        padding-inline: 64px;
+                    }
+                }
+
+                &-desc {
+                    color: #98A2B3;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-top: 12px;
+
+                    @media (min-width: vars.$sm) and (max-width: vars.$md) {
+                        padding-inline: 64px;
+                    }
+                }
+            }
+        }
+    }
+}

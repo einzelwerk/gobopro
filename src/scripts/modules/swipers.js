@@ -185,3 +185,63 @@ export function initNewsSwiper() {
 
     return newsSwiper;
 }
+
+export function initUsageSwiper() {
+    const usageSwiper = new Swiper('.usage-swiper', {
+        autoplay: {
+            delay: 5000,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                enabled: true,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+                enabled: true,
+            },
+            1360: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                enabled: true,
+            },
+            1440: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+                enabled: true,
+            },
+
+        }
+    });
+
+    return usageSwiper;
+}
+
+export function initCatalogueSwiper() {
+    const catalogueSwiper = new Swiper('.catalogue-swiper', {
+        autoplay: {
+            delay: 5000,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                enabled: true,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                enabled: true,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                enabled: true
+            }
+        }
+    });
+
+    return catalogueSwiper;
+}
