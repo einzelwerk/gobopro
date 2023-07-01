@@ -1,0 +1,160 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.product-display {
+    font-family: "Poppins";
+    margin-block: 100px 60px;
+
+    @media (max-width: vars.$lg) {
+        margin-block: 32px;
+    }
+
+    &__container {
+
+        &__item {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+
+            @media (max-width: vars.$lg) {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            &-picture,
+            &-content {
+                width: 50%;
+
+                @media (max-width: vars.$lg) {
+                    width: 100%;
+                }
+            }
+
+            &-content {
+                color: var(--clr-white);
+
+                &__info {
+                    &__name {
+                        color: var(--clr-accent);
+                        font-size: 48px;
+                        font-weight: 400;
+                        line-height: 60px;
+                        letter-spacing: -0.48px;
+                    }
+
+                    &__price {
+                        color: var(--clr-white);
+                        font-size: 32px;
+                        font-weight: 400;
+                        line-height: 40px;
+                        letter-spacing: -0.64px;
+                    }
+
+                    &__tags {
+
+                        &>span {
+                            @media(max-width: vars.$lg) {
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        @media(max-width: vars.$lg) {
+                            margin-top: 16px;
+                        }
+                    }
+
+                    &__actions {
+                        margin-block: 48px;
+
+                        @media (max-width: vars.$lg) {
+                            margin-block: 24px;
+                        }
+
+                        &>button {
+                            padding: 14px 24px;
+                            border-radius: 10px;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 24px;
+                        }
+                    }
+
+                    &__specs {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+
+                        &__char {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding-block: 24px;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__spec {
+        &-name {
+            color: #BABABB;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        &-value {
+            color: var(--clr-white);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+}
+
+.more-info {
+    &__acc {
+        &__item {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__content {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding-top: 16px;
+        }
+
+        &__title {
+            color: #BABABB;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        &__body {
+            width: 100%;
+
+            &-closed {
+                display: none;
+            }
+        }
+    }
+
+    &__trigger {
+        width: 24px;
+        height: 24px;
+        text-align: center;
+
+        &>svg {
+            color: var(--clr-white);
+        }
+    }
+}

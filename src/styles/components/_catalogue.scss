@@ -66,6 +66,10 @@
                     font-weight: 600;
                     line-height: 32px;
                     letter-spacing: -0.5px;
+
+                    @media (max-width: vars.$md) {
+                        font-size: 20px;
+                    }
                 }
 
                 &-price {
@@ -100,6 +104,13 @@
             padding: 8px 20px;
             border: 1px solid var(--clr-accent);
             border-radius: 12px;
+
+            @media (max-width: vars.$md) {
+                width: 100%;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+            }
         }
     }
 }

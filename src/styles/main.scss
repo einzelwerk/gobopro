@@ -18,6 +18,7 @@
 @use './components/partners';
 @use './components/blog';
 @use './components/benefits';
+@use './components/benefits-visual';
 @use './components/gallery';
 @use './components/reviews';
 @use './components/howitworks';
@@ -29,4 +30,6 @@
 @use './components/usage';
 @use './components/catalogue';
 @use './components/products';
+@use './components/product-display';
+@use './components/product-list';
 //  Pages

@@ -2,78 +2,109 @@ section#products.products.section
     .products__container.container
         h1.products__container__title Produkte
         .products__container__category
-            input#switch(type='checkbox')
-            label(for='switch')
-                .can-toggle__switch.demo-rebrand-2(data-checked='GoboPro' data-unchecked='Projektoren')
-        ul.catalogue__container__list.swiper.catalogue-swiper.products-swiper
-            .swiper-wrapper
-                li.catalogue__container__list__item.swiper-slide.catalogue-swiper-slide
-                    .catalogue__container__list__item-picture
-                        img(src='./assets/images/catalogue-1.png')
-                    .catalogue__container__list__item__content
-                        h4.catalogue__container__list__item-title
-                            span Profil-Scheinwerfer
-                            a.catalogue__link(href='#')
-                                svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
-                        p.catalogue__container__list__item-price 102,00 &euro;
-                li.catalogue__container__list__item.swiper-slide.catalogue-swiper-slide
-                    .catalogue__container__list__item-picture
-                        img(src='./assets/images/catalogue-2.png')
-                    .catalogue__container__list__item__content
-                        h4.catalogue__container__list__item-title
-                            span Gobo-Halterung
-                            a.catalogue__link(href='#')
-                                svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
-                        p.catalogue__container__list__item-price 157,00 &euro;
-                li.catalogue__container__list__item.swiper-slide.catalogue-swiper-slide
-                    .catalogue__container__list__item-picture
-                        img(src='./assets/images/catalogue-3.png')
-                    .catalogue__container__list__item__content
-                        h4.catalogue__container__list__item-title
-                            span Projektionsfl&auml;che
-                            a.catalogue__link(href='#')
-                                svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
-                        p.catalogue__container__list__item-price 304,00 &euro;
-        ul.catalogue__container__list.swiper.catalogue-swiper.products-swiper
-            .swiper-wrapper
-                li.catalogue__container__list__item.swiper-slide.catalogue-swiper-slide
-                    .catalogue__container__list__item-picture
-                        img(src='./assets/images/catalogue-1.png')
-                    .catalogue__container__list__item__content
-                        h4.catalogue__container__list__item-title
-                            span Profil-Scheinwerfer
-                            a.catalogue__link(href='#')
-                                svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
-                        p.catalogue__container__list__item-price 102,00 &euro;
-                li.catalogue__container__list__item.swiper-slide.catalogue-swiper-slide
-                    .catalogue__container__list__item-picture
-                        img(src='./assets/images/catalogue-2.png')
-                    .catalogue__container__list__item__content
-                        h4.catalogue__container__list__item-title
-                            span Gobo-Halterung
-                            a.catalogue__link(href='#')
-                                svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
-                        p.catalogue__container__list__item-price 157,00 &euro;
-                li.catalogue__container__list__item.swiper-slide.catalogue-swiper-slide
-                    .catalogue__container__list__item-picture
-                        img(src='./assets/images/catalogue-3.png')
-                    .catalogue__container__list__item__content
-                        h4.catalogue__container__list__item-title
-                            span Projektionsfl&auml;che
-                            a.catalogue__link(href='#')
-                                svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
-                                    path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
-                        p.catalogue__container__list__item-price 304,00 &euro;
+            .button-cover
+                #category-switch.button.r
+                    input.checkbox(type='checkbox')
+                    .knobs
+                    .layer
+                        span.layer__projectors Projektoren
+                        span.layer__gobopro Gobo
+        .products__container__filters
+            select#line.products__container__filters__item(name='line')
+                option.products__container__filters__item__option(value='Serie' selected='true' disabled='disabled') 
+                    | Serie
+                option.products__container__filters__item__option(value='X-Serie') X-Serie
+                option.products__container__filters__item__option(value='MH-Serie') MH-Serie
+                option.products__container__filters__item__option(value='GBP-Serie') GBP-Serie
+            select#remote.products__container__filters__item(name='remote')
+                option.products__container__filters__item__option(value='Fernbedienung' selected='true' disabled='disabled')
+                    | Fernbedienung
+                option.products__container__filters__item__option(value='Yes') Ja
+                option.products__container__filters__item__option(value='No') Nein
+            select#changer.products__container__filters__item(name='changer')
+                option.products__container__filters__item__option(value='Gobo-Wechsler' selected='true' disabled='disabled')
+                    | Gobo-Wechsler
+                option.products__container__filters__item__option(value='Yes') Ja
+                option.products__container__filters__item__option(value='No') Nein
+            select#distance.products__container__filters__item(name='distance')
+                option.products__container__filters__item__option(value='Projektionsentfernung' selected='true' disabled='disabled')
+                    | Projektionsentfernung
+                option.products__container__filters__item__option(value='2') 2 metres
+                option.products__container__filters__item__option(value='5') 5 metres
+                option.products__container__filters__item__option(value='10') 10 metres
+            select#rotation.products__container__filters__item(name='rotation')
+                option.products__container__filters__item__option(value='Bildrotation' selected='true' disabled='disabled')
+                    | Bildrotation
+                option.products__container__filters__item__option(value='90') 90 degrees
+                option.products__container__filters__item__option(value='180') 180 degrees
+                option.products__container__filters__item__option(value='360') 360 degrees
+        ul.catalogue__container__list.products__container__list
+            li.catalogue__container__list__item.products__container__list__item
+                .catalogue__container__list__item-picture
+                    img(src='./assets/images/catalogue-1.png')
+                .catalogue__container__list__item__content.products__container__list__item__content
+                    h4.catalogue__container__list__item-title
+                        span Profil-Scheinwerfer
+                        a.catalogue__link(href='#')
+                            svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
+                    p.catalogue__container__list__item-price 102,00 &euro;
+            li.catalogue__container__list__item.products__container__list__item
+                .catalogue__container__list__item-picture
+                    img(src='./assets/images/catalogue-2.png')
+                .catalogue__container__list__item__content.products__container__list__item__content
+                    h4.catalogue__container__list__item-title
+                        span Gobo-Halterung
+                        a.catalogue__link(href='#')
+                            svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
+                    p.catalogue__container__list__item-price 157,00 &euro;
+            li.catalogue__container__list__item.products__container__list__item
+                .catalogue__container__list__item-picture
+                    img(src='./assets/images/catalogue-3.png')
+                .catalogue__container__list__item__content.products__container__list__item__content
+                    h4.catalogue__container__list__item-title
+                        span Projektionsfl&auml;che
+                        a.catalogue__link(href='#')
+                            svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
+                    p.catalogue__container__list__item-price 304,00 &euro;
+        ul.catalogue__container__list.products__container__list
+            li.catalogue__container__list__item.products__container__list__item
+                .catalogue__container__list__item-picture
+                    img(src='./assets/images/catalogue-1.png')
+                .catalogue__container__list__item__content.products__container__list__item__content
+                    h4.catalogue__container__list__item-title
+                        span Profil-Scheinwerfer
+                        a.catalogue__link(href='#')
+                            svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
+                    p.catalogue__container__list__item-price 102,00 &euro;
+            li.catalogue__container__list__item.products__container__list__item
+                .catalogue__container__list__item-picture
+                    img(src='./assets/images/catalogue-2.png')
+                .catalogue__container__list__item__content.products__container__list__item__content
+                    h4.catalogue__container__list__item-title
+                        span Gobo-Halterung
+                        a.catalogue__link(href='#')
+                            svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
+                    p.catalogue__container__list__item-price 157,00 &euro;
+            li.catalogue__container__list__item.products__container__list__item
+                .catalogue__container__list__item-picture
+                    img(src='./assets/images/catalogue-3.png')
+                .catalogue__container__list__item__content.products__container__list__item__content
+                    h4.catalogue__container__list__item-title
+                        span Projektionsfl&auml;che
+                        a.catalogue__link(href='#')
+                            svg.btn__icon(viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6')
+                                path(stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M8.25 6H18V15.75')
+                    p.catalogue__container__list__item-price 304,00 &euro;
         .catalogue__more
             button.btn.catalogue__more__products Mehr anzeigen

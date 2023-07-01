@@ -1,0 +1,16 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.product-list {
+    &__swiper {
+        &-btn {
+            &-block {
+                @media (max-width: vars.$md) {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}

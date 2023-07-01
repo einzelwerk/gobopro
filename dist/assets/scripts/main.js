@@ -211,6 +211,36 @@ function chooseLanguage() {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/productInfoAcc.js":
+/*!***********************************************!*\
+  !*** ./src/scripts/modules/productInfoAcc.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initProductAcc: () => (/* binding */ initProductAcc)
+/* harmony export */ });
+function initProductAcc() {
+  var accItem = document.querySelector('.more-info__acc__item');
+  if (!accItem) return;
+  accItem.addEventListener("click", function () {
+    var accTrigger = accItem.children[1];
+    var panel = accItem.children[2];
+    if (panel.classList.contains("more-info__acc__body-closed") && !accTrigger.classList.contains("acc__trigger-open")) {
+      accTrigger.classList.add("acc__trigger-open");
+      accTrigger.style.transform = "rotate(180deg)";
+      panel.classList.remove("more-info__acc__body-closed");
+    } else {
+      accTrigger.classList.remove("acc__trigger-open");
+      accTrigger.style.transform = "rotate(0deg)";
+      panel.classList.add("more-info__acc__body-closed");
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/swipers.js":
 /*!****************************************!*\
   !*** ./src/scripts/modules/swipers.js ***!
@@ -11102,6 +11132,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_footerNavLinks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/footerNavLinks */ "./src/scripts/modules/footerNavLinks.js");
 /* harmony import */ var _modules_burgerMenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/burgerMenu */ "./src/scripts/modules/burgerMenu.js");
 /* harmony import */ var _modules_headerAcc__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/headerAcc */ "./src/scripts/modules/headerAcc.js");
+/* harmony import */ var _modules_productInfoAcc__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/productInfoAcc */ "./src/scripts/modules/productInfoAcc.js");
+
 
 
 
@@ -11134,6 +11166,10 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initNewsSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initUsageSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initCatalogueSwiper)();
+
+// PRODUCT PAGE
+
+(0,_modules_productInfoAcc__WEBPACK_IMPORTED_MODULE_8__.initProductAcc)();
 })();
 
 /******/ })()

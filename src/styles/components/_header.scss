@@ -81,13 +81,13 @@
         background-color: transparent;
         border: 1px solid var(--clr-light);
         border-radius: 12px;
-        padding: 10px;
+        padding: 16px;
       }
 
       &__popup__list {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 12px;
 
         &>li>a {
           &:hover {
@@ -237,7 +237,7 @@
   }
 
   &__content {
-    display: flex;
+    display: none;
     position: absolute;
     top: 73px;
     left: 0px;

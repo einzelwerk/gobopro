@@ -6,6 +6,7 @@ import { navLinksToggle } from './modules/headerNavLinks';
 import { footerLinksToggle } from './modules/footerNavLinks';
 import { toggleMenu } from './modules/burgerMenu';
 import { initHeaderAcc } from './modules/headerAcc';
+import { initProductAcc } from './modules/productInfoAcc';
 
 // HEADER-RELATED
 
@@ -30,4 +31,8 @@ initInstructionsSwiper();
 initNewsSwiper();
 initUsageSwiper();
 initCatalogueSwiper();
+
+// PRODUCT PAGE
+
+initProductAcc();
 
