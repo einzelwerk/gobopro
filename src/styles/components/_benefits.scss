@@ -5,11 +5,10 @@
 
 .benefits {
     font-family: "Poppins";
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-block: 120px 60px;
 
-    @media (max-width: vars.$sm) {
-        padding-bottom: 40px;
+    @media (max-width: vars.$md) {
+        padding-block: 32px;
     }
 
     &__container {

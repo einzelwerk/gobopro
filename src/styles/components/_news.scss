@@ -5,10 +5,10 @@
 
 .blog-3-3 {
     font-family: "Poppins";
-    padding-block: 60px 120px;
+    margin-block: 60px;
 
     @media (max-width: vars.$md) {
-        padding-block: 60px 68px;
+        margin-block: 32px;
     }
 
     &__container {

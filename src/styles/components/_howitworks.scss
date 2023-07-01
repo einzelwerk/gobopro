@@ -5,7 +5,11 @@
 
 .howitworks {
     font-family: "Poppins";
-    padding-block: 120px 64px;
+    padding-block: 120px 60px;
+
+    @media (max-width: vars.$md) {
+        padding-block: 32px;
+    }
 
     &__subtitle {
         color: #BABABB;
@@ -13,6 +17,10 @@
         font-size: 14px;
         line-height: 20px;
         text-align: center;
+
+        @media (max-width: vars.$md) {
+            text-align: left;
+        }
     }
 
     &__title {
@@ -22,6 +30,10 @@
         font-size: 36px;
         line-height: 46px;
         text-align: center;
+
+        @media (max-width: vars.$md) {
+            text-align: left;
+        }
     }
 
     &__container {

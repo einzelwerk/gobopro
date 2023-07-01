@@ -5,7 +5,11 @@
 
 .cta-4 {
     font-family: "Poppins";
-    margin-bottom: 60px;
+    margin-block: 60px;
+
+    @media (max-width: vars.$md) {
+        margin-block: 32px;
+    }
 
     &__content {
         position: relative;

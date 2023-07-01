@@ -5,8 +5,11 @@
 
 .gallery {
     font-family: "Poppins";
-    margin-top: 60px;
-    margin-bottom: 120px;
+    margin-block: 60px 120px;
+
+    @media (max-width: vars.$md) {
+        margin-block: 32px;
+    }
 
     &__title {
         color: var(--clr-white);
@@ -15,6 +18,10 @@
         line-height: 46px;
         text-align: center;
         margin-bottom: 64px;
+
+        @media (max-width: vars.$md) {
+            margin-bottom: 24px;
+        }
     }
 
     &__container {
