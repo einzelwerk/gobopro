@@ -1,0 +1,220 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+
+.product-detailed {
+    font-family: "Poppins";
+    margin-block: 60px 120px;
+
+    @media (max-width: vars.$lg) {
+        margin-block: 32px;
+    }
+
+    &__title {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 64px;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 46px;
+        letter-spacing: -0.36px;
+        color: var(--clr-white);
+
+        @media (max-width: vars.$lg) {
+            margin-bottom: 24px;
+            font-size: 28px;
+            text-align: left;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media (max-width: vars.$lg) {
+            display: none;
+        }
+
+        &__item {
+            display: flex;
+            width: 100%;
+            gap: 30px;
+            border-radius: 20px;
+            border: 1px solid #3F4146;
+            background: linear-gradient(0deg, #19191C 0%, #19191C 100%), linear-gradient(90deg, #6CEABD 0%, #1A1B1F 100%);
+
+            &:nth-of-type(even) {
+                flex-direction: row-reverse;
+            }
+
+            &-details {
+                display: flex;
+                flex-direction: column;
+                width: 65%;
+                padding: 60px;
+
+                @media (max-width: vars.$xl) {
+                    padding: 40px;
+                }
+
+                &__title {
+                    color: var(--clr-accent);
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 32px;
+                    letter-spacing: -0.5px;
+                    margin-bottom: 16px;
+                }
+
+                &__subtitle {
+                    width: 18ch;
+                    color: var(--clr-white);
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 46px;
+                    letter-spacing: -0.36px;
+                    margin-bottom: 32px;
+                }
+
+                &__actions {
+                    display: flex;
+                    gap: 12px;
+
+                    &>button {
+                        padding: 14px 32px;
+                        border-radius: 10px;
+                    }
+
+                    &>.btn-regular {
+                        display: flex;
+                        gap: 6px;
+                        align-items: center;
+                    }
+                }
+
+                &__specs {
+                    display: flex;
+                    gap: 32px;
+                    margin-top: 48px;
+
+                    @media (min-width: vars.$xxl) {
+                        gap: 64px;
+                    }
+
+                    @media (min-width: vars.$xl) {
+                        gap: 40px;
+                    }
+
+                    &__prop {
+                        display: flex;
+                        flex-direction: column;
+                        color: #6CEABD;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px;
+                        font-size: 12px;
+                        font-weight: 300;
+                        line-height: 12px;
+
+                        @media (max-width: vars.$xl) {
+                            font-size: 10px;
+                        }
+
+                        &__pic {
+                            width: 57px;
+                            height: 57px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+
+            &-picture {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: 35%;
+            }
+        }
+
+        &__mobile {
+            display: flex;
+            gap: 24px;
+            width: 100%;
+
+            @media (min-width: vars.$lg) {
+                display: none;
+            }
+
+            &__item {
+                width: 310px;
+                height: 460px;
+                border: 1px solid #3F4146;
+                border-radius: 20px;
+                background-image: url('../../assets/images/product-detail-mobile.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+
+                &-content {
+                    margin-top: auto;
+                    padding: 20px;
+                }
+
+                &-info {
+
+                    &__title {
+                        color: var(--clr-accent);
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                    }
+
+                    &__subtitle {
+                        width: 16ch;
+                        color: var(--clr-white);
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 30px;
+                    }
+                }
+
+                &-actions {
+                    margin-top: 20px;
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+
+                    &__link {
+                        &>.btn-regular {
+                            border-radius: 6px;
+                            width: 32px;
+                            height: 32px;
+                            text-align: center;
+                        }
+                    }
+
+
+                    &>.btn-accent {
+                        padding: 8px 16px;
+                        border-radius: 12px;
+                        font-weight: 600;
+
+                        @media (max-width: 360px) {
+                            padding: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

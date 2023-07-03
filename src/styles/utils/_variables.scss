@@ -63,4 +63,10 @@ $sm: $min-sm - 0.02px;
     background-color: var(--clr-accent);
     color: var(--clr-black);
   }
+
+  .btn-regular {
+    border: 1px solid var(--clr-accent);
+    color: var(--clr-accent);
+    background-color: transparent;
+  }
 }
