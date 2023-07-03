@@ -1,0 +1,82 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.info {
+    font-family: "Poppins";
+    margin-block: 120px;
+
+    @media (max-width: vars.$lg) {
+        margin-block: 32px;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            display: flex;
+            width: 100%;
+            gap: 64px;
+            flex-direction: row-reverse;
+
+            @media (max-width: vars.$lg) {
+                flex-direction: column;
+            }
+
+            &-picture,
+            &-content {
+                width: 50%;
+
+                @media (max-width: vars.$lg) {
+                    width: 100%;
+                }
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 16px;
+
+                &__title {
+                    color: #F2F4F7;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 46px;
+                    letter-spacing: -0.36px;
+
+                    @media (max-width: vars.$lg) {
+                        font-size: 28px;
+                    }
+                }
+
+                &__desc {
+                    color: #BABABB;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 30px;
+
+                    @media (max-width: vars.$lg) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        margin-top: 16px;
+        padding: 14px 24px;
+        border-radius: 10px;
+
+        @media (max-width: vars.$lg) {
+            width: 100%;
+        }
+    }
+}

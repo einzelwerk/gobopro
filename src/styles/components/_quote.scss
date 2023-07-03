@@ -1,0 +1,90 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.quote-1 {
+    font-family: "Poppins";
+    margin-block: 120px;
+
+    @media (max-width: vars.$lg) {
+        margin-block: 32px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 80px;
+
+        @media (max-width: vars.$lg) {
+            gap: 24px;
+        }
+
+
+        @media (max-width: vars.$xl) {
+            flex-direction: column;
+            align-items: unset;
+            justify-content: unset;
+        }
+    }
+
+    &__img {
+        &-block {
+            flex: 1 1 auto;
+        }
+
+        &-wrap,
+        & {
+            width: 100%;
+        }
+
+        border-radius: 20px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        color: var(--clr-light);
+
+        @media (max-width: vars.$xl) {
+            width: 100%;
+        }
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__icon {
+        display: block;
+        color: var(--clr-white);
+    }
+
+    &__blockquote {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__desc {
+        margin-block: 32px 24px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+        @media (min-width: vars.$xl) and (max-width: vars.$xxl) {
+            font-size: 14px;
+        }
+    }
+
+    &__author {
+        display: flex;
+        width: 100%;
+    }
+
+    &__cite {
+        margin-left: auto;
+    }
+}

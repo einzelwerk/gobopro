@@ -1,0 +1,119 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+
+.benefits-6 {
+    font-family: "Poppins";
+    margin-block: 60px;
+
+    @media (max-width: vars.$lg) {
+        margin-block: 32px;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: flex-start;
+        margin-bottom: 64px;
+
+        @media (max-width: vars.$xl) {
+            justify-content: center;
+            text-align: center;
+        }
+
+        &__title {
+            width: 60%;
+            color: var(--clr-white);
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 46px;
+            letter-spacing: -0.36px;
+
+            @media (max-width: vars.$xl) {
+                width: 100%;
+            }
+        }
+
+        &__subtitle {
+            width: 60%;
+            color: #BABABB;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+
+            @media (max-width: vars.$xl) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        gap: 30px;
+
+        @media (max-width: vars.$xl) {
+            flex-direction: column;
+        }
+
+        &__items,
+        &__picture {
+            width: 50%;
+
+            @media (max-width: vars.$xl) {
+                width: 100%;
+            }
+        }
+
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px 30px;
+
+            @media (max-width: vars.$sm) {
+                gap: 24px;
+            }
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 47%;
+                height: 280px;
+
+                @media (max-width: vars.$sm) {
+                    width: 100%;
+                    height: auto;
+                }
+
+                &-title {
+                    color: var(--clr-white);
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 30px;
+                }
+
+                &-desc {
+                    color: #BABABB;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+            }
+
+            @media (max-width: vars.$xl) {
+                order: 2;
+            }
+        }
+
+        &__picture {
+            @media (max-width: vars.$xl) {
+                order: 1;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
