@@ -252,8 +252,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initBenefitsSwiper: () => (/* binding */ initBenefitsSwiper),
 /* harmony export */   initBlogSwiper: () => (/* binding */ initBlogSwiper),
 /* harmony export */   initCatalogueSwiper: () => (/* binding */ initCatalogueSwiper),
+/* harmony export */   initDetailedProductSwiper: () => (/* binding */ initDetailedProductSwiper),
 /* harmony export */   initGallerySwiper: () => (/* binding */ initGallerySwiper),
 /* harmony export */   initInstructionsSwiper: () => (/* binding */ initInstructionsSwiper),
+/* harmony export */   initLinksSwiper: () => (/* binding */ initLinksSwiper),
+/* harmony export */   initNecessitiesSwiper: () => (/* binding */ initNecessitiesSwiper),
 /* harmony export */   initNewsSwiper: () => (/* binding */ initNewsSwiper),
 /* harmony export */   initPartnersSwiper: () => (/* binding */ initPartnersSwiper),
 /* harmony export */   initReviewsSwiper: () => (/* binding */ initReviewsSwiper),
@@ -488,6 +491,81 @@ function initCatalogueSwiper() {
     }
   });
   return catalogueSwiper;
+}
+function initNecessitiesSwiper() {
+  var necessitiesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.necessities-swiper', {
+    autoplay: {
+      delay: 5000
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        enabled: true
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        enabled: true
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+        enabled: true
+      }
+    }
+  });
+  return necessitiesSwiper;
+}
+function initLinksSwiper() {
+  var linksSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.links-swiper', {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
+    autoplay: {
+      delay: 5000
+    },
+    navigation: {
+      nextEl: '.links-swiper-btn_next',
+      prevEl: '.links-swiper-btn_prev'
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        enabled: true
+      },
+      768: {
+        slidesPerView: 2,
+        rows: 2,
+        enabled: true
+      }
+    }
+  });
+  return linksSwiper;
+}
+function initDetailedProductSwiper() {
+  var detailedSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.detailed-swiper', {
+    autoplay: {
+      delay: 5000
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        enabled: true
+      },
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 40,
+        enabled: true
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        enabled: true
+      }
+    }
+  });
+  return detailedSwiper;
 }
 
 /***/ }),
@@ -11166,6 +11244,9 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initNewsSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initUsageSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initCatalogueSwiper)();
+(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initNecessitiesSwiper)();
+(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initLinksSwiper)();
+(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initDetailedProductSwiper)();
 
 // PRODUCT PAGE
 

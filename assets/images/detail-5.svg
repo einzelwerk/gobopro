@@ -1,0 +1,20 @@
+<svg width="59" height="44" viewBox="0 0 59 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 3465930">
+<g id="Group 77">
+<g id="Group 75">
+<path id="Rectangle 2448" d="M2.62061 41.5455L57.0025 41.5455" stroke="#6CEABD" stroke-width="0.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+<ellipse id="Ellipse 20" cx="2.27535" cy="41.5455" rx="1.95455" ry="1.95455" fill="#6CEABD"/>
+<ellipse id="Ellipse 21" cx="57.0029" cy="41.5455" rx="1.95455" ry="1.95455" fill="#6CEABD"/>
+</g>
+<ellipse id="Ellipse 24" cx="3.74126" cy="15.6477" rx="3.42045" ry="3.42045" fill="#6CEABD"/>
+<path id="Vector 27" opacity="0.3" d="M57.0031 1.4772V30.7954L3.7417 15.6477L57.0031 1.4772Z" fill="url(#paint0_linear_757_20780)"/>
+<path id="Vector 28" d="M57.0024 31.7727V0.5" stroke="#6CEABD" stroke-width="0.8" stroke-linecap="round"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_757_20780" x1="6.67352" y1="16.1363" x2="57.0031" y2="16.1363" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6CEABD"/>
+<stop offset="1" stop-color="#6CEABD" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
