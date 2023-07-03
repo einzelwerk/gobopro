@@ -1,0 +1,52 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.downloads {
+    font-family: "Poppins";
+    margin-block: 120px 60px;
+    min-height: 500px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+
+        &__title {
+            color: var(--clr-white);
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: -0.48px;
+        }
+
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 12px;
+                width: 190px;
+                height: 190px;
+                border-radius: 20px;
+                background: #232428;
+
+                @media (max-width: 440px) {
+                    width: 100%;
+                }
+
+                &-text {
+                    color: var(--clr-white);
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

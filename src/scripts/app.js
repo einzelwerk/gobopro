@@ -1,6 +1,6 @@
 import 'normalize.css';
 import { initAcc } from './modules/acc';
-import { initBenefitsSwiper, initBlogSwiper, initCatalogueSwiper, initDetailedProductSwiper, initGallerySwiper, initInstructionsSwiper, initLinksSwiper, initNecessitiesSwiper, initNewsSwiper, initPartnersSwiper, initReviewsSwiper, initUsageSwiper } from './modules/swipers';
+import { initBenefitsSwiper, initBlogSwiper, initCatalogueSwiper, initDetailedProductSwiper, initGallerySwiper, initInstructionsSwiper, initLinksSwiper, initNecessitiesSwiper, initNewsPaginationSwiper, initNewsSwiper, initPartnersSwiper, initReviewsSwiper, initUsageSwiper } from './modules/swipers';
 import { chooseLanguage } from './modules/languages';
 import { navLinksToggle } from './modules/headerNavLinks';
 import { footerLinksToggle } from './modules/footerNavLinks';
@@ -34,6 +34,7 @@ initCatalogueSwiper();
 initNecessitiesSwiper();
 initLinksSwiper();
 initDetailedProductSwiper();
+initNewsPaginationSwiper();
 
 // PRODUCT PAGE
 

@@ -12,13 +12,9 @@
   justify-content: space-between;
   gap: 24px;
 
-  @media (max-width: vars.$xl) {
-    padding-block: 50px 60px;
-  }
-
   @media (max-width: vars.$lg) {
     flex-direction: column;
-    padding-block: 32px;
+    margin-block: 32px;
   }
 
   &__link:hover {
@@ -28,11 +24,11 @@
   &__text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     max-width: 550px;
     font-weight: 400;
     line-height: 60px;
     color: var(--clr-white);
-    padding-block: 60px;
 
     @media (max-width: vars.$lg) {
       order: 2;

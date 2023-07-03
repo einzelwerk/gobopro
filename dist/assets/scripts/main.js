@@ -257,6 +257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initInstructionsSwiper: () => (/* binding */ initInstructionsSwiper),
 /* harmony export */   initLinksSwiper: () => (/* binding */ initLinksSwiper),
 /* harmony export */   initNecessitiesSwiper: () => (/* binding */ initNecessitiesSwiper),
+/* harmony export */   initNewsPaginationSwiper: () => (/* binding */ initNewsPaginationSwiper),
 /* harmony export */   initNewsSwiper: () => (/* binding */ initNewsSwiper),
 /* harmony export */   initPartnersSwiper: () => (/* binding */ initPartnersSwiper),
 /* harmony export */   initReviewsSwiper: () => (/* binding */ initReviewsSwiper),
@@ -566,6 +567,33 @@ function initDetailedProductSwiper() {
     }
   });
   return detailedSwiper;
+}
+function initNewsPaginationSwiper() {
+  var newsPaginationSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.news-extended-swiper', {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
+    autoplay: {
+      delay: 5000
+    }
+    // breakpoints: {
+    //     320: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 10,
+    //         enabled: true,
+    //     },
+    //     576: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 40,
+    //         enabled: true,
+    //     },
+    //     768: {
+    //         slidesPerView: 2,
+    //         spaceBetween: 40,
+    //         enabled: true,
+    //     },
+    // }
+  });
+
+  return newsPaginationSwiper;
 }
 
 /***/ }),
@@ -11247,6 +11275,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initNecessitiesSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initLinksSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initDetailedProductSwiper)();
+(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initNewsPaginationSwiper)();
 
 // PRODUCT PAGE
 

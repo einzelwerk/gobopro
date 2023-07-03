@@ -26,6 +26,7 @@
 @use './components/cta';
 @use './components/faq';
 @use './components/news';
+@use './components/news-extended';
 @use './components/advantages';
 @use './components/requirements';
 @use './components/usage';
@@ -40,4 +41,6 @@
 @use './components/text-block';
 @use './components/quote';
 @use './components/info';
+@use './components/getintouch';
+@use './components/downloads';
 //  Pages

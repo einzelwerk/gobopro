@@ -1,0 +1,33 @@
+section.feedback-3.section.block
+    .feedback-3__container.container
+        .feedback-3__list
+            .feedback-3__item-order
+                .feedback-3__content
+                    .feedback-3__text-block
+                        h2.feedback-3__title Werden Sie noch heute Partner
+                    form.feedback-3__form(action='#')
+                        .feedback-3__field-block
+                            .feedback-3__field-block-row
+                                .feedback-3__field
+                                    label(for='feedback-name') Vornamen
+                                    input#feedback-name(type='text' placeholder='Name')
+                                .feedback-3__field
+                                    label(for='feedback-surname') Nachname
+                                    input#feedback-surname(type='text' placeholder='Surname')
+                            .feedback-3__field
+                                label(for='feedback-email') Email
+                                input#feedback-email(type='email' placeholder='Email')
+                            .feedback-3__field
+                                label(for='feedback-tel') Telefonnummer
+                                input#feedback-tel(type='tel' placeholder='Phone number')
+                            .feedback-3__field
+                                label(for='feedback-message') Nachricht
+                                textarea#feedback-message(name='message' placeholder='Message' rows='1')
+                        .feedback-3__bottom
+                            .feedback-3__privacy
+                                input#privacy-policy(type='checkbox' name='privacy-policy')
+                                | You agree to our friendly privacy
+                                |                       policy.
+                            button.feedback-3__btn.btn(type='submit') Senden
+        .feedback-3__img-wrap
+            img.feedback-3__img(src='./assets/images/getintouch.png' alt='Get in touch')
