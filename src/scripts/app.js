@@ -7,7 +7,6 @@ import { footerLinksToggle } from './modules/footerNavLinks';
 import { toggleMenu } from './modules/burgerMenu';
 import { initHeaderAcc } from './modules/headerAcc';
 import { initProductAcc } from './modules/productInfoAcc';
-import { initPagination } from './modules/pagination';
 
 // HEADER-RELATED
 
@@ -42,5 +41,5 @@ initProductAcc();
 
 // PAGINATION
 
-initPagination();
+// initPagination();
 

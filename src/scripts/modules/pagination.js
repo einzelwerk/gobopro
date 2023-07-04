@@ -8,7 +8,6 @@ const paginationLimit = 10;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
 let currentPage = 1;
 
-console.log(pageCount)
 
 const disableButton = (button) => {
     button.classList.add("disabled");
