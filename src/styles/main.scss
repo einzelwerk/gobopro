@@ -16,6 +16,7 @@
 @use './components/footer';
 @use './components/hero';
 @use './components/partners';
+@use './components/partners-extended';
 @use './components/blog';
 @use './components/benefits';
 @use './components/benefits-6';
@@ -44,4 +45,5 @@
 @use './components/getintouch';
 @use './components/contact';
 @use './components/downloads';
+@use './components/pagination';
 //  Pages

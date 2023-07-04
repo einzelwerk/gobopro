@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
+import Swiper, { Navigation, Scrollbar } from 'swiper';
 import 'swiper/swiper.css';
 
 export function initPartnersSwiper() {
@@ -325,32 +325,4 @@ export function initDetailedProductSwiper() {
     });
 
     return detailedSwiper;
-}
-
-export function initNewsPaginationSwiper() {
-    const newsPaginationSwiper = new Swiper('.news-extended-swiper', {
-        modules: [Pagination],
-        autoplay: {
-            delay: 5000,
-        },
-        // breakpoints: {
-        //     320: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 10,
-        //         enabled: true,
-        //     },
-        //     576: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 40,
-        //         enabled: true,
-        //     },
-        //     768: {
-        //         slidesPerView: 2,
-        //         spaceBetween: 40,
-        //         enabled: true,
-        //     },
-        // }
-    });
-
-    return newsPaginationSwiper;
 }

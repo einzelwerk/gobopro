@@ -211,6 +211,103 @@ function chooseLanguage() {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/pagination.js":
+/*!*******************************************!*\
+  !*** ./src/scripts/modules/pagination.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initPagination: () => (/* binding */ initPagination)
+/* harmony export */ });
+var paginationNumbers = document.getElementById("pagination-numbers");
+var paginatedList = document.getElementById("paginated-list");
+var listItems = paginatedList.querySelectorAll("li");
+var nextButton = document.getElementById("next-button");
+var prevButton = document.getElementById("prev-button");
+var paginationLimit = 10;
+var pageCount = Math.ceil(listItems.length / paginationLimit);
+var currentPage = 1;
+console.log(pageCount);
+var disableButton = function disableButton(button) {
+  button.classList.add("disabled");
+  button.setAttribute("disabled", true);
+};
+var enableButton = function enableButton(button) {
+  button.classList.remove("disabled");
+  button.removeAttribute("disabled");
+};
+var handlePageButtonsStatus = function handlePageButtonsStatus() {
+  if (currentPage === 1) {
+    disableButton(prevButton);
+  } else {
+    enableButton(prevButton);
+  }
+  if (pageCount === currentPage) {
+    disableButton(nextButton);
+  } else {
+    enableButton(nextButton);
+  }
+};
+var handleActivePageNumber = function handleActivePageNumber() {
+  document.querySelectorAll(".pagination-number").forEach(function (button) {
+    button.classList.remove("active");
+    var pageIndex = Number(button.getAttribute("page-index"));
+    if (pageIndex === currentPage) {
+      button.classList.add("active");
+    }
+  });
+};
+var appendPageNumber = function appendPageNumber(index) {
+  var pageNumber = document.createElement("button");
+  pageNumber.className = "pagination-number";
+  pageNumber.innerHTML = index;
+  pageNumber.setAttribute("page-index", index);
+  pageNumber.setAttribute("aria-label", "Page ".concat(index));
+  paginationNumbers.appendChild(pageNumber);
+};
+var getPaginationNumbers = function getPaginationNumbers() {
+  for (var i = 1; i <= pageCount; i += 1) {
+    appendPageNumber(i);
+  }
+};
+var setCurrentPage = function setCurrentPage(pageNum) {
+  currentPage = pageNum;
+  handleActivePageNumber();
+  handlePageButtonsStatus();
+  var prevRange = (pageNum - 1) * paginationLimit;
+  var currRange = pageNum * paginationLimit;
+  listItems.forEach(function (item, index) {
+    item.classList.add("hidden");
+    if (index >= prevRange && index < currRange) {
+      item.classList.remove("hidden");
+    }
+  });
+};
+function initPagination() {
+  window.addEventListener("load", function () {
+    getPaginationNumbers();
+    setCurrentPage(1);
+    prevButton.addEventListener("click", function () {
+      setCurrentPage(currentPage - 1);
+    });
+    nextButton.addEventListener("click", function () {
+      setCurrentPage(currentPage + 1);
+    });
+    document.querySelectorAll(".pagination-number").forEach(function (button) {
+      var pageIndex = Number(button.getAttribute("page-index"));
+      if (pageIndex) {
+        button.addEventListener("click", function () {
+          setCurrentPage(pageIndex);
+        });
+      }
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/productInfoAcc.js":
 /*!***********************************************!*\
   !*** ./src/scripts/modules/productInfoAcc.js ***!
@@ -257,7 +354,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initInstructionsSwiper: () => (/* binding */ initInstructionsSwiper),
 /* harmony export */   initLinksSwiper: () => (/* binding */ initLinksSwiper),
 /* harmony export */   initNecessitiesSwiper: () => (/* binding */ initNecessitiesSwiper),
-/* harmony export */   initNewsPaginationSwiper: () => (/* binding */ initNewsPaginationSwiper),
 /* harmony export */   initNewsSwiper: () => (/* binding */ initNewsSwiper),
 /* harmony export */   initPartnersSwiper: () => (/* binding */ initPartnersSwiper),
 /* harmony export */   initReviewsSwiper: () => (/* binding */ initReviewsSwiper),
@@ -567,33 +663,6 @@ function initDetailedProductSwiper() {
     }
   });
   return detailedSwiper;
-}
-function initNewsPaginationSwiper() {
-  var newsPaginationSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.news-extended-swiper', {
-    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
-    autoplay: {
-      delay: 5000
-    }
-    // breakpoints: {
-    //     320: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 10,
-    //         enabled: true,
-    //     },
-    //     576: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 40,
-    //         enabled: true,
-    //     },
-    //     768: {
-    //         slidesPerView: 2,
-    //         spaceBetween: 40,
-    //         enabled: true,
-    //     },
-    // }
-  });
-
-  return newsPaginationSwiper;
 }
 
 /***/ }),
@@ -11239,6 +11308,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_burgerMenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/burgerMenu */ "./src/scripts/modules/burgerMenu.js");
 /* harmony import */ var _modules_headerAcc__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/headerAcc */ "./src/scripts/modules/headerAcc.js");
 /* harmony import */ var _modules_productInfoAcc__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/productInfoAcc */ "./src/scripts/modules/productInfoAcc.js");
+/* harmony import */ var _modules_pagination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/pagination */ "./src/scripts/modules/pagination.js");
+
 
 
 
@@ -11275,11 +11346,14 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initNecessitiesSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initLinksSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initDetailedProductSwiper)();
-(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initNewsPaginationSwiper)();
 
 // PRODUCT PAGE
 
 (0,_modules_productInfoAcc__WEBPACK_IMPORTED_MODULE_8__.initProductAcc)();
+
+// PAGINATION
+
+(0,_modules_pagination__WEBPACK_IMPORTED_MODULE_9__.initPagination)();
 })();
 
 /******/ })()

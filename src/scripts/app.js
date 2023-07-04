@@ -1,12 +1,13 @@
 import 'normalize.css';
 import { initAcc } from './modules/acc';
-import { initBenefitsSwiper, initBlogSwiper, initCatalogueSwiper, initDetailedProductSwiper, initGallerySwiper, initInstructionsSwiper, initLinksSwiper, initNecessitiesSwiper, initNewsPaginationSwiper, initNewsSwiper, initPartnersSwiper, initReviewsSwiper, initUsageSwiper } from './modules/swipers';
+import { initBenefitsSwiper, initBlogSwiper, initCatalogueSwiper, initDetailedProductSwiper, initGallerySwiper, initInstructionsSwiper, initLinksSwiper, initNecessitiesSwiper, initNewsSwiper, initPartnersSwiper, initReviewsSwiper, initUsageSwiper } from './modules/swipers';
 import { chooseLanguage } from './modules/languages';
 import { navLinksToggle } from './modules/headerNavLinks';
 import { footerLinksToggle } from './modules/footerNavLinks';
 import { toggleMenu } from './modules/burgerMenu';
 import { initHeaderAcc } from './modules/headerAcc';
 import { initProductAcc } from './modules/productInfoAcc';
+import { initPagination } from './modules/pagination';
 
 // HEADER-RELATED
 
@@ -34,9 +35,12 @@ initCatalogueSwiper();
 initNecessitiesSwiper();
 initLinksSwiper();
 initDetailedProductSwiper();
-initNewsPaginationSwiper();
 
 // PRODUCT PAGE
 
 initProductAcc();
+
+// PAGINATION
+
+initPagination();
 

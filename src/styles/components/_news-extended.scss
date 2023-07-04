@@ -15,6 +15,27 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        &__title {
+            width: 100%;
+            color: var(--neutral-100, #F2F4F7);
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: -0.48px;
+            text-align: left;
+            margin-bottom: 64px;
+        }
+
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            &__item {
+                width: 31%;
+            }
+        }
     }
 
     &__text-block {
@@ -79,6 +100,7 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         gap: 30px;
         margin-top: 70px;
     }

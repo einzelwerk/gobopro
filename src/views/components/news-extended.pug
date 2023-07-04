@@ -2,73 +2,199 @@ section#news-extended.news-extended.section
     .news-extended__container.container
         h2.news-extended__container__title
             | News
-        ul.news-extended__container__items.news-extended-swiper
-            .swiper-wrapper
-                li.news-extended__container__items__item.swiper-slide.news-extended-slide
-                    .news-extended__item
-                        a.news-extended__link(href='#')
-                            picture.news-extended__img-wrap
-                                img.news-extended__img(src='./assets/images/news-1.png' alt='')
-                            .news-extended__item-content
-                                .news-extended__item-text-block
-                                    span.news-extended__info
-                                        | 22 Mai 2023
-                                    .news-extended__name-block
-                                        h3.news-extended__name
-                                            | Lassen Sie uns &uuml;ber Gobos sprechen
-                                            svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
-                                                path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
-                                    p.news-extended__desc
-                                        | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat
-                li.news-extended__container__items__item.swiper-slide.news-extended-slide
-                    .news-extended__item
-                        a.news-extended__link(href='#')
-                            picture.news-extended__img-wrap
-                                img.news-extended__img(src='./assets/images/news-1.png' alt='')
-                            .news-extended__item-content
-                                .news-extended__item-text-block
-                                    span.news-extended__info
-                                        | 22 Mai 2023
-                                    .news-extended__name-block
-                                        h3.news-extended__name
-                                            | Lassen Sie uns &uuml;ber Gobos sprechen
-                                            svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
-                                                path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
-                                    p.news-extended__desc
-                                        | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat
-                li.news-extended__container__items__item.swiper-slide.news-extended-slide
-                    .news-extended__item
-                        a.news-extended__link(href='#')
-                            picture.news-extended__img-wrap
-                                img.news-extended__img(src='./assets/images/news-1.png' alt='')
-                            .news-extended__item-content
-                                .news-extended__item-text-block
-                                    span.news-extended__info
-                                        | 22 Mai 2023
-                                    .news-extended__name-block
-                                        h3.news-extended__name
-                                            | Lassen Sie uns &uuml;ber Gobos sprechen
-                                            svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
-                                                path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
-                                    p.news-extended__desc
-                                        | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat
-                li.news-extended__container__items__item.swiper-slide.news-extended-slide
-                    .news-extended__item
-                        a.news-extended__link(href='#')
-                            picture.news-extended__img-wrap
-                                img.news-extended__img(src='./assets/images/news-1.png' alt='')
-                            .news-extended__item-content
-                                .news-extended__item-text-block
-                                    span.news-extended__info
-                                        | 22 Mai 2023
-                                    .news-extended__name-block
-                                        h3.news-extended__name
-                                            | Lassen Sie uns &uuml;ber Gobos sprechen
-                                            svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
-                                                path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
-                                    p.news-extended__desc
-                                        | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat
+        ul.news-extended__container__items.container#paginated-list
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat                        
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat                        
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat                        
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat                        
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat                        
+            li.news-extended__container__items__item
+                .news-extended__item
+                    a.news-extended__link(href='#')
+                        picture.news-extended__img-wrap
+                            img.news-extended__img(src='./assets/images/news-1.png' alt='')
+                        .news-extended__item-content
+                            .news-extended__item-text-block
+                                span.news-extended__info
+                                    | 22 Mai 2023
+                                .news-extended__name-block
+                                    h3.news-extended__name
+                                        | Lassen Sie uns &uuml;ber Gobos sprechen
+                                        svg.news-extended__name_icon(viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5 15L15 5' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                            path(d='M6.875 5H15V13.125' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round')
+                                p.news-extended__desc
+                                    | Gobos sind eine erschwingliche, zuverl&auml;ssige Technologie, die sich im Laufe der Zeit bew&auml;hrt hat
+        nav.pagination.section#pagination
+            .pagination__container.container 
+                #pagination-numbers
+                .pagination-buttons
+                    button.pagination-button#prev-button(aria-label="Previous page" title="Previous page")
+                        img(src='./assets/images/pagination-arrow-left.svg' alt="Previous")
+                    button.pagination-button#next-button(aria-label="Next page" title="Next page")
+                        img(src='./assets/images/pagination-arrow-right.svg' alt="Next")
