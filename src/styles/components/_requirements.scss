@@ -52,9 +52,32 @@
                 }
 
                 &-picture {
+                    position: relative;
+
                     @media (max-width: vars.$md) {
                         display: flex;
                         justify-content: center;
+                    }
+
+                    &__number {
+                        position: absolute;
+                        left: 16px;
+                        top: 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 48px;
+                        height: 48px;
+                        background-color: var(--clr-dark);
+                        padding: 8px 18px 8px 16px;
+                        color: var(--clr-white);
+                        border-radius: 12px;
+                        background: rgba(255, 255, 255, 0.20);
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 32px;
+                        letter-spacing: -0.5px;
+                        text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                     }
                 }
 
