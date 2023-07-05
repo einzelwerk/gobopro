@@ -24,13 +24,6 @@
                 margin-bottom: 60px;
             }
 
-            &:nth-of-type(even) {
-                flex-direction: row-reverse;
-
-                @media (max-width: vars.$lg) {
-                    flex-direction: column;
-                }
-            }
 
             &-picture,
             &-content {
@@ -72,10 +65,15 @@
             }
         }
     }
-}
 
-.benefits-singular {
-    @media (max-width: vars.$lg) {
-        flex-direction: column-reverse;
+    &__btn {
+        display: flex;
+        width: 170px;
+        margin-top: 16px;
+        padding: 14px 24px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid var(--main, #6CEABD);
     }
 }

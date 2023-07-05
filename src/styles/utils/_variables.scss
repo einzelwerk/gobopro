@@ -69,4 +69,8 @@ $sm: $min-sm - 0.02px;
     color: var(--clr-accent);
     background-color: transparent;
   }
+
+  .row-reverse {
+    flex-direction: row-reverse;
+  }
 }
