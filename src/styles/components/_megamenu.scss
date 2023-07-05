@@ -4,12 +4,14 @@
 @use '../utils/functions' as fn;
 
 .megamenu {
+    display: none;
     position: absolute;
     width: 100%;
     background-color: var(--clr-dark);
     font-family: "Poppins";
     margin-block: 40px;
     padding-bottom: 40px;
+    z-index: 1000;
 
     @media(max-width: vars.$lg) {
         display: none;
@@ -17,7 +19,6 @@
 
     &.active {
         display: block;
-        z-index: 1000;
     }
 
     &__container {
