@@ -66,18 +66,31 @@
                     }
 
                     &__actions {
+                        display: flex;
+                        align-items: center;
+                        gap: 28px;
                         margin-block: 48px;
 
                         @media (max-width: vars.$lg) {
                             margin-block: 24px;
                         }
 
-                        &>button {
+                        @media(max-width: vars.$sm) {
+                            flex-direction: column;
+                        }
+
+                        &>button:first-of-type {
                             padding: 14px 24px;
                             border-radius: 10px;
                             font-size: 16px;
                             font-weight: 500;
                             line-height: 24px;
+                        }
+
+                        &>button {
+                            @media(max-width: vars.$sm) {
+                                width: 100%;
+                            }
                         }
                     }
 
@@ -156,5 +169,21 @@
         &>svg {
             color: var(--clr-white);
         }
+    }
+}
+
+.btn-gift {
+    display: flex;
+    align-items: flex-start;
+    width: 200px;
+    gap: 8px;
+    color: var(--clr-accent);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+    @media (max-width: vars.$sm) {
+        justify-content: center;
+        width: 100%;
     }
 }
