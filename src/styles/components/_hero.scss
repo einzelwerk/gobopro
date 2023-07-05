@@ -94,6 +94,8 @@
     }
 
     &-btn {
+      display: flex;
+      align-items: center;
       border: 1px solid var(--clr-accent);
       background-color: transparent;
       color: var(--clr-accent);
