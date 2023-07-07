@@ -3,6 +3,8 @@
 @use '../utils/functions' as fn;
 
 .header-1-4 {
+  $this: &;
+
   position: relative;
   z-index: 20;
   background-color: var(--clr-dark);
@@ -11,6 +13,13 @@
   &__nav-item {
     color: var(--clr-light);
     font-weight: 400;
+
+    &:hover{
+      #{$this}__nav-submenu{
+        background-color: var(--clr-dark);
+        display: block;
+      }
+    }
   }
 
   &__inner {
@@ -51,6 +60,17 @@
       margin-left: 0px;
       font-size: 14px;
     }
+    
+    &-submenu{
+      display: none;
+      position: absolute;
+      width: 100vw;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      padding-block: 40px;
+    }
 
     &-list {
       display: flex;
@@ -71,8 +91,7 @@
     }
 
     &-item {
-      position: relative;
-
+  
       &__link {
 
         &__mobile {
