@@ -135,7 +135,7 @@
             <div class="header-1-4__right">
               <div class="header-1-4__contacts"><a class="header-1-4__contacts-lang btn btn_medium" href="#">De
                   <div class="header-1-4__contacts-lang__dropdown"><span class="header-language">De</span><span class="header-language">En</span></div></a>
-                <button class="header-1-4__contacts-btn btn btn_medium btn_black" type="button">Konfigurator
+                <button class="header-1-4__contacts-btn btn btn_medium btn_black take__quiz" type="button">Konfigurator
                   <svg viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" d="M3.33398 7.99992H12.6673M12.6673 7.99992L8.00065 3.33325M12.6673 7.99992L8.00065 12.6666"></path>
                   </svg>
@@ -293,7 +293,7 @@
                     <div class="menu__bottom">
                       <div class="menu__bottom__lang"> <a class="header-1-4__contacts-lang btn btn_medium" href="#">De</a><a class="header-1-4__contacts-lang btn btn_medium" href="#">En</a></div>
                       <div class="menu__bottom__config"> 
-                        <button class="btn btn-accent">Konfigurator</button>
+                        <button class="btn btn-accent take__quiz">Konfigurator</button>
                       </div>
                     </div>
                   </div>
@@ -333,6 +333,10 @@
                   <label for="outside-usage">Drau&szlig;en</label>
                 </div>
               </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
             </div>
             <div class="quiz__content inactive" data-page="2">
               <div class="quiz__steps">
@@ -360,8 +364,12 @@
                   <label for="night">Nacht</label>
                 </div>
               </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
             </div>
-            <div class="quiz__content inactive" data-page="3">
+            <div class="quiz__content" data-page="3">
               <div class="quiz__steps">
                 <div class="quiz__steps__step completed"></div>
                 <div class="quiz__steps__step completed"></div>
@@ -434,6 +442,10 @@
                   </datalist>
                 </div>
               </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
             </div>
             <div class="quiz__content inactive" data-page="4">
               <div class="quiz__steps">
@@ -498,6 +510,10 @@
                   </datalist>
                 </div>
               </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
             </div>
             <div class="quiz__content inactive" data-page="5">
               <div class="quiz__steps">
@@ -525,8 +541,12 @@
                   <label for="lightsensor2">Nein</label>
                 </div>
               </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
             </div>
-            <div class="quiz__content" data-page="6">
+            <div class="quiz__content inactive" data-page="6">
               <div class="quiz__steps">
                 <div class="quiz__steps__step completed"></div>
                 <div class="quiz__steps__step completed"></div>
@@ -565,6 +585,10 @@
                   <label for="image5">Bis zu 9 statische Bilder</label>
                 </div>
               </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
             </div>
             <div class="quiz__content inactive" data-page="7">
               <div class="quiz__steps">
@@ -585,6 +609,10 @@
               <div class="quiz__answers">
                 <textarea placeholder="Ihre Nachricht"></textarea>
               </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
             </div>
             <div class="quiz__content inactive" data-page="8">
               <div class="quiz__steps">
@@ -603,10 +631,10 @@
                   Um eine schnelle Angebotserstellung und Bearbeitung zu gewährleisten ist esgewünscht Fotos von den räumlichen Gegebenheiten und Dateien mit Bilder an<a class="text-accent" href="mailto:info@gobopro.de">&nbsp;info@gobopro.de&nbsp;</a>zukommen zu lassen.</h2>
                 <p class="quiz__desc"> </p>
               </div>
-            </div>
-            <div class="quiz__actions">
-              <button class="btn btn-regular">Zurück</button>
-              <button class="btn btn-accent">Weiter</button>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
             </div>
             <div class="quiz__content quiz__content-form inactive" data-page="9">
               <div class="quiz__picture"><img src="./assets/images/quiz-1.png"></div>
@@ -1734,7 +1762,7 @@
                   </div>
                 </div>
               </div>
-              <button class="btn footer-3__quiz" type="button">Take the quiz!</button>
+              <button class="btn footer-3__quiz take__quiz" type="button">Take the quiz!</button>
             </div>
           </div>
           <div class="footer-3__bottom">

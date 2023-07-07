@@ -12,7 +12,20 @@
     }
 
     &__video {
+        height: 630px;
         border-radius: 20px;
+
+        @media (min-width: vars.$xl) and (max-width: vars.$xxl) {
+            height: 550px;
+        }
+
+        @media (min-width: vars.$lg) and (max-width: vars.$xl) {
+            width: 65%;
+        }
+
+        @media (min-width: vars.$md) and (max-width: vars.$lg) {
+            width: 85%;
+        }
     }
 
     &__title {
@@ -50,22 +63,6 @@
 
             &__item {
                 cursor: pointer;
-
-                &>video {
-                    height: 630px;
-
-                    @media (min-width: vars.$xl) and (max-width: vars.$xxl) {
-                        height: 550px;
-                    }
-
-                    @media (min-width: vars.$lg) and (max-width: vars.$xl) {
-                        width: 65%;
-                    }
-
-                    @media (min-width: vars.$md) and (max-width: vars.$lg) {
-                        width: 85%;
-                    }
-                }
             }
 
             @media (max-width: vars.$xl) {

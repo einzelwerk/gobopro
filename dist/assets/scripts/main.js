@@ -211,22 +211,6 @@ function initHeaderAcc() {
 
 /***/ }),
 
-/***/ "./src/scripts/modules/headerNavLinks.js":
-/*!***********************************************!*\
-  !*** ./src/scripts/modules/headerNavLinks.js ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   navLinksToggle: () => (/* binding */ navLinksToggle)
-/* harmony export */ });
-function navLinksToggle() {
-  // const links = document.querySelectorAll('.header-1-4__nav-item');
-}
-
-/***/ }),
-
 /***/ "./src/scripts/modules/languages.js":
 /*!******************************************!*\
   !*** ./src/scripts/modules/languages.js ***!
@@ -303,6 +287,32 @@ function initRangeSlider() {
     var value = inputSlider.value.value;
     sliderValue.textContent = "".concat(value, "M");
     updateSliderTrack(value);
+  });
+}
+
+/***/ }),
+
+/***/ "./src/scripts/modules/quizToggle.js":
+/*!*******************************************!*\
+  !*** ./src/scripts/modules/quizToggle.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   quizToggle: () => (/* binding */ quizToggle)
+/* harmony export */ });
+function quizToggle() {
+  var quiz = document.querySelector(".quiz");
+  var quizClose = document.querySelector(".quiz__close");
+  var quizBtn = document.querySelector(".take__quiz");
+  quizBtn.addEventListener("click", function () {
+    quiz.classList.remove("inactive");
+    document.body.style.overflow = "hidden";
+  });
+  quizClose.addEventListener("click", function () {
+    quiz.classList.add("inactive");
+    document.body.style.overflow = "auto";
   });
 }
 
@@ -11273,7 +11283,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_acc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/acc */ "./src/scripts/modules/acc.js");
 /* harmony import */ var _modules_swipers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swipers */ "./src/scripts/modules/swipers.js");
 /* harmony import */ var _modules_languages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/languages */ "./src/scripts/modules/languages.js");
-/* harmony import */ var _modules_headerNavLinks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/headerNavLinks */ "./src/scripts/modules/headerNavLinks.js");
+/* harmony import */ var _modules_quizToggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/quizToggle */ "./src/scripts/modules/quizToggle.js");
 /* harmony import */ var _modules_footerNavLinks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/footerNavLinks */ "./src/scripts/modules/footerNavLinks.js");
 /* harmony import */ var _modules_burgerMenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/burgerMenu */ "./src/scripts/modules/burgerMenu.js");
 /* harmony import */ var _modules_headerAcc__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/headerAcc */ "./src/scripts/modules/headerAcc.js");
@@ -11293,7 +11303,6 @@ __webpack_require__.r(__webpack_exports__);
 // HEADER-RELATED
 
 (0,_modules_languages__WEBPACK_IMPORTED_MODULE_3__.chooseLanguage)();
-(0,_modules_headerNavLinks__WEBPACK_IMPORTED_MODULE_4__.navLinksToggle)();
 (0,_modules_burgerMenu__WEBPACK_IMPORTED_MODULE_6__.toggleMenu)();
 (0,_modules_headerAcc__WEBPACK_IMPORTED_MODULE_7__.initHeaderAcc)();
 
@@ -11323,6 +11332,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // QUIZ
 
+(0,_modules_quizToggle__WEBPACK_IMPORTED_MODULE_4__.quizToggle)();
 (0,_modules_quizSlider__WEBPACK_IMPORTED_MODULE_9__.initRangeSlider)();
 })();
 

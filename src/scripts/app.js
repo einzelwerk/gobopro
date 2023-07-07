@@ -2,7 +2,7 @@ import 'normalize.css';
 import { initAcc } from './modules/acc';
 import { initBenefitsSwiper, initBlogSwiper, initCatalogueSwiper, initDetailedProductSwiper, initGallerySwiper, initInstructionsSwiper, initLinksSwiper, initNecessitiesSwiper, initNewsSwiper, initPartnersSwiper, initReviewsSwiper, initUsageSwiper } from './modules/swipers';
 import { chooseLanguage } from './modules/languages';
-import { navLinksToggle } from './modules/headerNavLinks';
+import { quizToggle } from './modules/quizToggle';
 import { footerLinksToggle } from './modules/footerNavLinks';
 import { toggleMenu } from './modules/burgerMenu';
 import { initHeaderAcc } from './modules/headerAcc';
@@ -12,7 +12,6 @@ import { initRangeSlider } from './modules/quizSlider';
 // HEADER-RELATED
 
 chooseLanguage();
-navLinksToggle();
 toggleMenu();
 initHeaderAcc();
 
@@ -42,5 +41,6 @@ initProductAcc();
 
 // QUIZ
 
+quizToggle();
 initRangeSlider();
 
