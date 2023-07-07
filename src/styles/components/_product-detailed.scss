@@ -85,7 +85,7 @@
                     display: flex;
                     gap: 12px;
 
-                    &>button {
+                    &>.btn-accent {
                         padding: 14px 32px;
                         border-radius: 10px;
                     }
@@ -94,6 +94,8 @@
                         display: flex;
                         gap: 6px;
                         align-items: center;
+                        padding: 14px 32px;
+                        border-radius: 10px;
                     }
                 }
 
