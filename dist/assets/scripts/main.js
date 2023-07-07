@@ -232,37 +232,60 @@ function navLinksToggle() {
     link.addEventListener("mouseover", function () {
       var linkDropdownIcon = link.children[1];
       if (link.children.length > 1) {
+        // if (!link.classList.contains("active")) {
+        //     link.classList.add("active");
+        //     megamenu.classList.add("active");
+        //     linkDropdownIcon.style.transform = `rotate(180deg)`;
+        // }
         switch (link.dataset.toggle) {
           case 'product':
             if (!navProduct.style.display || navProduct.style.display === "none") {
               megamenu.classList.add("active");
-              navProduct.style.display = "block";
+              navProduct.classList.add("active");
               linkDropdownIcon.style.transform = "rotate(180deg)";
-            } else {
-              megamenu.classList.remove("active");
-              navProduct.style.display = "none";
-              linkDropdownIcon.style.transform = "rotate(0deg)";
             }
             break;
           case 'industry':
             if (!navIndustry.style.display || navIndustry.style.display === "none") {
               megamenu.classList.add("active");
-              navIndustry.style.display = "block";
+              navIndustry.classList.add("active");
               linkDropdownIcon.style.transform = "rotate(180deg)";
-            } else {
-              megamenu.classList.remove("active");
-              navIndustry.style.display = "none";
-              linkDropdownIcon.style.transform = "rotate(0deg)";
             }
             break;
           case 'news':
             if (!navNews.style.display || navNews.style.display === "none") {
               megamenu.classList.add("active");
-              navNews.style.display = "block";
+              navNews.classList.add("active");
               linkDropdownIcon.style.transform = "rotate(180deg)";
-            } else {
+            }
+            break;
+          default:
+            break;
+        }
+      }
+    });
+    megamenu.addEventListener("mouseleave", function () {
+      var linkDropdownIcon = link.children[1];
+      if (link.children.length > 1) {
+        switch (link.dataset.toggle) {
+          case 'product':
+            if (navProduct.style.display === "block" || navProduct.classList.contains("active")) {
               megamenu.classList.remove("active");
-              navNews.style.display = "none";
+              navProduct.classList.remove("active");
+              linkDropdownIcon.style.transform = "rotate(0deg)";
+            }
+            break;
+          case 'industry':
+            if (navIndustry.style.display === "block" || navIndustry.classList.contains("active")) {
+              megamenu.classList.remove("active");
+              navIndustry.classList.remove("active");
+              linkDropdownIcon.style.transform = "rotate(0deg)";
+            }
+            break;
+          case 'news':
+            if (navNews.style.display === "block" || navNews.classList.contains("active")) {
+              megamenu.classList.remove("active");
+              navNews.classList.remove("active");
               linkDropdownIcon.style.transform = "rotate(0deg)";
             }
             break;

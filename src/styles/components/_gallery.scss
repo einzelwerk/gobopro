@@ -11,6 +11,10 @@
         margin-block: 32px;
     }
 
+    &__video {
+        border-radius: 20px;
+    }
+
     &__title {
         color: var(--clr-white);
         font-weight: 400;
@@ -46,6 +50,22 @@
 
             &__item {
                 cursor: pointer;
+
+                &>video {
+                    height: 630px;
+
+                    @media (min-width: vars.$xl) and (max-width: vars.$xxl) {
+                        height: 550px;
+                    }
+
+                    @media (min-width: vars.$lg) and (max-width: vars.$xl) {
+                        width: 65%;
+                    }
+
+                    @media (min-width: vars.$md) and (max-width: vars.$lg) {
+                        width: 85%;
+                    }
+                }
             }
 
             @media (max-width: vars.$xl) {

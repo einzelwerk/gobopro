@@ -73,4 +73,8 @@ $sm: $min-sm - 0.02px;
   .row-reverse {
     flex-direction: row-reverse;
   }
+
+  .active {
+    display: block;
+  }
 }
