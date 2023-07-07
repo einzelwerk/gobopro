@@ -305,10 +305,12 @@ __webpack_require__.r(__webpack_exports__);
 function quizToggle() {
   var quiz = document.querySelector(".quiz");
   var quizClose = document.querySelector(".quiz__close");
-  var quizBtn = document.querySelector(".take__quiz");
-  quizBtn.addEventListener("click", function () {
-    quiz.classList.remove("inactive");
-    document.body.style.overflow = "hidden";
+  var quizBtn = document.querySelectorAll(".take__quiz");
+  quizBtn.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      quiz.classList.remove("inactive");
+      document.body.style.overflow = "hidden";
+    });
   });
   quizClose.addEventListener("click", function () {
     quiz.classList.add("inactive");
