@@ -8,7 +8,7 @@ export function navLinksToggle() {
     if (!links) return;
 
     links.forEach(link => {
-        link.addEventListener("click", () => {
+        link.addEventListener("mouseover", () => {
 
             const linkDropdownIcon = link.children[1];
 

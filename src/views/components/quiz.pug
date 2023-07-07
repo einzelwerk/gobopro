@@ -1,0 +1,302 @@
+#quiz.quiz.inactive
+    .quiz__container
+        .quiz__close
+            img(src='./assets/images/X.svg' alt='Close modal')
+        .quiz__content(data-page='1').inactive
+            .quiz__steps
+                .quiz__steps__step.active
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+            .quiz__heading
+                .quiz__page
+                    span 1/8
+                h2.quiz__question Wo werden Sie den Projektor verwenden?
+                p.quiz__desc
+            .quiz__answers
+                .quiz__answers__item
+                    input#inside-usage(type='radio' name="area")
+                    label(for='inside-usage') Drinnen
+                .quiz__answers__item
+                    input#outside-usage(type='radio' name="area")
+                    label(for='outside-usage') Drau&szlig;en
+        .quiz__content(data-page='2').inactive
+            .quiz__steps
+                .quiz__steps__step.completed
+                .quiz__steps__step.active
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+            .quiz__heading
+                .quiz__page
+                    span 2/8
+                h2.quiz__question Zu welcher Tageszeit wird der Projektor eingesetzt?
+                p.quiz__desc
+            .quiz__answers
+                .quiz__answers__item
+                    input#day(type='checkbox')
+                    label(for='day') Tag
+                .quiz__answers__item
+                    input#night(type='checkbox')
+                    label(for='night') Nacht
+        .quiz__content(data-page='3').inactive
+            .quiz__steps
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.active
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+            .quiz__heading
+                .quiz__page
+                    span 3/8
+                h2.quiz__question Projektionsabstand vom Projektor zur Projektion:
+                p.quiz__desc
+            .quiz__answers
+                .slider 
+                    span.rangeValue
+                    input#fader(type="range" min="2" max="100" value="2" step="2" list="rangesettings")
+                    datalist#rangesettings 
+                        option 2
+                        option 4
+                        option 6
+                        option 8
+                        option 10
+                        option 12
+                        option 14
+                        option 16
+                        option 18
+                        option 20
+                        option 22
+                        option 24
+                        option 26
+                        option 28
+                        option 30
+                        option 32
+                        option 34
+                        option 36
+                        option 38
+                        option 40
+                        option 42
+                        option 44
+                        option 46
+                        option 48
+                        option 50
+                        option 52
+                        option 54
+                        option 56
+                        option 58
+                        option 60
+                        option 62
+                        option 64
+                        option 66
+                        option 68
+                        option 70
+                        option 72
+                        option 74
+                        option 76
+                        option 78
+                        option 80
+                        option 82
+                        option 84
+                        option 86
+                        option 88
+                        option 90
+                        option 92
+                        option 94
+                        option 96
+                        option 98
+                        option 100
+        .quiz__content(data-page='4').inactive
+            .quiz__steps
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.active
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+            .quiz__heading
+                .quiz__page
+                    span 4/8
+                h2.quiz__question Wie groß ist die Projektion?
+                p.quiz__desc
+            .quiz__answers
+                .slider 
+                    span.rangeValue
+                    input#fader(type="range" min="0.5" max="20" value="0.5" step="0.5" list="rangesettings")
+                    datalist#rangesettings 
+                        option 0.5
+                        option 1
+                        option 1.5
+                        option 2
+                        option 2.5
+                        option 3
+                        option 3.5
+                        option 4
+                        option 4.5
+                        option 5
+                        option 5.5
+                        option 6
+                        option 6.5
+                        option 7
+                        option 7.5
+                        option 8
+                        option 8.5
+                        option 9
+                        option 9.5
+                        option 10
+                        option 10.5
+                        option 11
+                        option 11.5
+                        option 12
+                        option 12.5
+                        option 13
+                        option 13.5
+                        option 14
+                        option 14.5
+                        option 15
+                        option 15.5
+                        option 16
+                        option 16.5
+                        option 17
+                        option 17.5
+                        option 18
+                        option 18.5
+                        option 19
+                        option 19.5
+                        option 20
+        .quiz__content(data-page='5').inactive
+            .quiz__steps
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.active
+                .quiz__steps__step
+                .quiz__steps__step
+                .quiz__steps__step
+            .quiz__heading
+                .quiz__page
+                    span 5/8
+                h2.quiz__question Wird ein Lichtsensor eingesetzt?
+                p.quiz__desc Von einem Projektor aus kann man mit einer Fernbedienung das projizierte Bild ändern
+            .quiz__answers
+                .quiz__answers__item
+                    input#lightsensor(type='radio' name="lightsensor")
+                    label(for='lightsensor') Ja
+                .quiz__answers__item
+                    input#lightsensor(type='radio' name="lightsensor")
+                    label(for='lightsensor') Nein
+        .quiz__content(data-page='6')
+            .quiz__steps
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.active
+                .quiz__steps__step
+                .quiz__steps__step
+            .quiz__heading
+                .quiz__page
+                    span 6/8
+                h2.quiz__question Wie viele Bilder werden benötigt?
+                p.quiz__desc
+            .quiz__answers
+                .quiz__answers__item
+                    input#lightsensor(type='radio' name="images")
+                    label(for='images') Ein rotierendes Bild
+                .quiz__answers__item
+                    input#images(type='radio' name="images")
+                    label(for='images') Ein statisches Bild
+                .quiz__answers__item
+                    input#images(type='radio' name="images")
+                    label(for='images') 3 statische Bilder
+                .quiz__answers__item
+                    input#images(type='radio' name="images")
+                    label(for='images') Bis zu 7 statische Bilder
+                .quiz__answers__item
+                    input#images(type='radio' name="images")
+                    label(for='images') Bis zu 9 statische Bilder
+        .quiz__content(data-page='7').inactive
+            .quiz__steps
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.active
+                .quiz__steps__step
+            .quiz__heading
+                .quiz__page
+                    span 7/8
+                h2.quiz__question Notizen:
+                p.quiz__desc
+            .quiz__answers
+                textarea(placeholder="Ihre Nachricht")
+        .quiz__content(data-page='8').inactive
+            .quiz__steps
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.completed
+                .quiz__steps__step.active
+            .quiz__heading
+                .quiz__page
+                    span 8/8
+                h2.quiz__question Um eine schnelle Angebotserstellung und Bearbeitung zu gewährleisten ist es
+                    | gewünscht Fotos von den räumlichen Gegebenheiten und Dateien mit Bilder an
+                    a.text-accent(href="mailto:info@gobopro.de") &nbsp;info@gobopro.de&nbsp;
+                    | zukommen zu lassen.
+                p.quiz__desc 
+        .quiz__actions
+            button.btn.btn-regular Zurück
+            button.btn.btn-accent Weiter
+        .quiz__content.quiz__content-form(data-page='9').inactive
+            .quiz__picture
+                img(src='@/assets/images/quiz-1.png')
+            .quiz__heading
+                h2.quiz__question Ihre Auswahl ist bereit!
+                    | Geben Sie Ihre E-Mail-Adresse an, damit wir Ihnen eine Auswahl von Produkten zusenden können
+                p.quiz__desc
+                form.quiz__form(action="POST")
+                    input(type='text' placeholder="Name")
+                    input(type='email' placeholder="E-mail")
+                    input(type='phone' placeholder="Telefon (optional)")
+                    p.quiz__extrainfo Durch Klicken auf die Schaltfläche “senden” stimmen Sie der Verarbeitung personenbezogener Daten zu.
+            .quiz__send 
+                button.btn.btn-accent Senden
+        .quiz__content.quiz__content-form(data-page='10').inactive
+            .quiz__picture
+                img(src='@/assets/images/quiz-2.png')
+            .quiz__heading
+                h2.quiz__question Vielen Dank für Ihre Teilnahme!
+                p.quiz__desc Wir haben eine Auswahl von Produkten an Ihre E-Mail-Adresse gesendet
+                    | Wenn Sie noch Fragen haben, kontaktieren Sie uns bitte direkt
+                    | Wir werden die am besten geeignete Option für Sie finden
+                .quiz__contacts 
+                    .quiz__contacts__item 
+                        h4.quiz__contacts__item__title Telefon
+                        a.quiz__contacts__item__detail(href="tel:+4973039403952") +49 7303 9403 952
+                    .quiz__contacts__item 
+                        h4.quiz__contacts__item__title E-mail
+                        a.quiz__contacts__item__detail(href="mailto:info@gobopro.de") info@gobopro.de
+            .quiz__send 
+                button.btn.btn-accent Back to Home
+

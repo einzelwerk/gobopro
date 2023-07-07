@@ -7,6 +7,7 @@ import { footerLinksToggle } from './modules/footerNavLinks';
 import { toggleMenu } from './modules/burgerMenu';
 import { initHeaderAcc } from './modules/headerAcc';
 import { initProductAcc } from './modules/productInfoAcc';
+import { initRangeSlider } from './modules/quizSlider';
 
 // HEADER-RELATED
 
@@ -42,4 +43,8 @@ initProductAcc();
 // PAGINATION
 
 // initPagination();
+
+// QUIZ
+
+initRangeSlider();
 
