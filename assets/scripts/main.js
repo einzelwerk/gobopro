@@ -229,7 +229,7 @@ function navLinksToggle() {
   var navNews = document.querySelector('.megamenu__container-news');
   if (!links) return;
   links.forEach(function (link) {
-    link.addEventListener("click", function () {
+    link.addEventListener("mouseover", function () {
       var linkDropdownIcon = link.children[1];
       if (link.children.length > 1) {
         switch (link.dataset.toggle) {
@@ -326,6 +326,32 @@ function initProductAcc() {
       accTrigger.style.transform = "rotate(0deg)";
       panel.classList.add("more-info__acc__body-closed");
     }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/scripts/modules/quizSlider.js":
+/*!*******************************************!*\
+  !*** ./src/scripts/modules/quizSlider.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initRangeSlider: () => (/* binding */ initRangeSlider)
+/* harmony export */ });
+var sliderValue = document.querySelector(".slider span");
+var inputSlider = document.querySelector(".slider input");
+function updateSliderTrack(value) {
+  var w = value * parseInt(window.getComputedStyle(inputSlider).getPropertyValue('width'), 10) / 100;
+  inputSlider.style.boxShadow = "inset ".concat(w, "px 0 #6CEABD");
+}
+function initRangeSlider() {
+  inputSlider.addEventListener('input', function () {
+    var value = inputSlider.value.value;
+    sliderValue.textContent = "".concat(value, "M");
+    updateSliderTrack(value);
   });
 }
 
@@ -11301,6 +11327,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_burgerMenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/burgerMenu */ "./src/scripts/modules/burgerMenu.js");
 /* harmony import */ var _modules_headerAcc__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/headerAcc */ "./src/scripts/modules/headerAcc.js");
 /* harmony import */ var _modules_productInfoAcc__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/productInfoAcc */ "./src/scripts/modules/productInfoAcc.js");
+/* harmony import */ var _modules_quizSlider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/quizSlider */ "./src/scripts/modules/quizSlider.js");
+
 
 
 
@@ -11345,6 +11373,10 @@ __webpack_require__.r(__webpack_exports__);
 // PAGINATION
 
 // initPagination();
+
+// QUIZ
+
+(0,_modules_quizSlider__WEBPACK_IMPORTED_MODULE_9__.initRangeSlider)();
 })();
 
 /******/ })()
