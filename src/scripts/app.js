@@ -40,10 +40,6 @@ initDetailedProductSwiper();
 
 initProductAcc();
 
-// PAGINATION
-
-// initPagination();
-
 // QUIZ
 
 initRangeSlider();

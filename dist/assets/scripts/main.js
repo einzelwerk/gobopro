@@ -11370,10 +11370,6 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_modules_productInfoAcc__WEBPACK_IMPORTED_MODULE_8__.initProductAcc)();
 
-// PAGINATION
-
-// initPagination();
-
 // QUIZ
 
 (0,_modules_quizSlider__WEBPACK_IMPORTED_MODULE_9__.initRangeSlider)();
