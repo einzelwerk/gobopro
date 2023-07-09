@@ -277,16 +277,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initRangeSlider: () => (/* binding */ initRangeSlider)
 /* harmony export */ });
 var sliderValue = document.querySelector(".slider span");
-var inputSlider = document.querySelector(".slider input");
-function updateSliderTrack(value) {
-  var w = value * parseInt(window.getComputedStyle(inputSlider).getPropertyValue('width'), 10) / 100;
-  inputSlider.style.boxShadow = "inset ".concat(w, "px 0 #6CEABD");
-}
+var inputSliders = document.querySelectorAll(".slider input");
 function initRangeSlider() {
-  inputSlider.addEventListener('input', function () {
-    var value = inputSlider.value.value;
-    sliderValue.textContent = "".concat(value, "M");
-    updateSliderTrack(value);
+  inputSliders.forEach(function (inputSlider) {
+    inputSlider.addEventListener('input', function () {
+      // eslint-disable-next-line
+      var value = inputSlider.value;
+      console.log(value);
+      var w = value * parseInt(window.getComputedStyle(inputSlider).getPropertyValue('width'), 10) / 100;
+      // eslint-disable-next-line
+      inputSlider.style.boxShadow = "inset ".concat(w, "px 0 #6CEABD");
+      sliderValue.textContent = "".concat(value, "M");
+    });
   });
 }
 
@@ -308,6 +310,7 @@ function quizToggle() {
   var quizBtn = document.querySelectorAll(".take__quiz");
   quizBtn.forEach(function (btn) {
     btn.addEventListener("click", function () {
+      window.scrollTo(0, 0);
       quiz.classList.remove("inactive");
       document.body.style.overflow = "hidden";
     });
