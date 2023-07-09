@@ -6,6 +6,7 @@ export function quizToggle() {
 
     quizBtn.forEach(btn => {
         btn.addEventListener("click", () => {
+            window.scrollTo(0, 0);
             quiz.classList.remove("inactive")
             document.body.style.overflow = "hidden"
         });
