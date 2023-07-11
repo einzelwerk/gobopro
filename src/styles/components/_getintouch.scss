@@ -46,7 +46,7 @@
         flex-direction: column;
         border-radius: 20px;
         padding: 50px;
-        height: 1040px;
+        // height: 1040px;
 
         @media (min-width: vars.$lg) and (max-width: vars.$xl) {
             padding: 25px;
@@ -181,12 +181,12 @@
     }
 
     &__img {
-        height: 1040px;
+        // height: 1040px;
         border-radius: 20px;
 
-        @media (max-width: vars.$md) {
-            height: 700px;
-        }
+        // @media (max-width: vars.$md) {
+        //     height: 700px;
+        // }
 
         &-wrap {
             width: 50%;
