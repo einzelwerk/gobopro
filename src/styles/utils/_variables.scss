@@ -77,4 +77,8 @@ $sm: $min-sm - 0.02px;
   .active {
     display: block;
   }
+
+  .visible {
+    display: flex;
+  }
 }
