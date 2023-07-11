@@ -143,19 +143,16 @@
             margin-top: 24px;
         }
 
-        &__field {
+        &>input {
+            width: 16px;
+            height: 16px;
+            margin-right: 12px;
+            background-color: transparent;
+            border: 1px solid var(--clr-light);
+            border-radius: 3px;
 
-            &>input {
-                width: 16px;
-                height: 16px;
-                margin-right: 12px;
-                background-color: transparent;
-                border: 1px solid var(--clr-light);
-                border-radius: 3px;
-
-                &:checked {
-                    content: url('../../assets/images/input-checked.svg');
-                }
+            &:checked {
+                content: url('../../assets/images/input-checked.svg');
             }
         }
     }
