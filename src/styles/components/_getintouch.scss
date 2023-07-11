@@ -143,16 +143,19 @@
             margin-top: 24px;
         }
 
-        &>input {
-            width: 16px;
-            height: 16px;
-            margin-right: 12px;
-            background-color: transparent;
-            border: 1px solid var(--clr-light);
-            border-radius: 3px;
+        &__field {
 
-            &:checked {
-                content: url('../../assets/images/input-checked.svg');
+            &>input {
+                width: 16px;
+                height: 16px;
+                margin-right: 12px;
+                background-color: transparent;
+                border: 1px solid var(--clr-light);
+                border-radius: 3px;
+
+                &:checked {
+                    content: url('../../assets/images/input-checked.svg');
+                }
             }
         }
     }
@@ -182,12 +185,7 @@
     }
 
     &__img {
-        // height: 1040px;
         border-radius: 20px;
-
-        // @media (max-width: vars.$md) {
-        //     height: 700px;
-        // }
 
         &-wrap {
             width: 50%;
