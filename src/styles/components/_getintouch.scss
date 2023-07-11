@@ -137,6 +137,7 @@
     }
 
     &__privacy {
+        display: flex;
 
         @media (max-width: vars.$xl) {
             margin-top: 24px;
