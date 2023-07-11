@@ -11,18 +11,23 @@ section.feedback-3.section.block
                             .feedback-3__field
                                 label(for='feedback-name') Vornamen
                                 input#feedback-name(type='text' placeholder='Name')
+                                span.input-error Dieses Feld muss ausgefüllt werden.
                             .feedback-3__field
                                 label(for='feedback-surname') Nachname
                                 input#feedback-surname(type='text' placeholder='Surname')
+                                span.input-error Dieses Feld muss ausgefüllt werden.
                             .feedback-3__field
                                 label(for='feedback-email') Email
                                 input#feedback-email(type='email' placeholder='Email')
+                                span.input-error Dieses Feld muss ausgefüllt werden.
                             .feedback-3__field
                                 label(for='feedback-tel') Telefonnummer
                                 input#feedback-tel(type='tel' placeholder='Phone number')
+                                span.input-error Dieses Feld muss ausgefüllt werden.
                             .feedback-3__field
                                 label(for='feedback-message') Nachricht
                                 textarea#feedback-message(name='message' placeholder='Message' rows='1')
+                                span.input-error Dieses Feld muss ausgefüllt werden.
                         .feedback-3__bottom
                             .feedback-3__privacy
                                 input#privacy-policy(type='checkbox' name='privacy-policy')

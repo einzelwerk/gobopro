@@ -45,13 +45,13 @@
 
     &__list {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         width: 100%;
-        gap: 30px;
+        gap: 200px;
 
         @media (max-width: vars.$lg) {
             flex-direction: column;
+            gap: 24px;
         }
     }
 
