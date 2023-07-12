@@ -35,6 +35,23 @@
                 height: 190px;
                 border-radius: 20px;
                 background: #232428;
+                cursor: pointer;
+
+                &-icon {
+                    width: 24px;
+                    height: 24px;
+                    background-image: url(../../assets/images/pdf.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    &:hover {
+                        background-image: url(../../assets/images/pdf-active.svg);
+                    }
+                }
+
+                &:hover {
+                    opacity: .88;
+                }
 
                 @media (max-width: 440px) {
                     width: 100%;

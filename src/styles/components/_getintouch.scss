@@ -131,6 +131,11 @@
             }
         }
 
+        input.incorrect,
+        textarea.incorrect {
+            border: 1px solid #ED3838;
+        }
+
         textarea {
             padding: 12px 16px;
         }

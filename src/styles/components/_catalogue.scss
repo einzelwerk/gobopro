@@ -37,6 +37,12 @@
                 width: 410px;
                 border: 1px solid #3F4146;
                 border-radius: 20px;
+                cursor: pointer;
+                transition: opacity .25s ease-in-out;
+
+                &:hover {
+                    opacity: .6;
+                }
 
                 &-picture {
                     background: linear-gradient(0deg, #19191C 0%, #19191C 100%), radial-gradient(128.11% 128.11% at 50.00% -32.40%, #6CEABD 0%, rgba(108, 234, 189, 0.36) 43.11%, rgba(108, 234, 189, 0.00) 100%), rgba(108, 234, 189, 0.10);

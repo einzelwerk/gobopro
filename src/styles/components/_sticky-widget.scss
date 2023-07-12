@@ -1,0 +1,36 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+
+.sticky-widget {
+    position: fixed;
+    right: 0;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-accent);
+    padding: 4px;
+    gap: 4px;
+    border-radius: 10px;
+
+    &__item {
+        border-radius: 10px;
+
+        &:hover {
+            background-color: rgba(45, 96, 77, 0.5);
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+        }
+    }
+}

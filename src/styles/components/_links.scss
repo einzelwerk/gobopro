@@ -152,6 +152,11 @@
         flex-direction: column;
         gap: 20px;
         height: 100%;
+        transition: opacity .25s ease-in-out;
+
+        &:hover {
+            opacity: .6;
+        }
     }
 
     &__img {

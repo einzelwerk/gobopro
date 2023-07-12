@@ -108,6 +108,11 @@
     &__item {
         height: 100%;
         max-width: 410px;
+        transition: opacity .25s ease-in-out;
+
+        &:hover {
+            opacity: .6;
+        }
 
         @media (min-width: vars.$xl) and (max-width: vars.$xxl) {
             max-width: 360px;

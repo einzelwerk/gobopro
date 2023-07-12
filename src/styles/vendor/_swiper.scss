@@ -3,6 +3,7 @@
 @use "../utils/functions" as fn;
 
 .swiper {
+
   &-button-prev,
   &-button-next {
     &::after {
@@ -10,4 +11,3 @@
     }
   }
 }
-

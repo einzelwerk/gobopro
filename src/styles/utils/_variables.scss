@@ -62,12 +62,26 @@ $sm: $min-sm - 0.02px;
   .btn-accent {
     background-color: var(--clr-accent);
     color: var(--clr-black);
+
+    &:hover {
+      opacity: .8;
+    }
   }
 
   .btn-regular {
     border: 1px solid var(--clr-accent);
     color: var(--clr-accent);
     background-color: transparent;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .btn_black {
+    &:hover {
+      opacity: .8;
+    }
   }
 
   .row-reverse {

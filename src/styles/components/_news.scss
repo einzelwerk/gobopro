@@ -85,6 +85,11 @@
 
     &__item {
         height: 100%;
+        transition: opacity .25s ease-in-out;
+
+        &:hover {
+            opacity: .6;
+        }
 
         @media (min-width: vars.$xxl) {
             width: 410px;

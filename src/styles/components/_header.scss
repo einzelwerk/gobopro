@@ -14,14 +14,16 @@
     color: var(--clr-light);
     font-weight: 400;
 
-    &:hover{
-      #{$this}__nav-submenu{
+    &:hover {
+      #{$this}__nav-submenu {
         background-color: var(--clr-dark);
         display: block;
       }
 
-      #{$this}__nav-popup__btn{
+      #{$this}__nav-popup__btn {
         transform: rotate(180deg);
+        color: var(--clr-white);
+        fill: var(--clr-white);
       }
     }
   }
@@ -64,8 +66,8 @@
       margin-left: 0px;
       font-size: 14px;
     }
-    
-    &-submenu{
+
+    &-submenu {
       display: none;
       position: absolute;
       width: 100%;
@@ -96,6 +98,10 @@
 
     &-item {
       padding-block: 40px;
+
+      &:hover {
+        color: var(--clr-white);
+      }
 
       &__link {
 
@@ -240,6 +246,10 @@
 
     &-info {
       color: var(--clr-white);
+
+      &:hover {
+        color: var(--clr-accent);
+      }
     }
 
     &-btn {
