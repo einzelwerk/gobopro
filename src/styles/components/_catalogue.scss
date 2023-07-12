@@ -96,6 +96,8 @@
         margin-top: 64px;
 
         &__products {
+            display: flex;
+            align-items: center;
             height: 60px;
             color: var(--clr-accent);
             font-size: 16px;
