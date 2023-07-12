@@ -1,0 +1,136 @@
+// Utils
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.singular-news {
+    font-family: "Poppins";
+
+    &__top {
+        margin-block: 100px 60px;
+
+        @media (max-width: vars.$lg) {
+            display: flex;
+            flex-direction: column;
+            margin-block: 32px;
+        }
+
+        &__date {
+            color: #BABABB;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 16px;
+
+            @media (max-width: vars.$lg) {
+                order: 2;
+            }
+        }
+
+        &__title {
+            color: var(--clr-white);
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: -0.48px;
+            margin-bottom: 60px;
+
+            @media (max-width: vars.$lg) {
+                font-size: 40px;
+                margin-bottom: 0;
+                order: 3;
+            }
+        }
+
+        &__picture {
+            @media (max-width: vars.$lg) {
+                margin-bottom: 24px;
+                order: 1;
+            }
+        }
+    }
+
+    &__bottom {
+        margin-block: 60px;
+        display: flex;
+        gap: 120px;
+
+        @media (max-width: vars.$lg) {
+            margin-block: 32px;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        &__content {
+            width: 60%;
+
+            @media(max-width: vars.$lg) {
+                width: 100%;
+                order: 2;
+                margin-top: 32px;
+            }
+
+            &-title {
+                color: var(--clr-white);
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 32px;
+                letter-spacing: -0.5px;
+                margin-bottom: 16px;
+
+                @media (max-width: vars.$lg) {
+                    font-size: 20px;
+                }
+            }
+
+            &-desc {
+                color: var(--clr-light);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                margin-bottom: 24px;
+            }
+
+        }
+
+        &__nav {
+
+            @media(max-width: vars.$lg) {
+                order: 1;
+                margin-block: 32px;
+            }
+
+            &__title {
+                color: var(--clr-white);
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 32px;
+                letter-spacing: -0.5px;
+            }
+
+            &__links {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                margin-top: 32px;
+                margin-left: 16px;
+                list-style-type: disc;
+
+                &__item {
+                    color: #BABABB;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+
+                    &__link {
+                        display: block;
+                    }
+
+                    &:hover {
+                        color: var(--clr-accent);
+                    }
+                }
+            }
+        }
+    }
+}

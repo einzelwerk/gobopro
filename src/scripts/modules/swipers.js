@@ -177,7 +177,7 @@ export function initNewsSwiper() {
             },
             992: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                spaceBetween: 30,
                 enabled: true,
             },
         }

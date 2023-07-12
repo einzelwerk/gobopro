@@ -86,6 +86,10 @@
     &__item {
         height: 100%;
 
+        @media (min-width: vars.$xxl) {
+            width: 410px;
+        }
+
         &-content {
             display: flex;
             flex-direction: column;
