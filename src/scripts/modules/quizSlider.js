@@ -7,7 +7,6 @@ export function initRangeSlider() {
         inputSlider.addEventListener('input', () => {
             // eslint-disable-next-line
             const value = inputSlider.value;
-            console.log(value);
             const w = value * (parseInt(window.getComputedStyle(inputSlider).getPropertyValue('width'), 10)) / 100;
             // eslint-disable-next-line
             inputSlider.style.boxShadow = `inset ${w}px 0 #6CEABD`;

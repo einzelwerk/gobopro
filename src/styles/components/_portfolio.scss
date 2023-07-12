@@ -16,6 +16,33 @@
         flex-direction: column;
         align-items: center;
 
+        &__nav {
+            display: flex;
+            width: 100%;
+            gap: 40px;
+            justify-content: flex-start;
+            margin-bottom: 40px;
+
+            &__item {
+                color: var(--clr-white);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                padding: 8px 16px;
+                border-radius: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--clr-light);
+                }
+
+                &.tab-active {
+                    color: var(--clr-light);
+                    background-color: var(--clr-white);
+                }
+            }
+        }
+
         &__title {
             width: 100%;
             color: var(--neutral-100, #F2F4F7);
@@ -34,6 +61,19 @@
 
             &__item {
                 width: 31%;
+                height: 100%;
+
+                &-content {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                }
+
+                &-text-block {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                }
             }
         }
     }
@@ -105,20 +145,6 @@
         margin-top: 70px;
     }
 
-    &__item {
-        height: 100%;
-
-        &-content {
-            display: flex;
-            flex-direction: column;
-        }
-
-        &-text-block {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-    }
 
     &__info {
         color: #BABABB;
@@ -149,6 +175,7 @@
         display: flex;
         gap: 8px;
         justify-content: space-between;
+        align-items: center;
         font-weight: 500;
         font-size: 24px;
         line-height: 32px;
@@ -174,5 +201,108 @@
             gap: 8px;
             margin-top: auto;
         }
+    }
+}
+
+.fancybox__container {
+    --fancybox-color: var(--clr-dark);
+    --fancybox-bg: var(--clr-dark);
+    opacity: 0.9800000190734863;
+
+    --f-spinner-color-1: rgba(0, 0, 0, 0.1);
+    --f-spinner-color-2: rgba(17, 24, 28, 0.8);
+}
+
+.fancybox__slide.has-image>.fancybox__content {
+    padding-inline: 16px;
+}
+
+.fancybox__nav {
+    --f-button-next-pos: 72px;
+    --f-button-prev-pos: 72px;
+
+    --f-button-width: 56px;
+    --f-button-height: 56px;
+
+    --f-button-color: #333;
+    --f-button-hover-color: #333;
+
+    --f-button-bg: transparent;
+    --f-button-border: 1px solid var(--clr-light);
+
+    --f-button-svg-height: 12px;
+    --f-button-svg-width: 12px;
+
+    --f-button-svg-stroke-width: 3;
+    --f-button-svg-filter: none;
+}
+
+.fancybox__toolbar {
+    --f-button-color: var(--clr-light);
+    --f-button-hover-color: var(--clr-white);
+
+    --f-button-width: 56px;
+    --f-button-height: 56px;
+
+    --f-button-bg: transparent;
+    --f-button-hover-bg: transparent;
+    --f-button-active-bg: transparent;
+
+    --f-button-svg-stroke-width: 1.5;
+    --f-button-svg-filter: none;
+
+    background: var(--clr-dark);
+    text-shadow: none;
+}
+
+.fancybox__slide {
+    padding: 12px 0px;
+}
+
+.f-thumbs__track {
+    width: 100%;
+}
+
+.fancybox__thumbs.is-classic {
+    --f-thumb-opacity: 1;
+    --f-thumb-hover-opacity: 1;
+    --f-thumb-selected-opacity: 1;
+
+    --f-thumb-width: 120px;
+    --f-thumb-height: 120px;
+    --f-thumb-gap: 24px;
+    --f-thumb-offset: 5px;
+    --f-thumb-outline: 0;
+}
+
+.fancybox__thumbs.is-classic .f-thumbs__slide {
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.fancybox__thumbs.is-classic .f-thumbs__slide:hover,
+.fancybox__thumbs.is-classic .f-thumbs__slide.is-nav-selected {
+    border: 1px solid #6b7280;
+}
+
+[data-fancybox-close] {
+    margin: 24px;
+}
+
+.f-button.is-prev {
+    content: url(../../assets/images/gallery-prev.svg);
+    padding: 10px;
+
+    @media (max-width: vars.$lg) {
+        display: none;
+    }
+}
+
+.f-button.is-next {
+    content: url(../../assets/images/gallery-next.svg);
+    padding: 10px;
+
+    @media (max-width: vars.$lg) {
+        display: none;
     }
 }

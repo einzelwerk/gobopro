@@ -8,6 +8,7 @@ import { toggleMenu } from './modules/burgerMenu';
 import { initHeaderAcc } from './modules/headerAcc';
 import { initProductAcc } from './modules/productInfoAcc';
 import { initRangeSlider } from './modules/quizSlider';
+import { initPortfolioGallery } from './modules/portfolioGallery';
 
 // HEADER-RELATED
 
@@ -44,3 +45,6 @@ initProductAcc();
 quizToggle();
 initRangeSlider();
 
+// PORTFOLIO GALLERY
+
+initPortfolioGallery();
