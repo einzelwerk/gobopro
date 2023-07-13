@@ -109,6 +109,7 @@
         height: 100%;
         max-width: 410px;
         transition: opacity .25s ease-in-out;
+        cursor: pointer;
 
         &:hover {
             opacity: .6;
