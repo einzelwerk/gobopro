@@ -65,6 +65,20 @@
             }
         }
 
+        &__mobile-filter {
+            display: flex;
+            gap: 8px;
+            color: var(--clr-white);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 24px;
+
+            @media (min-width: vars.$lg) {
+                display: none;
+            }
+        }
+
         &__filters {
             display: flex;
             gap: 12px;

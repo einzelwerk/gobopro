@@ -13,7 +13,7 @@
 
     &__container {
 
-        &__title {
+        &>h1 {
             color: var(--clr-white);
             font-size: 48px;
             font-weight: 400;
@@ -34,7 +34,7 @@
     &__content {
         max-width: 860px;
 
-        &__point {
+        &>h2 {
             color: var(--clr-white);
             font-size: 24px;
             font-weight: 500;
@@ -47,7 +47,7 @@
             }
         }
 
-        &__title {
+        &>h3 {
             color: var(--clr-white);
             font-size: 20px;
             font-weight: 500;
@@ -60,7 +60,7 @@
             }
         }
 
-        &__subtitle {
+        &>h4 {
             color: var(--clr-white);
             font-size: 16px;
             font-weight: 500;
@@ -72,7 +72,7 @@
             }
         }
 
-        &__desc {
+        &>p {
             color: var(--clr-light);
             font-size: 16px;
             font-weight: 400;

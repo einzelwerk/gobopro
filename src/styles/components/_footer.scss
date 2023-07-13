@@ -38,8 +38,15 @@ footer {
                 height: 40px;
                 cursor: pointer;
 
+
                 &>svg {
                     fill: var(--clr-dark);
+
+                    &:hover {
+                        &>path {
+                            fill: var(--clr-accent);
+                        }
+                    }
                 }
             }
         }

@@ -9,6 +9,7 @@ import { initHeaderAcc } from './modules/headerAcc';
 import { initProductAcc } from './modules/productInfoAcc';
 import { initRangeSlider } from './modules/quizSlider';
 import { initPortfolioGallery } from './modules/portfolioGallery';
+import { initFilterToggle } from './modules/filterToggle';
 
 // HEADER-RELATED
 
@@ -35,6 +36,10 @@ initCatalogueSwiper();
 initNecessitiesSwiper();
 initLinksSwiper();
 initDetailedProductSwiper();
+
+// PRODUCTS PAGE
+
+initFilterToggle();
 
 // PRODUCT PAGE
 
