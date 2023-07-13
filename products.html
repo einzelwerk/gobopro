@@ -292,6 +292,72 @@
         </div>
       </header>
       <main class="main">
+        <div class="mobile-filter container"> 
+          <div class="mobile-filter__container">
+            <button class="mobile-filter__back btn"> <img src="./assets/images/menu-back.svg" alt="Go back">Filter</button>
+            <div class="mobile-filter__content">
+              <div class="mobile-filter__content-item">
+                <div class="mobile-filter__content-item__title">Serie</div>
+                <div class="mobile-filter__content-item__options">
+                  <div class="mobile-filter__content-item__options__option">GBP-Serie</div>
+                  <div class="mobile-filter__content-item__options__option">MH-Serie</div>
+                  <div class="mobile-filter__content-item__options__option">X-Serie</div>
+                </div>
+              </div>
+              <div class="mobile-filter__content-item"> 
+                <div class="mobile-filter__content-item__toggle"> <span>Fernbedienung</span>
+                  <label class="toggle">
+                    <input class="mobile-filter__switch" type="checkbox"><span class="toggle-thumb round"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="mobile-filter__content-item"> 
+                <div class="mobile-filter__content-item__toggle"> <span>Gobo-Wechsler</span>
+                  <label class="toggle">
+                    <input class="mobile-filter__switch" type="checkbox"><span class="toggle-thumb round"></span>
+                  </label>
+                </div>
+                <div class="mobile-filter__content-item__options">
+                  <div class="mobile-filter__content-item__options__option">3</div>
+                  <div class="mobile-filter__content-item__options__option">4</div>
+                  <div class="mobile-filter__content-item__options__option">3-7</div>
+                  <div class="mobile-filter__content-item__options__option">3-9</div>
+                </div>
+              </div>
+              <div class="mobile-filter__content-item">
+                <div class="mobile-filter__content-item__title">Projektionsentfernung</div>
+                <div class="mobile-filter__content-item__range">
+                  <div class="slider sliderFilter"><span class="rangeValueFilter"></span>
+                    <input id="fader1" type="range" min="2" max="18" value="2" step="2" list="rangesettings">
+                    <datalist id="rangesettings"> 
+                      <option>2</option>
+                      <option>4</option>
+                      <option>6</option>
+                      <option>8</option>
+                      <option>10</option>
+                      <option>12</option>
+                      <option>14</option>
+                      <option>16</option>
+                      <option>18</option>
+                    </datalist>
+                  </div>
+                </div>
+              </div>
+              <div class="mobile-filter__content-item"> 
+                <div class="mobile-filter__content-item__toggle"> <span>Bildrotation</span>
+                  <label class="toggle">
+                    <input class="mobile-filter__switch" type="checkbox"><span class="toggle-thumb round"></span>
+                  </label>
+                </div>
+                <div class="mobile-filter__content-item__options">
+                  <div class="mobile-filter__content-item__options__option">Beidseitig</div>
+                  <div class="mobile-filter__content-item__options__option">Einseitig</div>
+                </div>
+              </div>
+              <btn class="mobile-filter__apply btn btn-accent">Anwenden</btn>
+            </div>
+          </div>
+        </div>
         <section class="products section" id="products">
           <div class="products__container container">
             <h1 class="products__container__title">Produkte</h1>
@@ -304,6 +370,7 @@
                 </div>
               </div>
             </div>
+            <div class="products__container__mobile-filter"> <img src="./assets/images/filter-icon.svg">Filter</div>
             <div class="products__container__filters">
               <select class="products__container__filters__item" id="line" name="line">
                 <option class="products__container__filters__item__option" value="Serie" selected="true" disabled="disabled">
