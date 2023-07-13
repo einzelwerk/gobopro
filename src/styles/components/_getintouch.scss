@@ -184,6 +184,11 @@
         font-size: 18px;
         font-weight: 500;
         line-height: 24px;
+        transition: opacity .25s ease-in-out;
+
+        &:hover {
+            opacity: .7;
+        }
     }
 
     &__img {

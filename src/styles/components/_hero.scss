@@ -17,9 +17,14 @@
     margin-block: 32px;
   }
 
-  &__link:hover {
-    text-decoration: var(--clr-accent) underline;
+  &__link {
+    transition: text-decoration .15s ease-in-out;
+
+    &:hover {
+      text-decoration: var(--clr-accent) underline;
+    }
   }
+
 
   &__text {
     display: flex;

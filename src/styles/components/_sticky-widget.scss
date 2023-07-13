@@ -20,6 +20,7 @@
 
     &__item {
         border-radius: 10px;
+        transition: background-color .15s ease-in-out;
 
         &:hover {
             background-color: rgba(45, 96, 77, 0.5);

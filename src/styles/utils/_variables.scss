@@ -62,6 +62,7 @@ $sm: $min-sm - 0.02px;
   .btn-accent {
     background-color: var(--clr-accent);
     color: var(--clr-black);
+    transition: opacity .15s ease-in-out;
 
     &:hover {
       opacity: .8;
@@ -72,6 +73,7 @@ $sm: $min-sm - 0.02px;
     border: 1px solid var(--clr-accent);
     color: var(--clr-accent);
     background-color: transparent;
+    transition: opacity .15s ease-in-out;
 
     &:hover {
       opacity: .8;
@@ -79,6 +81,8 @@ $sm: $min-sm - 0.02px;
   }
 
   .btn_black {
+    transition: opacity .15s ease-in-out;
+
     &:hover {
       opacity: .8;
     }

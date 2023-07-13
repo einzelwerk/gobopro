@@ -13,6 +13,7 @@
   &__nav-item {
     color: var(--clr-light);
     font-weight: 400;
+    transition: background-color .25s ease-in-out;
 
     &:hover {
       #{$this}__nav-submenu {
