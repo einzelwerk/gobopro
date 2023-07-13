@@ -112,6 +112,11 @@
     }
 
     &__item {
+        transition: opacity .25s ease-in-out;
+
+        &:hover {
+            opacity: .7;
+        }
 
         &-content {
             display: flex;

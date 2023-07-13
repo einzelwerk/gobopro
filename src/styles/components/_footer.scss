@@ -195,6 +195,14 @@ footer {
     &__links {
         display: flex;
         gap: 16px;
+
+        &-link {
+            transition: color .25s ease-in-out;
+
+            &:hover {
+                color: var(--clr-white);
+            }
+        }
     }
 }
 

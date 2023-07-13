@@ -37,16 +37,20 @@
                 background: #232428;
                 cursor: pointer;
 
+                $this: &;
+
+                &:hover {
+                    #{$this}-icon {
+                        background-image: url(../../assets/images/pdf-active.svg);
+                    }
+                }
+
                 &-icon {
                     width: 24px;
                     height: 24px;
                     background-image: url(../../assets/images/pdf.svg);
                     background-size: cover;
                     background-repeat: no-repeat;
-
-                    &:hover {
-                        background-image: url(../../assets/images/pdf-active.svg);
-                    }
                 }
 
                 &:hover {

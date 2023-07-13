@@ -104,6 +104,7 @@ function initFilterToggle() {
   var filterToggle = document.querySelector(".products__container__mobile-filter");
   var filterClose = document.querySelector(".mobile-filter__back");
   var filterMobile = document.querySelector(".mobile-filter");
+  if (!filterClose && !filterMobile && !filterToggle) return;
   filterToggle.addEventListener("click", function () {
     if (!filterMobile || filterMobile.style.display === "none" || filterMobile.style.display === "") {
       filterMobile.style.display = "flex";
@@ -299,7 +300,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function initPortfolioGallery() {
-  _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox.bind('[data-fancybox="gallery"]', {
+  _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox.bind('[data-fancybox]', {
     compact: false,
     idle: false,
     animated: false,

@@ -74,7 +74,7 @@
       display: none;
       position: absolute;
       width: 100%;
-      top: 100%;
+      top: 80%;
       left: 50%;
       transform: translateX(-50%);
       z-index: 999;
@@ -239,11 +239,11 @@
         flex-direction: column;
         gap: 12px;
         padding: 16px 12px;
-        border: 1px solid var(--clr-light);
+        border: 1px solid var(--clr-white);
         border-radius: 23px;
         left: 0;
         bottom: -85px;
-        background-color: transparent;
+        background-color: var(--clr-dark);
       }
     }
 

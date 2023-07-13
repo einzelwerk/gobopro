@@ -3,6 +3,8 @@ export function initFilterToggle() {
     const filterClose = document.querySelector(".mobile-filter__back");
     const filterMobile = document.querySelector(".mobile-filter");
 
+    if (!filterClose && !filterMobile && !filterToggle) return;
+
     filterToggle.addEventListener("click", () => {
         if (!filterMobile || filterMobile.style.display === "none" || filterMobile.style.display === "") {
             filterMobile.style.display = "flex";
