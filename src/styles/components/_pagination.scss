@@ -46,10 +46,11 @@
 }
 
 .pagination-number:hover,
-.pagination-button:not(.disabled):hover {
-    color: #fff;
+.pagination-button:not(.disabled):hover,
+.pagination-number.pagination-active {
+    color: var(--clr-white);
 }
 
 .pagination-number.active {
-    color: #fff;
+    color: var(--clr-white);
 }
