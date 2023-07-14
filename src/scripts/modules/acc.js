@@ -8,16 +8,16 @@ export function initAcc() {
       const panel = accItem.nextElementSibling;
       const accTrigger = accItem.children[2];
 
-      if (panel.classList.contains("acc__body-closed") && !accTrigger.classList.contains("acc__trigger-open")) {
+      if (!panel.classList.contains("acc__body-active") && !accTrigger.classList.contains("acc__trigger-open")) {
         accTrigger.classList.add("acc__trigger-open");
         accTrigger.children[0].style.display = "none";
         accTrigger.children[1].style.display = "block";
-        panel.classList.remove("acc__body-closed");
+        panel.classList.add("acc__body-active");
       } else {
         accTrigger.classList.remove("acc__trigger-open");
         accTrigger.children[0].style.display = "block";
         accTrigger.children[1].style.display = "none";
-        panel.classList.add("acc__body-closed");
+        panel.classList.remove("acc__body-active");
       }
     })
   })

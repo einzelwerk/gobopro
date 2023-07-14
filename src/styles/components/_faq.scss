@@ -43,8 +43,14 @@
         justify-content: space-between;
     }
 
-    &__body-closed {
-        display: none;
+    &__body {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease-in;
+
+        &-active {
+            max-height: 160px;
+        }
     }
 
     &__title {
