@@ -150,6 +150,10 @@
     left: 0;
 }
 
+.knobs {
+    pointer-events: none;
+}
+
 .button {
     position: relative;
     top: 50%;
@@ -193,26 +197,27 @@
 
 .layer__projectors {
     position: relative;
-    top: 8px;
+    top: -32px;
     padding: 40px 24px;
     font-family: "Poppins";
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
     color: rgba(255, 255, 255, 0.40);
+
+    &:nth-of-type(2) {
+        position: relative;
+        top: -32px;
+        right: 0;
+        padding: 40px 48px;
+        font-family: "Poppins";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        color: rgba(255, 255, 255, 0.40);
+    }
 }
 
-.layer__gobopro {
-    position: relative;
-    top: 8px;
-    right: 0;
-    padding: 40px 48px;
-    font-family: "Poppins";
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
-    color: rgba(255, 255, 255, 0.40);
-}
 
 #category-switch .knobs:before {
     content: "Projektoren";
