@@ -2,13 +2,9 @@ section#products.products.section
     .products__container.container
         h1.products__container__title Produkte
         .products__container__category
-            .button-cover
-                #category-switch.button.r
-                    input.checkbox(type='checkbox')
-                    .knobs
-                    .layer
-                        a.layer__projectors(href="").category-active Projektoren
-                        a.layer__projectors(href="").category-active Gobo
+            .category-switch#category-switch
+                a.layer__item Projektoren
+                a.layer__item.category-active Gobo
         .products__container__mobile-filter 
             img(src='@/assets/images/filter-icon.svg')
             | Filter
