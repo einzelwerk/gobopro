@@ -4,31 +4,31 @@ section.gallery.container
         span.text-accent Cases
     .gallery__container
         .gallery__container__left
-            .gallery__container__left__item
+            a.gallery__container__left__item(href="@/assets/resources/gobo.mp4" data-fancybox="gallery")
                 video.gallery__video(controls)
                     source(src="@/assets/resources/gobo.mp4") 
         .gallery__container__right
-            .gallery__container__right__item
-                img(src='./assets/images/gallery2.png')
-            .gallery__container__right__item
-                img(src='./assets/images/gallery3.png')
-            .gallery__container__right__item
-                img(src='./assets/images/gallery4.png')
-            .gallery__container__right__item
-                img(src='./assets/images/gallery5.png')
+            a.gallery__container__right__item(href="@/assets/images/gallery2.png" data-fancybox="gallery")
+                img(src='@/assets/images/gallery2.png')
+            a.gallery__container__right__item(href="@/assets/images/gallery3.png" data-fancybox="gallery")
+                img(src='@/assets/images/gallery3.png')
+            a.gallery__container__right__item(href="@/assets/images/gallery4.png" data-fancybox="gallery")
+                img(src='@/assets/images/gallery4.png')
+            a.gallery__container__right__item(href="@/assets/images/gallery5.png" data-fancybox="gallery")
+                img(src='@/assets/images/gallery5.png')
     .gallery__container__mobile.swiper.gallery-swiper
         .swiper-wrapper
             .gallery__container__right__item.swiper-slide.gallery-swiper-slide
                 video.gallery__video(controls)
                     source(src="@/assets/resources/gobo.mp4") 
             .gallery__container__right__item.swiper-slide.gallery-swiper-slide
-                img(src='./assets/images/gallery2.png')
+                img(src='@/assets/images/gallery2.png')
             .gallery__container__right__item.swiper-slide.gallery-swiper-slide
-                img(src='./assets/images/gallery3.png')
+                img(src='@/assets/images/gallery3.png')
             .gallery__container__right__item.swiper-slide.gallery-swiper-slide
-                img(src='./assets/images/gallery4.png')
+                img(src='@/assets/images/gallery4.png')
             .gallery__container__right__item.swiper-slide.gallery-swiper-slide
-                img(src='./assets/images/gallery5.png')
+                img(src='@/assets/images/gallery5.png')
         .swiper-btn-block.gallery__swiper-btn-block
             button.swiper-btn.gallery-swiper-btn_prev.btn-arrow(type='button')
                 svg(width='14' height='14' viewbox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg')
