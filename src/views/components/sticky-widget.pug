@@ -2,12 +2,20 @@
     .sticky-widget__item
         a.sticky-widget__item__link(href="tel:+4973039403952")
             img(src="@/assets/images/sticky-1.svg" alt="phone")
+            span.sticky-widget__item__link__tooltip 
+                | Call
     .sticky-widget__item
         a.sticky-widget__item__link(href="mailto:info@gobopro.de")
             img(src="@/assets/images/sticky-2.svg" alt="email")
+            span.sticky-widget__item__link__tooltip 
+                | Email
     .sticky-widget__item
-        a.sticky-widget__item__link(href="#")
-            img(src="@/assets/images/sticky-3.svg" alt="chat")
+        a.sticky-widget__item__link.contact-form(href="#")
+            img(src="@/assets/images/sticky-3.svg" alt="contact")
+            span.sticky-widget__item__link__tooltip 
+                | Contact
     .sticky-widget__item
-        a.sticky-widget__item__link(href="#")
-            img(src="@/assets/images/sticky-4.svg" alt="favorite")
+        a.sticky-widget__item__link.take__quiz(href="#")
+            img(src="@/assets/images/sticky-4.svg" alt="quiz")
+            span.sticky-widget__item__link__tooltip 
+                | Take a quiz

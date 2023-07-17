@@ -1,0 +1,37 @@
+.contact-modal
+    .contact-modal__container
+        .contact-modal__close
+            img(src='./assets/images/X.svg' alt='Close modal')
+        .feedback-3__item-order
+            .feedback-3__content.contact-modal__content
+                .feedback-3__text-block
+                    h2.feedback-3__title Unverbindliche Anfrage
+                    p.feedback-3__desc Jedes Projekt wird bei GoboPro individuell behandelt. Fragen Sie unverbindlich an, um alle notwendigen Informationen zu erhalten. Wir finden immer eine passende Lösung.
+                form.feedback-3__form(action='#')
+                    .feedback-3__field-block
+                        .feedback-3__field
+                            label(for='feedback-name') Vornamen
+                            input#feedback-name(type='text' placeholder='Name')
+                            span.error Dieses Feld muss ausgefüllt werden.
+                        .feedback-3__field
+                            label(for='feedback-surname') Nachname
+                            input#feedback-surname(type='text' placeholder='Surname')
+                            span.error Dieses Feld muss ausgefüllt werden.
+                        .feedback-3__field
+                            label(for='feedback-email') Email
+                            input#feedback-email(type='email' placeholder='Email')
+                            span.error Dieses Feld muss ausgefüllt werden.
+                        .feedback-3__field
+                            label(for='feedback-tel') Telefonnummer
+                            input#feedback-tel(type='tel' placeholder='Phone number')
+                            span.error Dieses Feld muss ausgefüllt werden.
+                        .feedback-3__field
+                            label(for='feedback-message') Nachricht
+                            textarea#feedback-message(name='message' placeholder='Message' rows='1')
+                            span.error Dieses Feld muss ausgefüllt werden.
+                    .feedback-3__bottom
+                        .feedback-3__privacy
+                            input#privacy-policy(type='checkbox' name='privacy-policy')
+                            | You agree to our friendly privacy
+                            |                       policy.
+                        button.feedback-3__btn.btn(type='submit') Senden

@@ -67,13 +67,16 @@
 
     &__title {
         width: 100%;
-        text-align: center;
         color: var(--clr-white);
         font-size: 36px;
         font-weight: 400;
         line-height: 46px;
         letter-spacing: -0.36px;
         text-align: center;
+
+        @media (max-width: vars.$lg) {
+            font-size: 28px;
+        }
     }
 
     &__desc {

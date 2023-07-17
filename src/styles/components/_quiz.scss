@@ -13,6 +13,7 @@
     height: 115dvh;
     height: 115vh;
     background: rgba(0, 0, 0, .7);
+    display: none;
 
     &__container {
         position: absolute;
@@ -68,6 +69,7 @@
         right: 24px;
         font-size: 32px;
         color: var(--clr-white);
+        cursor: pointer;
     }
 
     &__steps {

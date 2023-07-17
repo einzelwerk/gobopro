@@ -122,7 +122,7 @@
             </nav>
             <div class="header-1-4__right">
               <div class="header-1-4__contacts"><a class="header-1-4__contacts-lang btn btn_medium" href="#">De
-                  <div class="header-1-4__contacts-lang__dropdown"><span class="header-language">De</span><span class="header-language">En</span></div></a>
+                  <div class="header-1-4__contacts-lang__dropdown"><span class="header-language">En</span></div></a>
                 <button class="header-1-4__contacts-btn btn btn_medium btn_black take__quiz" type="button">Konfigurator
                   <svg viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" d="M3.33398 7.99992H12.6673M12.6673 7.99992L8.00065 3.33325M12.6673 7.99992L8.00065 12.6666"></path>
@@ -293,12 +293,16 @@
       </header>
       <main class="main">
         <div class="sticky-widget"> 
-          <div class="sticky-widget__item"><a class="sticky-widget__item__link" href="tel:+4973039403952"><img src="./assets/images/sticky-1.svg" alt="phone"></a></div>
-          <div class="sticky-widget__item"><a class="sticky-widget__item__link" href="mailto:info@gobopro.de"><img src="./assets/images/sticky-2.svg" alt="email"></a></div>
-          <div class="sticky-widget__item"><a class="sticky-widget__item__link" href="#"><img src="./assets/images/sticky-3.svg" alt="chat"></a></div>
-          <div class="sticky-widget__item"><a class="sticky-widget__item__link" href="#"><img src="./assets/images/sticky-4.svg" alt="favorite"></a></div>
+          <div class="sticky-widget__item"><a class="sticky-widget__item__link" href="tel:+4973039403952"><img src="./assets/images/sticky-1.svg" alt="phone"><span class="sticky-widget__item__link__tooltip">
+                 Call</span></a></div>
+          <div class="sticky-widget__item"><a class="sticky-widget__item__link" href="mailto:info@gobopro.de"><img src="./assets/images/sticky-2.svg" alt="email"><span class="sticky-widget__item__link__tooltip">
+                 Email</span></a></div>
+          <div class="sticky-widget__item"><a class="sticky-widget__item__link contact-form" href="#"><img src="./assets/images/sticky-3.svg" alt="contact"><span class="sticky-widget__item__link__tooltip">
+                 Contact</span></a></div>
+          <div class="sticky-widget__item"><a class="sticky-widget__item__link take__quiz" href="#"><img src="./assets/images/sticky-4.svg" alt="quiz"><span class="sticky-widget__item__link__tooltip">
+                 Take a quiz</span></a></div>
         </div>
-        <div class="quiz inactive" id="quiz">
+        <div class="quiz" id="quiz">
           <div class="quiz__container">
             <div class="quiz__close"><img src="./assets/images/X.svg" alt="Close modal"></div>
             <div class="quiz__content inactive" data-page="1">
@@ -670,6 +674,50 @@
             </div>
           </div>
         </div>
+        <div class="contact-modal">
+          <div class="contact-modal__container">
+            <div class="contact-modal__close"><img src="./assets/images/X.svg" alt="Close modal"></div>
+            <div class="feedback-3__item-order">
+              <div class="feedback-3__content contact-modal__content">
+                <div class="feedback-3__text-block">
+                  <h2 class="feedback-3__title">Unverbindliche Anfrage</h2>
+                  <p class="feedback-3__desc">Jedes Projekt wird bei GoboPro individuell behandelt. Fragen Sie unverbindlich an, um alle notwendigen Informationen zu erhalten. Wir finden immer eine passende Lösung.</p>
+                </div>
+                <form class="feedback-3__form" action="#">
+                  <div class="feedback-3__field-block">
+                    <div class="feedback-3__field">
+                      <label for="feedback-name">Vornamen</label>
+                      <input id="feedback-name" type="text" placeholder="Name"><span class="error">Dieses Feld muss ausgefüllt werden.</span>
+                    </div>
+                    <div class="feedback-3__field">
+                      <label for="feedback-surname">Nachname</label>
+                      <input id="feedback-surname" type="text" placeholder="Surname"><span class="error">Dieses Feld muss ausgefüllt werden.</span>
+                    </div>
+                    <div class="feedback-3__field">
+                      <label for="feedback-email">Email</label>
+                      <input id="feedback-email" type="email" placeholder="Email"><span class="error">Dieses Feld muss ausgefüllt werden.</span>
+                    </div>
+                    <div class="feedback-3__field">
+                      <label for="feedback-tel">Telefonnummer</label>
+                      <input id="feedback-tel" type="tel" placeholder="Phone number"><span class="error">Dieses Feld muss ausgefüllt werden.</span>
+                    </div>
+                    <div class="feedback-3__field">
+                      <label for="feedback-message">Nachricht</label>
+                      <textarea id="feedback-message" name="message" placeholder="Message" rows="1"></textarea><span class="error">Dieses Feld muss ausgefüllt werden.</span>
+                    </div>
+                  </div>
+                  <div class="feedback-3__bottom">
+                    <div class="feedback-3__privacy">
+                      <input id="privacy-policy" type="checkbox" name="privacy-policy">You agree to our friendly privacy
+                                            policy.
+                    </div>
+                    <button class="feedback-3__btn btn" type="submit">Senden</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="hero-1 container block">
           <div class="hero-1__text">
             <h1 class="hero-1__text-title"><span class="text-accent">Lighting projections</span> for advertising</h1>
@@ -682,7 +730,7 @@
             </p>
             <div class="hero-1__tags"><span class="hero-1__tags-item">Gastst&auml;tten</span><span class="hero-1__tags-item">Autoh&auml;user</span><span class="hero-1__tags-item">Sch&ouml;nheitssalons</span><span class="hero-1__tags-item">Fitnessclubs</span><span class="hero-1__tags-item">Reiseb&uuml;ros</span><span class="hero-1__tags-item">Architekturb&uuml;ros</span><span class="hero-1__tags-item">Events</span></div>
             <div class="hero-1__buttons">
-              <button class="hero-1__buttons-btn btn-accent" type="button">
+              <button class="hero-1__buttons-btn btn-accent contact-form" type="button">
                 Unverbindlich
                 Anfragen
               </button>
@@ -1347,7 +1395,7 @@
                     kostenlos beheben.
                   </p>
                 </div>
-                <div class="cta-4__btn-block"><a class="btn btn_large btn_black" href="#">Unverbindlich Anfragen
+                <div class="cta-4__btn-block"><a class="btn btn_large btn_black contact-form" href="#">Unverbindlich Anfragen
                     <svg class="btn__icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6"></path>
                       <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8.25 6H18V15.75"></path>

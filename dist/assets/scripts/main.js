@@ -285,6 +285,54 @@ function chooseLanguage() {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/modalToggle.js":
+/*!********************************************!*\
+  !*** ./src/scripts/modules/modalToggle.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   contactToggle: () => (/* binding */ contactToggle),
+/* harmony export */   quizToggle: () => (/* binding */ quizToggle)
+/* harmony export */ });
+function quizToggle() {
+  var quiz = document.querySelector(".quiz");
+  var quizClose = document.querySelector(".quiz__close");
+  var quizBtns = document.querySelectorAll(".take__quiz");
+  if (!quiz || !quizBtns) return;
+  quizBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      window.scrollTo(0, 0);
+      quiz.classList.add("visible");
+      document.body.style.overflow = "hidden";
+    });
+  });
+  quizClose.addEventListener("click", function () {
+    quiz.classList.remove("visible");
+    document.body.style.overflow = "auto";
+  });
+}
+function contactToggle() {
+  var contactModal = document.querySelector(".contact-modal");
+  var contactModalClose = document.querySelector(".contact-modal__close");
+  var contactModalBtns = document.querySelectorAll(".contact-form");
+  if (!contactModal || !contactModalBtns) return;
+  contactModalBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      window.scrollTo(0, 0);
+      contactModal.classList.add("visible");
+      document.body.style.overflow = "hidden";
+    });
+  });
+  contactModalClose.addEventListener("click", function () {
+    contactModal.classList.remove("visible");
+    document.body.style.overflow = "auto";
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/portfolioGallery.js":
 /*!*************************************************!*\
   !*** ./src/scripts/modules/portfolioGallery.js ***!
@@ -378,38 +426,6 @@ function initRangeSlider() {
       sliderValue.textContent = "".concat(value, "M");
     });
   });
-}
-
-/***/ }),
-
-/***/ "./src/scripts/modules/quizToggle.js":
-/*!*******************************************!*\
-  !*** ./src/scripts/modules/quizToggle.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   quizToggle: () => (/* binding */ quizToggle)
-/* harmony export */ });
-function quizToggle() {
-
-  // const quiz = document.querySelector(".quiz");
-  // const quizClose = document.querySelector(".quiz__close");
-  // const quizBtn = document.querySelectorAll(".take__quiz");
-
-  // quizBtn.forEach(btn => {
-  //     btn.addEventListener("click", () => {
-  //         window.scrollTo(0, 0);
-  //         quiz.classList.remove("inactive");
-  //         document.body.style.overflow = "hidden";
-  //     });
-  // })
-
-  // quizClose.addEventListener("click", () => {
-  //     quiz.classList.add("inactive");
-  //     document.body.style.overflow = "auto";
-  // });
 }
 
 /***/ }),
@@ -11391,7 +11407,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_acc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/acc */ "./src/scripts/modules/acc.js");
 /* harmony import */ var _modules_swipers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swipers */ "./src/scripts/modules/swipers.js");
 /* harmony import */ var _modules_languages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/languages */ "./src/scripts/modules/languages.js");
-/* harmony import */ var _modules_quizToggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/quizToggle */ "./src/scripts/modules/quizToggle.js");
+/* harmony import */ var _modules_modalToggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/modalToggle */ "./src/scripts/modules/modalToggle.js");
 /* harmony import */ var _modules_footerNavLinks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/footerNavLinks */ "./src/scripts/modules/footerNavLinks.js");
 /* harmony import */ var _modules_burgerMenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/burgerMenu */ "./src/scripts/modules/burgerMenu.js");
 /* harmony import */ var _modules_headerAcc__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/headerAcc */ "./src/scripts/modules/headerAcc.js");
@@ -11448,8 +11464,12 @@ __webpack_require__.r(__webpack_exports__);
 
 // QUIZ
 
-(0,_modules_quizToggle__WEBPACK_IMPORTED_MODULE_4__.quizToggle)();
+(0,_modules_modalToggle__WEBPACK_IMPORTED_MODULE_4__.quizToggle)();
 (0,_modules_quizSlider__WEBPACK_IMPORTED_MODULE_9__.initRangeSlider)();
+
+// CONTACT FORM
+
+(0,_modules_modalToggle__WEBPACK_IMPORTED_MODULE_4__.contactToggle)();
 
 // PORTFOLIO GALLERY
 
