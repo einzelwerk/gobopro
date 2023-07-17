@@ -31,7 +31,6 @@
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
-            justify-content: space-between;
 
             &__item {
                 width: 410px;
@@ -62,15 +61,24 @@
                     display: flex;
                     justify-content: flex-end;
                     border-radius: 20px;
+                    height: 500px;
+                    z-index: 10;
+
+                    &>img {
+                        position: absolute;
+                        top: 22%;
+                        z-index: -1;
+                    }
 
                     &__specs {
                         position: absolute;
                         left: 30px;
-                        bottom: 34px;
+                        top: 34px;
                         display: flex;
                         flex-wrap: wrap;
                         width: 200px;
                         gap: 32px 8px;
+                        z-index: 11;
 
                         &__item {
                             display: flex;
@@ -92,10 +100,6 @@
                                 object-fit: scale-down;
                             }
                         }
-                    }
-
-                    &>img {
-                        padding-block: 35px;
                     }
                 }
 

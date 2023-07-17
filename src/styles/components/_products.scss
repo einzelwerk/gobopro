@@ -28,7 +28,12 @@
 
         &__list {
             &:first-of-type {
+                margin-top: 64px;
                 margin-bottom: 32px;
+
+                @media (max-width: vars.$lg) {
+                    margin-top: 24px;
+                }
             }
 
             @media (min-width: vars.$lg) and (max-width: vars.$xl) {
@@ -69,7 +74,7 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 24px;
-            margin-bottom: 24px;
+            margin-block: 24px;
 
             @media (min-width: vars.$lg) {
                 display: none;
@@ -80,7 +85,6 @@
             display: flex;
             gap: 12px;
             margin-top: 32px;
-            margin-bottom: 64px;
 
             &__item {
                 position: relative;
