@@ -292,6 +292,378 @@
         </div>
       </header>
       <main class="main">
+        <div class="quiz" id="quiz">
+          <div class="quiz__container">
+            <div class="quiz__close"><img src="./assets/images/X.svg" alt="Close modal"></div>
+            <div class="quiz__content inactive" data-page="1">
+              <div class="quiz__steps">
+                <div class="quiz__steps__step active"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+              </div>
+              <div class="quiz__heading">
+                <div class="quiz__page"><span>1/8</span></div>
+                <h2 class="quiz__question">Wo werden Sie den Projektor verwenden?</h2>
+                <p class="quiz__desc"></p>
+              </div>
+              <div class="quiz__answers">
+                <div class="quiz__answers__item">
+                  <input id="inside-usage" type="radio" name="area">
+                  <label for="inside-usage">Drinnen</label>
+                </div>
+                <div class="quiz__answers__item">
+                  <input id="outside-usage" type="radio" name="area">
+                  <label for="outside-usage">Drau&szlig;en</label>
+                </div>
+              </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
+            </div>
+            <div class="quiz__content" data-page="2">
+              <div class="quiz__steps">
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step active"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+              </div>
+              <div class="quiz__heading">
+                <div class="quiz__page"><span>2/8</span></div>
+                <h2 class="quiz__question">Zu welcher Tageszeit wird der Projektor eingesetzt?</h2>
+                <p class="quiz__desc"></p>
+              </div>
+              <div class="quiz__answers">
+                <div class="quiz__answers__item">
+                  <input id="day" type="checkbox">
+                  <label for="day">Tag</label>
+                </div>
+                <div class="quiz__answers__item">
+                  <input id="night" type="checkbox">
+                  <label for="night">Nacht</label>
+                </div>
+              </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
+            </div>
+            <div class="quiz__content inactive" data-page="3">
+              <div class="quiz__steps">
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step active"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+              </div>
+              <div class="quiz__heading">
+                <div class="quiz__page"><span>3/8</span></div>
+                <h2 class="quiz__question">Projektionsabstand vom Projektor zur Projektion:</h2>
+                <p class="quiz__desc"></p>
+              </div>
+              <div class="quiz__answers">
+                <div class="slider"> <span class="rangeValue"></span>
+                  <input id="fader1" type="range" min="2" max="100" value="2" step="2" list="rangesettings">
+                  <datalist id="rangesettings"> 
+                    <option>2</option>
+                    <option>4</option>
+                    <option>6</option>
+                    <option>8</option>
+                    <option>10</option>
+                    <option>12</option>
+                    <option>14</option>
+                    <option>16</option>
+                    <option>18</option>
+                    <option>20</option>
+                    <option>22</option>
+                    <option>24</option>
+                    <option>26</option>
+                    <option>28</option>
+                    <option>30</option>
+                    <option>32</option>
+                    <option>34</option>
+                    <option>36</option>
+                    <option>38</option>
+                    <option>40</option>
+                    <option>42</option>
+                    <option>44</option>
+                    <option>46</option>
+                    <option>48</option>
+                    <option>50</option>
+                    <option>52</option>
+                    <option>54</option>
+                    <option>56</option>
+                    <option>58</option>
+                    <option>60</option>
+                    <option>62</option>
+                    <option>64</option>
+                    <option>66</option>
+                    <option>68</option>
+                    <option>70</option>
+                    <option>72</option>
+                    <option>74</option>
+                    <option>76</option>
+                    <option>78</option>
+                    <option>80</option>
+                    <option>82</option>
+                    <option>84</option>
+                    <option>86</option>
+                    <option>88</option>
+                    <option>90</option>
+                    <option>92</option>
+                    <option>94</option>
+                    <option>96</option>
+                    <option>98</option>
+                    <option>100</option>
+                  </datalist>
+                </div>
+              </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
+            </div>
+            <div class="quiz__content inactive" data-page="4">
+              <div class="quiz__steps">
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step active"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+              </div>
+              <div class="quiz__heading">
+                <div class="quiz__page"><span>4/8</span></div>
+                <h2 class="quiz__question">Wie groß ist die Projektion?</h2>
+                <p class="quiz__desc"></p>
+              </div>
+              <div class="quiz__answers">
+                <div class="slider"> <span class="rangeValue"></span>
+                  <input id="fader2" type="range" min="0.5" max="20" value="0.5" step="0.5" list="newrangesettings">
+                  <datalist id="newrangesettings"> 
+                    <option>0.5</option>
+                    <option>1</option>
+                    <option>1.5</option>
+                    <option>2</option>
+                    <option>2.5</option>
+                    <option>3</option>
+                    <option>3.5</option>
+                    <option>4</option>
+                    <option>4.5</option>
+                    <option>5</option>
+                    <option>5.5</option>
+                    <option>6</option>
+                    <option>6.5</option>
+                    <option>7</option>
+                    <option>7.5</option>
+                    <option>8</option>
+                    <option>8.5</option>
+                    <option>9</option>
+                    <option>9.5</option>
+                    <option>10</option>
+                    <option>10.5</option>
+                    <option>11</option>
+                    <option>11.5</option>
+                    <option>12</option>
+                    <option>12.5</option>
+                    <option>13</option>
+                    <option>13.5</option>
+                    <option>14</option>
+                    <option>14.5</option>
+                    <option>15</option>
+                    <option>15.5</option>
+                    <option>16</option>
+                    <option>16.5</option>
+                    <option>17</option>
+                    <option>17.5</option>
+                    <option>18</option>
+                    <option>18.5</option>
+                    <option>19</option>
+                    <option>19.5</option>
+                    <option>20</option>
+                  </datalist>
+                </div>
+              </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
+            </div>
+            <div class="quiz__content inactive" data-page="5">
+              <div class="quiz__steps">
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step active"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+              </div>
+              <div class="quiz__heading">
+                <div class="quiz__page"><span>5/8</span></div>
+                <h2 class="quiz__question">Wird ein Lichtsensor eingesetzt?</h2>
+                <p class="quiz__desc">Von einem Projektor aus kann man mit einer Fernbedienung das projizierte Bild ändern</p>
+              </div>
+              <div class="quiz__answers">
+                <div class="quiz__answers__item">
+                  <input id="lightsensor1" type="radio" name="lightsensor">
+                  <label for="lightsensor1">Ja</label>
+                </div>
+                <div class="quiz__answers__item">
+                  <input id="lightsensor2" type="radio" name="lightsensor">
+                  <label for="lightsensor2">Nein</label>
+                </div>
+              </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
+            </div>
+            <div class="quiz__content inactive" data-page="6">
+              <div class="quiz__steps">
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step active"></div>
+                <div class="quiz__steps__step"></div>
+                <div class="quiz__steps__step"></div>
+              </div>
+              <div class="quiz__heading">
+                <div class="quiz__page"><span>6/8</span></div>
+                <h2 class="quiz__question">Wie viele Bilder werden benötigt?</h2>
+                <p class="quiz__desc"></p>
+              </div>
+              <div class="quiz__answers">
+                <div class="quiz__answers__item">
+                  <input id="image1" type="radio" name="images">
+                  <label for="image1">Ein rotierendes Bild</label>
+                </div>
+                <div class="quiz__answers__item">
+                  <input id="image2" type="radio" name="images">
+                  <label for="image2">Ein statisches Bild</label>
+                </div>
+                <div class="quiz__answers__item">
+                  <input id="image3" type="radio" name="images">
+                  <label for="image3">3 statische Bilder</label>
+                </div>
+                <div class="quiz__answers__item">
+                  <input id="image4" type="radio" name="images">
+                  <label for="image4">Bis zu 7 statische Bilder</label>
+                </div>
+                <div class="quiz__answers__item">
+                  <input id="image5" type="radio" name="images">
+                  <label for="image5">Bis zu 9 statische Bilder</label>
+                </div>
+              </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
+            </div>
+            <div class="quiz__content inactive" data-page="7">
+              <div class="quiz__steps">
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step active"></div>
+                <div class="quiz__steps__step"></div>
+              </div>
+              <div class="quiz__heading">
+                <div class="quiz__page"><span>7/8</span></div>
+                <h2 class="quiz__question">Notizen:</h2>
+                <p class="quiz__desc"></p>
+              </div>
+              <div class="quiz__answers">
+                <textarea placeholder="Ihre Nachricht"></textarea>
+              </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
+            </div>
+            <div class="quiz__content inactive" data-page="8">
+              <div class="quiz__steps">
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step completed"></div>
+                <div class="quiz__steps__step active"></div>
+              </div>
+              <div class="quiz__heading">
+                <div class="quiz__page"><span>8/8</span></div>
+                <h2 class="quiz__question">
+                  Um eine schnelle Angebotserstellung und Bearbeitung zu gewährleisten ist esgewünscht Fotos von den räumlichen Gegebenheiten und Dateien mit Bilder an<a class="text-accent" href="mailto:info@gobopro.de">&nbsp;info@gobopro.de&nbsp;</a>zukommen zu lassen.</h2>
+                <p class="quiz__desc"> </p>
+              </div>
+              <div class="quiz__actions">
+                <button class="btn btn-regular">Zurück</button>
+                <button class="btn btn-accent">Weiter</button>
+              </div>
+            </div>
+            <div class="quiz__content quiz__content-form inactive" data-page="9">
+              <div class="quiz__picture"><img src="./assets/images/quiz-1.png"></div>
+              <div class="quiz__heading">
+                <h2 class="quiz__question">
+                  Ihre Auswahl ist bereit!Geben Sie Ihre E-Mail-Adresse an, damit wir Ihnen eine Auswahl von Produkten zusenden können</h2>
+                <p class="quiz__desc"></p>
+                <form class="quiz__form" action="POST">
+                  <input type="text" placeholder="Name">
+                  <input type="email" placeholder="E-mail">
+                  <input type="phone" placeholder="Telefon (optional)">
+                  <p class="quiz__extrainfo">Durch Klicken auf die Schaltfläche “senden” stimmen Sie der Verarbeitung personenbezogener Daten zu.</p>
+                </form>
+              </div>
+              <div class="quiz__send"> 
+                <button class="btn btn-accent">Senden</button>
+              </div>
+            </div>
+            <div class="quiz__content quiz__content-form inactive" data-page="10">
+              <div class="quiz__picture"><img src="./assets/images/quiz-2.png"></div>
+              <div class="quiz__heading">
+                <h2 class="quiz__question">Vielen Dank für Ihre Teilnahme!</h2>
+                <p class="quiz__desc">
+                  Wir haben eine Auswahl von Produkten an Ihre E-Mail-Adresse gesendetWenn Sie noch Fragen haben, kontaktieren Sie uns bitte direkt
+                  Wir werden die am besten geeignete Option für Sie finden
+                </p>
+                <div class="quiz__contacts"> 
+                  <div class="quiz__contacts__item"> 
+                    <h4 class="quiz__contacts__item__title">Telefon</h4><a class="quiz__contacts__item__detail" href="tel:+4973039403952">+49 7303 9403 952</a>
+                  </div>
+                  <div class="quiz__contacts__item"> 
+                    <h4 class="quiz__contacts__item__title">E-mail</h4><a class="quiz__contacts__item__detail" href="mailto:info@gobopro.de">info@gobopro.de</a>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz__send"> 
+                <button class="btn btn-accent">Back to Home</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="singular-news section">
           <div class="singular-news__container container">
             <div class="singular-news__top">
