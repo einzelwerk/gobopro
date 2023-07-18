@@ -4,171 +4,170 @@
 @use '../utils/functions' as fn;
 
 .products {
-    font-family: "Poppins";
-    margin-block: 100px 60px;
+  font-family: 'Poppins';
+  margin-block: 100px 60px;
 
-    @media (max-width: vars.$md) {
-        margin-block: 32px;
+  @media (max-width: vars.$md) {
+    margin-block: 32px;
+  }
+
+  &__container {
+    &__title {
+      color: var(--clr-white);
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: -0.48px;
+      margin-bottom: 64px;
     }
 
-    &__container {
-
-        &__title {
-            color: var(--clr-white);
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 60px;
-            letter-spacing: -0.48px;
-            margin-bottom: 64px;
-        }
-
-        &__category {
-            display: flex;
-        }
-
-        &__list {
-            &:first-of-type {
-                margin-top: 64px;
-                margin-bottom: 32px;
-
-                @media (max-width: vars.$lg) {
-                    margin-top: 24px;
-                }
-            }
-
-            @media (min-width: vars.$lg) and (max-width: vars.$xl) {
-                gap: 15px;
-            }
-
-            &__item {
-                width: 410px;
-
-                @media (max-width: vars.$xxl) {
-                    width: 360px;
-                }
-
-                @media (min-width: vars.$lg) and (max-width: vars.$xl) {
-                    width: 300px;
-                }
-
-                @media (max-width: vars.$lg) {
-                    width: 100%;
-                }
-
-                &__content {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-
-                    @media (min-width: vars.$lg) and (max-width: vars.$xl) {
-                        height: 160px;
-                    }
-                }
-            }
-        }
-
-        &__mobile-filter {
-            display: flex;
-            gap: 8px;
-            color: var(--clr-white);
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            margin-block: 24px;
-
-            @media (min-width: vars.$lg) {
-                display: none;
-            }
-        }
-
-        &__filters {
-            display: flex;
-            gap: 12px;
-            margin-top: 32px;
-
-            &__item {
-                position: relative;
-                width: 235px;
-                padding: 14px 12px 14px 16px;
-                border-radius: 24px;
-                border: 1px solid rgba(255, 255, 255, 0.10);
-                color: var(--clr-white);
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 20px;
-                letter-spacing: 0.14px;
-                background-image: url("../../assets/images/arrow-down.svg");
-                background-size: 16px;
-                background-repeat: no-repeat;
-                background-position: calc(100% - 16px) center;
-            }
-
-            @media (max-width: vars.$lg) {
-                display: none;
-            }
-
-            &__mobile {
-                display: none;
-                color: var(--clr-white);
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
-                margin-bottom: 24px;
-
-                &>button {
-                    position: relative;
-                    padding-left: 32px;
-
-                    &::after {
-                        position: absolute;
-                        content: url('../../assets/images/filter-icon.svg');
-                        left: 0;
-                        top: 0;
-
-                    }
-                }
-
-                @media (max-width: vars.$lg) {
-                    display: block;
-                }
-            }
-        }
+    &__category {
+      display: flex;
     }
+
+    &__list {
+      &:first-of-type {
+        margin-top: 64px;
+        margin-bottom: 32px;
+
+        @media (max-width: vars.$lg) {
+          margin-top: 24px;
+        }
+      }
+
+      @media (min-width: vars.$lg) and (max-width: vars.$xl) {
+        gap: 15px;
+      }
+
+      &__item {
+        width: 410px;
+
+        @media (max-width: vars.$xxl) {
+          width: 360px;
+        }
+
+        @media (min-width: vars.$lg) and (max-width: vars.$xl) {
+          width: 300px;
+        }
+
+        @media (max-width: vars.$lg) {
+          width: 100%;
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          @media (min-width: vars.$lg) and (max-width: vars.$xl) {
+            height: 160px;
+          }
+        }
+      }
+    }
+
+    &__mobile-filter {
+      display: flex;
+      gap: 8px;
+      color: var(--clr-white);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-block: 24px;
+
+      @media (min-width: vars.$lg) {
+        display: none;
+      }
+    }
+
+    &__filters {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+
+      &__item {
+        position: relative;
+        width: 235px;
+        padding: 14px 12px 14px 16px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--clr-white);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.14px;
+        background-image: url('../../assets/images/arrow-down.svg');
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 16px) center;
+      }
+
+      @media (max-width: vars.$lg) {
+        display: none;
+      }
+
+      &__mobile {
+        display: none;
+        color: var(--clr-white);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 24px;
+
+        & > button {
+          position: relative;
+          padding-left: 32px;
+
+          &::after {
+            position: absolute;
+            content: url('../../assets/images/filter-icon.svg');
+            left: 0;
+            top: 0;
+          }
+        }
+
+        @media (max-width: vars.$lg) {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
-
-
 .category-switch {
-    display: flex;
-    width: 325px;
-    height: 46px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.10);
+  display: flex;
+  width: 325px;
+  height: 46px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+
+  @media (max-width: vars.$lg) {
+    width: 100%;
+  }
 }
 
 .layer__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--clr-light);
-    width: 50%;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-light);
+  width: 50%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 .category-active {
-    color: var(--clr-black);
-    width: 49%;
-    background-color: var(--clr-accent);
-    border-radius: 30px;
+  color: var(--clr-black);
+  width: 49%;
+  background-color: var(--clr-accent);
+  border-radius: 30px;
 }
 
 // FILTERS
 
 select {
-
-    &>option {
-        color: var(--clr-dark);
-    }
+  & > option {
+    color: var(--clr-dark);
+  }
 }

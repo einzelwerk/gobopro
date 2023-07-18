@@ -52,7 +52,7 @@
         }
 
         &__mobile {
-            margin-top: 64px;
+            margin-top: 24px;
 
             @media (min-width: vars.$md) {
                 display: none;
@@ -63,10 +63,9 @@
             display: flex;
             flex-direction: column;
             max-width: 300px;
-            justify-content: space-between;
             align-items: flex-start;
             padding: 20px 20px 24px;
-            border: 1px solid var(--clr-accent);
+            border: 1px solid rgba(108, 234, 189, .16);
             border-radius: 20px;
 
             @media (max-width: vars.$xl) {
@@ -74,7 +73,8 @@
             }
 
             @media (max-width: vars.$lg) {
-                height: 390px;
+                height: 320px;
+                padding: 16px;
             }
 
             @media (min-width: vars.$md) and (max-width: vars.$lg) {
@@ -83,7 +83,7 @@
 
             @media (min-width: vars.$sm) and (max-width: vars.$md) {
                 max-width: 100%;
-                height: 465px;
+                height: 380px;
             }
 
             &__icon {
@@ -91,7 +91,7 @@
                 font-weight: 500;
                 font-size: 24px;
                 line-height: 32px;
-                margin-bottom: 96px;
+                margin-bottom: 32px;
                 align-items: center;
                 justify-content: center;
                 width: 40px;

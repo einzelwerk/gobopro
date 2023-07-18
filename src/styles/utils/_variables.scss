@@ -55,6 +55,23 @@ $sm: $min-sm - 0.02px;
 
   // UTILITY CLASSES
 
+  .long-word{
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+
+  .pt-60{
+
+    @media(min-width: $lg){
+      padding-top: 60px;
+    }
+
+    @media(max-width: $lg){
+      padding-top: 32px;
+    }
+
+  }
+
   .text-accent {
     color: var(--clr-accent);
   }

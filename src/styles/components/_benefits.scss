@@ -4,112 +4,132 @@
 @use '../utils/functions' as fn;
 
 .benefits {
-    font-family: "Poppins";
-    padding-block: 120px 60px;
+  font-family: 'Poppins';
+  padding-block: 120px 60px;
+
+  @media (max-width: vars.$md) {
+    padding-block: 32px;
+  }
+
+  &__container {
+    display: flex;
+    gap: minmax(32px, 40px);
+
+    @media (max-width: vars.$xxl) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    color: var(--clr-white);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+
+    @media (max-width: vars.$lg) {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: -0.56px;
+    }
+
+    &-wrap {
+      flex: none;
+      max-width: 450px;
+      margin-right: 80px;
+      margin-bottom: 60px;
+
+      @media (max-width: vars.$lg) {
+        margin-bottom: 24px;
+      }
+    }
+
+    position: sticky;
+    top: 100px;
+    left: 0;
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+    color: #bababb;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 32px;
+
+    @media (max-width: vars.$lg) {
+      display: none;
+    }
 
     @media (max-width: vars.$md) {
-        padding-block: 32px;
+      grid-template-columns: repeat(1, 1fr);
     }
 
-    &__container {
-        display: flex;
-        gap: minmax(32px, 40px);
+    &__mobile {
+      display: flex;
 
-        @media (max-width: vars.$xxl) {
-            flex-direction: column;
-        }
+      @media (min-width: vars.$lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding-right: 24px;
+    background: radial-gradient(
+      128.11% 128.11% at 50% -32.4%,
+      rgba(108, 234, 189, 0.32) 0%,
+      rgba(108, 234, 189, 0.1152) 43.11%,
+      rgba(108, 234, 189, 0) 100%
+    );
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 20px 24px;
+    border: 1px solid #3f4146;
+    border-radius: 20px;
+
+    @media (max-width: vars.$xxl) {
+      padding-right: 0;
     }
 
-    &__title {
-        color: var(--clr-white);
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 46px;
-
-        &-wrap {
-            flex: none;
-            max-width: 450px;
-            margin-right: 80px;
-            margin-bottom: 60px;
-        }
-
-        position: sticky;
-        top: 100px;
-        left: 0;
+    @media (max-width: vars.$lg) {
+      height: 320px;
     }
+  }
 
-    &__subtitle {
-        margin-top: 20px;
-        color: #BABABB;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
+  &__icon {
+    display: inline-block;
+    margin-bottom: 68px;
+
+    @media (max-width: vars.$lg) {
+      margin-bottom: 32px;
     }
+  }
 
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px 32px;
+  &__name {
+    color: var(--clr-white);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.05px;
+    margin-bottom: 16px;
 
-        @media (max-width: vars.$lg) {
-            display: none;
-        }
-
-        @media (max-width: vars.$md) {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        &__mobile {
-            display: flex;
-
-            @media (min-width: vars.$lg) {
-                display: none;
-            }
-        }
+    @media (max-width: vars.$lg) {
+      margin-bottom: 8px;
     }
+  }
 
-    &__item {
-        display: flex;
-        flex-direction: column;
-        padding-right: 24px;
-        background: radial-gradient(128.11% 128.11% at 50% -32.4%, rgba(108, 234, 189, 0.32) 0%, rgba(108, 234, 189, 0.1152) 43.11%, rgba(108, 234, 189, 0) 100%);
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 20px 20px 24px;
-        border: 1px solid #3F4146;
-        border-radius: 20px;
-
-        @media (max-width: vars.$xxl) {
-            padding-right: 0;
-        }
-
-        @media (min-width: vars.$sm) and (max-width: vars.$lg) {
-            height: 350px;
-        }
-
-        @media (max-width: vars.$sm) {
-            height: 320px;
-        }
-    }
-
-    &__icon {
-        display: inline-block;
-        margin-bottom: 68px;
-    }
-
-    &__name {
-        color: var(--clr-white);
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: -.05px;
-        margin-bottom: 16px;
-    }
-
-    &__desc {
-        color: #BABABB;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 400;
-    }
+  &__desc {
+    color: #bababb;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
 }

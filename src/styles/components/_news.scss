@@ -47,7 +47,7 @@
         &-btn {
 
             @media (max-width: vars.$md) {
-                padding-block: 10px;
+                padding-block: 8px;
                 width: 100%;
                 display: flex;
                 align-items: center;
@@ -80,7 +80,11 @@
     &__list {
         display: flex;
         gap: 30px;
-        margin-top: 70px;
+        margin-top: 64px;
+
+        @media (max-width: vars.$lg){
+            margin-top: 24px;
+        }
     }
 
     &__item {

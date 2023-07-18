@@ -7,7 +7,7 @@
 .swiper-btn-block {
     display: flex;
     gap: 12px;
-    margin-top: 16px;
+    margin-top: 64px;
     margin-left: 10px;
 }
 
@@ -16,10 +16,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     border: 1px solid #475467;
+
+    @media (max-width: vars.$lg){
+        width: 32px;
+        height: 32px;
+
+        &>svg{
+            width: 14px;
+            height: 14px;
+        }
+    }
 }
 
 
@@ -52,7 +62,7 @@
     .swiper-scrollbar {
         display: block;
         background-color: var(--clr-light);
-        height: 4px;
+        height: 2px;
         border-radius: 2px;
     }
 

@@ -4,150 +4,142 @@
 @use '../utils/functions' as fn;
 
 .gallery {
-    font-family: "Poppins";
-    margin-block: 60px 120px;
+  font-family: 'Poppins';
+  margin-block: 120px 60px;
+
+  @media (max-width: vars.$md) {
+    margin-block: 32px;
+  }
+
+  &__video {
+    height: 630px;
+    border-radius: 20px;
+
+    @media (min-width: vars.$xl) and (max-width: vars.$xxl) {
+      height: 590px;
+    }
+
+    @media (min-width: vars.$lg) and (max-width: vars.$xl) {
+      width: 65%;
+    }
+
+    @media (min-width: vars.$md) and (max-width: vars.$lg) {
+      width: 85%;
+    }
+  }
+
+  &__title {
+    color: var(--clr-white);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    text-align: center;
+    margin-bottom: 64px;
 
     @media (max-width: vars.$md) {
-        margin-block: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media (max-width: vars.$md) {
+      display: none;
     }
 
-    &__video {
-        height: 630px;
-        border-radius: 20px;
-
-        @media (min-width: vars.$xl) and (max-width: vars.$xxl) {
-            height: 550px;
-        }
-
-        @media (min-width: vars.$lg) and (max-width: vars.$xl) {
-            width: 65%;
-        }
-
-        @media (min-width: vars.$md) and (max-width: vars.$lg) {
-            width: 85%;
-        }
+    &__mobile {
+      @media (min-width: vars.$md) {
+        display: none;
+      }
     }
 
-    &__title {
-        color: var(--clr-white);
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 46px;
-        text-align: center;
-        margin-bottom: 64px;
+    &__left {
+      display: flex;
+      width: 47%;
 
-        @media (max-width: vars.$md) {
-            margin-bottom: 24px;
+      &__item {
+        cursor: pointer;
+      }
+
+      @media (max-width: vars.$xl) {
+        width: 100%;
+
+        &__item {
+          display: flex;
+          justify-content: center;
+          width: 100%;
         }
+      }
     }
 
-    &__container {
-        display: flex;
-        flex-wrap: wrap;
+    &__right {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      gap: 30px;
+
+      @media (max-width: vars.$xl) {
+        width: 100%;
         gap: 30px;
+      }
+
+      @media (max-width: vars.$lg) {
+        width: 100%;
+        gap: 23px;
+      }
+
+      &__item {
+        width: 45%;
+        height: 300px;
+        cursor: pointer;
 
         @media (max-width: vars.$md) {
-            display: none;
+          width: 300px;
+          height: 300px;
         }
 
-        &__mobile {
-            @media (min-width: vars.$md) {
-                display: none;
-            }
+        & > img {
+          @media (max-width: vars.$md) {
+            width: 450px;
+          }
         }
 
-        &__left {
-            display: flex;
-            width: 47%;
-            align-items: center;
-            justify-content: center;
-
-            &__item {
-                cursor: pointer;
-            }
-
-            @media (max-width: vars.$xl) {
-                width: 100%;
-
-                &__item {
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                }
-            }
+        @media (max-width: vars.$xl) {
+          display: flex;
+          width: 48.4%;
         }
 
-        &__right {
-            display: flex;
-            flex-wrap: wrap;
-            width: 50%;
-            gap: 30px;
-
-            @media (max-width: vars.$xl) {
-                width: 100%;
-                gap: 30px;
-            }
-
-            @media (max-width: vars.$lg) {
-                width: 100%;
-                gap: 23px;
-            }
-
-            &__item {
-                width: 45%;
-                height: 300px;
-                cursor: pointer;
-
-                @media (max-width: vars.$md) {
-                    width: 300px;
-                    height: 300px;
-                }
-
-                &>img {
-                    @media (max-width: vars.$md) {
-                        width: 450px;
-                    }
-                }
-
-                @media (max-width: vars.$xl) {
-                    display: flex;
-                    width: 48.4%;
-
-                }
-
-                @media (max-width: vars.$lg) {
-                    display: flex;
-                    justify-content: flex-start;
-                }
-
-                &>img {
-                    @media (max-width: vars.$md) {
-                        border-radius: 12px;
-                    }
-                }
-            }
-
-            @media (max-width: vars.$xl) {
-
-                &__item:nth-of-type(odd) {
-                    justify-content: flex-end;
-                }
-
-                &__item:nth-of-type(even) {
-                    justify-content: flex-start;
-                }
-
-            }
-
-            @media (max-width: vars.$md) {
-
-                &__item:nth-of-type(odd),
-                &__item:nth-of-type(even) {
-                    justify-content: center;
-                }
-            }
-
+        @media (max-width: vars.$lg) {
+          display: flex;
+          justify-content: flex-start;
         }
 
+        & > img {
+          @media (max-width: vars.$md) {
+            border-radius: 12px;
+          }
+        }
+      }
+
+      @media (max-width: vars.$xl) {
+        &__item:nth-of-type(odd) {
+          justify-content: flex-end;
+        }
+
+        &__item:nth-of-type(even) {
+          justify-content: flex-start;
+        }
+      }
+
+      @media (max-width: vars.$md) {
+        &__item:nth-of-type(odd),
+        &__item:nth-of-type(even) {
+          justify-content: center;
+        }
+      }
     }
+  }
 }

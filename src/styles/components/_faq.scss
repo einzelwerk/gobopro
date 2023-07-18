@@ -5,7 +5,7 @@
 
 .faq-1 {
     font-family: "Poppins";
-    margin-block: 60px;
+    margin-block: 120px 60px;
 
     @media (max-width: vars.$md) {
         margin-block: 32px;
@@ -17,6 +17,10 @@
         gap: 64px;
         max-width: 720px;
         margin: 0 auto;
+
+        @media (max-width: vars.$lg){
+            gap: 24px;
+        }
     }
 
     &__text-block {
@@ -31,6 +35,12 @@
         font-weight: 400;
         font-size: 36px;
         line-height: 46px;
+
+        @media (max-width: vars.$lg) {
+            font-size: 28px;
+            line-height: 36px;
+            letter-spacing: -0.56px;
+        }
     }
 }
 
@@ -76,9 +86,13 @@
 
     &__content {
         color: var(--clr-light);
+        padding-top: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
 
-        &__desc {
-            padding-top: 16px;
+        @media(max-width: vars.$lg){
+            line-height: 20px;
         }
     }
 

@@ -24,6 +24,14 @@
             line-height: 46px;
             letter-spacing: -0.36px;
             margin-bottom: 64px;
+
+            @media (max-width: vars.$lg){
+                font-size: 28px;
+                font-weight: 400;
+                line-height: 36px;
+                letter-spacing: -0.56px;
+                margin-bottom: 24px;
+            }
         }
 
         &__list {

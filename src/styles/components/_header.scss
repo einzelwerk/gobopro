@@ -24,8 +24,8 @@
       #{$this}__nav-popup__btn {
         transform: rotate(180deg);
 
-        &>svg {
-          content: url(../../assets/images/header-nav-active.svg);
+        &>svg>path{
+          fill: var(--clr-white);
         }
       }
     }

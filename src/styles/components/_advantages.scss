@@ -5,10 +5,10 @@
 
 .advantages {
     font-family: "Poppins";
-    margin-block: 60px;
+    margin-block: 120px;
 
     @media (max-width: vars.$lg) {
-        margin-block: 32px;
+        margin-block: 64px 32px;
     }
 
     &__container {
@@ -45,6 +45,10 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
+
+            @media (max-width: vars.$lg){
+                margin-top: 20px;
+            }
 
             &__item {
                 color: #98A2B3;
