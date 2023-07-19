@@ -445,11 +445,22 @@ function initStickyWidget() {
 
   // eslint-disable-next-line
   if (!stickyWidget) return;
+  stickyWidget.classList.remove("container");
   window.addEventListener("resize", function () {
     if (window.innerWidth < 992) {
       stickyWidget.classList.add("container");
+      var oldScrollY = window.scrollY;
+      window.addEventListener("scroll", function () {
+        if (oldScrollY < window.scrollY && window.innerWidth < 992) {
+          stickyWidget.style.display = "flex";
+        } else if (oldScrollY > window.scrollY && window.innerWidth < 992) {
+          stickyWidget.style.display = "none";
+        }
+        oldScrollY = window.scrollY;
+      });
     } else {
       stickyWidget.classList.remove("container");
+      stickyWidget.style.display = "flex";
     }
   });
 }
