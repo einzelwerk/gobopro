@@ -101,6 +101,10 @@
         height: 300px;
         cursor: pointer;
 
+        @media (min-width: vars.$xl) and (max-width: vars.$xxl) {
+          height: 260px;
+        }
+
         & > img,
         & > video {
           border-radius: 20px;
