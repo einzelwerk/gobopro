@@ -62,6 +62,11 @@
 
       &__item {
         cursor: pointer;
+
+        & > img,
+        & > video {
+          border-radius: 20px;
+        }
       }
 
       @media (max-width: vars.$xl) {
@@ -95,6 +100,11 @@
         width: 45%;
         height: 300px;
         cursor: pointer;
+
+        & > img,
+        & > video {
+          border-radius: 20px;
+        }
 
         @media (max-width: vars.$md) {
           width: 300px;
