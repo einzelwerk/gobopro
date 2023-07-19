@@ -77,11 +77,25 @@
           border-radius: 20px;
           height: 500px;
           z-index: 10;
+          overflow: hidden;
+
+          @media (min-width: vars.$lg) and (max-width: vars.$xxl) {
+            height: 420px;
+          }
+
+          @media (max-width: vars.$min) {
+            height: 400px;
+          }
 
           & > img {
             position: absolute;
-            top: 22%;
+            top: 10%;
+            left: 35%;
             z-index: -1;
+
+            @media (max-width: vars.$sm) {
+              top: 15%;
+            }
           }
 
           &__specs {
@@ -93,6 +107,10 @@
             width: 200px;
             gap: 32px 8px;
             z-index: 11;
+
+            @media (max-width: vars.$md) {
+              display: none;
+            }
 
             &__item {
               display: flex;
