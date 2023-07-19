@@ -83,7 +83,7 @@
             height: 420px;
           }
 
-          @media (max-width: vars.$min) {
+          @media (max-width: 420px) {
             height: 400px;
           }
 
@@ -93,8 +93,12 @@
             left: 35%;
             z-index: -1;
 
-            @media (max-width: vars.$sm) {
+            @media (max-width: 420px) {
               top: 15%;
+            }
+
+            @media (max-width: 420px) {
+              top: 5%;
             }
           }
 
