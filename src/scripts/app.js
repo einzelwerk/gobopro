@@ -10,6 +10,7 @@ import { initProductAcc } from './modules/productInfoAcc';
 import { initRangeSlider } from './modules/quizSlider';
 import { initPortfolioGallery } from './modules/portfolioGallery';
 import { initFilterToggle } from './modules/filterToggle';
+import { initStickyWidget } from './modules/stickyWidget';
 
 // HEADER-RELATED
 
@@ -57,3 +58,7 @@ contactToggle();
 // PORTFOLIO GALLERY
 
 initPortfolioGallery();
+
+// STICKY WIDGET
+
+initStickyWidget();

@@ -3,62 +3,93 @@
 @use '../utils/variables' as vars;
 @use '../utils/functions' as fn;
 
-
 .sticky-widget {
-    font-family: "Poppins";
-    position: fixed;
-    right: 0;
-    top: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--clr-accent);
-    padding: 4px;
-    gap: 4px;
+  font-family: 'Poppins';
+  position: fixed;
+  right: 0;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-accent);
+  padding: 4px;
+  gap: 4px;
+  border-radius: 10px;
+  z-index: 990;
+
+  @media (max-width: vars.$lg) {
+    flex-direction: row;
+    top: 89%;
+    bottom: 1%;
+    width: 90%;
+    left: 0;
+    justify-content: space-around;
+  }
+
+  &__item {
     border-radius: 10px;
-    z-index: 990;
+    transition: background-color 0.15s ease-in-out;
 
-    &__item {
-        border-radius: 10px;
-        transition: background-color .15s ease-in-out;
-
-        &:hover {
-            background-color: rgba(45, 96, 77, 0.5);
-        }
-
-        &__link {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            cursor: pointer;
-
-            $this: &;
-
-            &:hover {
-                #{$this}__tooltip {
-                    display: flex;
-                }
-            }
-
-            &__tooltip {
-                position: absolute;
-                display: none;
-                align-items: center;
-                justify-content: center;
-                top: 5px;
-                right: 65px;
-                width: 120px;
-                height: 40px;
-                padding: 8px 12px;
-                border-radius: 8px;
-                background-color: var(--clr-accent);
-                font-weight: 500;
-                font-size: 16px;
-            }
-        }
+    @media (max-width: vars.$lg) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
     }
+
+    &-title {
+      font-weight: 600;
+      @media (min-width: vars.$lg) {
+        display: none;
+      }
+
+      @media (max-width: 359px) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(45, 96, 77, 0.5);
+    }
+
+    &__link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+
+      $this: &;
+
+      &:hover {
+        #{$this}__tooltip {
+          display: flex;
+        }
+      }
+
+      &__tooltip {
+        position: absolute;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        top: 5px;
+        right: 65px;
+        width: 120px;
+        height: 40px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        background-color: var(--clr-accent);
+        font-weight: 500;
+        font-size: 16px;
+
+        @media (max-width: vars.$lg) {
+          display: none;
+        }
+      }
+    }
+  }
 }

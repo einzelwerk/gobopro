@@ -430,6 +430,32 @@ function initRangeSlider() {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/stickyWidget.js":
+/*!*********************************************!*\
+  !*** ./src/scripts/modules/stickyWidget.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initStickyWidget: () => (/* binding */ initStickyWidget)
+/* harmony export */ });
+function initStickyWidget() {
+  var stickyWidget = document.querySelector(".sticky-widget");
+
+  // eslint-disable-next-line
+  if (!stickyWidget) return;
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 992) {
+      stickyWidget.classList.add("container");
+    } else {
+      stickyWidget.classList.remove("container");
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/swipers.js":
 /*!****************************************!*\
   !*** ./src/scripts/modules/swipers.js ***!
@@ -11415,6 +11441,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_quizSlider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/quizSlider */ "./src/scripts/modules/quizSlider.js");
 /* harmony import */ var _modules_portfolioGallery__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/portfolioGallery */ "./src/scripts/modules/portfolioGallery.js");
 /* harmony import */ var _modules_filterToggle__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/filterToggle */ "./src/scripts/modules/filterToggle.js");
+/* harmony import */ var _modules_stickyWidget__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/stickyWidget */ "./src/scripts/modules/stickyWidget.js");
+
 
 
 
@@ -11474,6 +11502,10 @@ __webpack_require__.r(__webpack_exports__);
 // PORTFOLIO GALLERY
 
 (0,_modules_portfolioGallery__WEBPACK_IMPORTED_MODULE_10__.initPortfolioGallery)();
+
+// STICKY WIDGET
+
+(0,_modules_stickyWidget__WEBPACK_IMPORTED_MODULE_12__.initStickyWidget)();
 })();
 
 /******/ })()
