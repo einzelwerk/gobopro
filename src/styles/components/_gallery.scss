@@ -84,7 +84,7 @@
       display: flex;
       flex-wrap: wrap;
       width: 50%;
-      gap: 30px;
+      gap: 20px 30px;
 
       @media (max-width: vars.$xl) {
         width: 100%;
