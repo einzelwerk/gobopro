@@ -16,7 +16,7 @@
   padding: 4px;
   gap: 4px;
   border-radius: 10px;
-  z-index: 990;
+  z-index: 1;
 
   @media (max-width: vars.$lg) {
     flex-direction: row;

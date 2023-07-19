@@ -8,12 +8,12 @@
   position: relative;
   z-index: 20;
   background-color: var(--clr-dark);
-  font-family: "Poppins";
+  font-family: 'Poppins';
 
   &__nav-item {
     color: var(--clr-light);
     font-weight: 400;
-    transition: background-color .25s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
 
     &:hover {
       #{$this}__nav-submenu {
@@ -24,7 +24,7 @@
       #{$this}__nav-popup__btn {
         transform: rotate(180deg);
 
-        &>svg>path{
+        & > svg > path {
           fill: var(--clr-white);
         }
       }
@@ -32,7 +32,6 @@
   }
 
   &__inner {
-
     display: flex;
     align-items: center;
     height: 80px;
@@ -69,7 +68,6 @@
       margin-left: 0px;
       font-size: 14px;
     }
-
 
     &-submenu {
       display: none;
@@ -108,7 +106,6 @@
       }
 
       &__link {
-
         &__mobile {
           display: flex;
           justify-content: space-between;
@@ -139,7 +136,7 @@
         flex-direction: column;
         gap: 12px;
 
-        &>li>a {
+        & > li > a {
           &:hover {
             color: var(--clr-white);
           }
@@ -148,7 +145,6 @@
     }
 
     &-inner {
-
       &__container {
         overflow-y: auto;
         margin-block: 16px;
@@ -174,7 +170,6 @@
         flex-direction: column;
         margin-top: 16px;
       }
-
     }
   }
 
@@ -206,7 +201,7 @@
         border-radius: 10px;
         border: 1px solid var(--clr-accent);
 
-        &>svg {
+        & > svg {
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -236,7 +231,7 @@
       &__dropdown {
         display: none;
         position: absolute;
-        content: "";
+        content: '';
         flex-direction: column;
         gap: 12px;
         padding: 16px 12px;
@@ -312,12 +307,11 @@
   }
 
   &__container {
-
     &__inner {
       display: flex;
       flex-direction: column;
-      height: 89dvh;
-      height: 89vh;
+      height: 91dvh;
+      height: 91vh;
     }
   }
 
@@ -354,6 +348,7 @@
     right: 0px;
     background-color: var(--clr-dark);
     border-bottom: 1px solid var(--clr-light);
+    z-index: 1100;
   }
 
   &__more {
@@ -390,7 +385,7 @@
     }
 
     &__config {
-      &>button {
+      & > button {
         display: flex;
         width: 200px;
         padding: 8px 20px;
@@ -415,7 +410,7 @@
 }
 
 .header-language {
-  color: #7C7D84;
+  color: #7c7d84;
   font-size: 16px;
   font-family: Poppins;
   line-height: 16px;
@@ -429,7 +424,6 @@
 // HEADER ACCORDION
 
 .header-acc {
-
   &__head {
     display: flex;
     width: 100%;
@@ -442,7 +436,6 @@
   }
 
   &__body {
-
     &-closed {
       display: none;
     }
@@ -465,8 +458,7 @@
   }
 
   &__trigger {
-
-    &>svg {
+    & > svg {
       width: 20px;
       height: 20px;
       color: var(--clr-light);

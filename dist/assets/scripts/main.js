@@ -421,8 +421,9 @@ function initRangeSlider() {
       // eslint-disable-next-line
       var value = inputSlider.value;
       var w = value * parseInt(window.getComputedStyle(inputSlider).getPropertyValue('width'), 10) / 100;
+      // inputSlider.style.boxShadow = `inset ${w}px 0 #6CEABD`;
       // eslint-disable-next-line
-      inputSlider.style.boxShadow = "inset ".concat(w, "px 0 #6CEABD");
+      inputSlider.style.background = "linear-gradient(to right, #6CEABD ".concat(w, "%, #ccc ").concat(w, "%)");
       sliderValue.textContent = "".concat(value, "M");
     });
   });
@@ -445,19 +446,23 @@ function initStickyWidget() {
 
   // eslint-disable-next-line
   if (!stickyWidget) return;
-  stickyWidget.classList.remove("container");
+  if (window.innerWidth < 992) {
+    stickyWidget.classList.add("container");
+  } else {
+    stickyWidget.classList.remove("container");
+  }
+  var oldScrollY = window.scrollY;
+  window.addEventListener("scroll", function () {
+    if (oldScrollY < window.scrollY && window.innerWidth < 992) {
+      stickyWidget.style.display = "flex";
+    } else if (oldScrollY > window.scrollY && window.innerWidth < 992) {
+      stickyWidget.style.display = "none";
+    }
+    oldScrollY = window.scrollY;
+  });
   window.addEventListener("resize", function () {
     if (window.innerWidth < 992) {
       stickyWidget.classList.add("container");
-      var oldScrollY = window.scrollY;
-      window.addEventListener("scroll", function () {
-        if (oldScrollY < window.scrollY && window.innerWidth < 992) {
-          stickyWidget.style.display = "flex";
-        } else if (oldScrollY > window.scrollY && window.innerWidth < 992) {
-          stickyWidget.style.display = "none";
-        }
-        oldScrollY = window.scrollY;
-      });
     } else {
       stickyWidget.classList.remove("container");
       stickyWidget.style.display = "flex";
