@@ -4,108 +4,106 @@
 @use '../utils/functions' as fn;
 
 .faq-1 {
-    font-family: "Poppins";
-    margin-block: 120px 60px;
+  font-family: 'Poppins';
+  margin-block: 120px 60px;
 
-    @media (max-width: vars.$md) {
-        margin-block: 32px;
+  @media (max-width: vars.$md) {
+    margin-block: 32px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    max-width: 720px;
+    margin: 0 auto;
+
+    @media (max-width: vars.$lg) {
+      gap: 24px;
     }
+  }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 64px;
-        max-width: 720px;
-        margin: 0 auto;
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: min(12px, 20px);
+    text-align: center;
+  }
 
-        @media (max-width: vars.$lg){
-            gap: 24px;
-        }
+  &__title {
+    color: var(--clr-white);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+
+    @media (max-width: vars.$lg) {
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: -0.56px;
     }
-
-    &__text-block {
-        display: flex;
-        flex-direction: column;
-        gap: min(12px, 20px);
-        text-align: center;
-    }
-
-    &__title {
-        color: var(--clr-white);
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 46px;
-
-        @media (max-width: vars.$lg) {
-            font-size: 28px;
-            line-height: 36px;
-            letter-spacing: -0.56px;
-        }
-    }
+  }
 }
 
 .acc {
+  &__head {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    &__head {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
+  &__body {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.1s ease-in-out;
+
+    &-active {
+      max-height: 160px;
     }
+  }
 
-    &__body {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.4s ease-in;
+  &__title {
+    width: 100%;
+    color: var(--clr-white);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    cursor: pointer;
+  }
 
-        &-active {
-            max-height: 160px;
-        }
+  &__item {
+    margin-bottom: 24px;
+  }
+
+  &__item:where(:not(:first-of-type)) {
+    border-top: 1px solid var(--clr-light);
+  }
+
+  &__item:where(:not(:first-of-type)) > &__head {
+    margin-top: 24px;
+  }
+
+  &__content {
+    color: var(--clr-light);
+    padding-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    @media (max-width: vars.$lg) {
+      line-height: 20px;
     }
+  }
 
-    &__title {
-        width: 100%;
-        color: var(--clr-white);
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-        cursor: pointer;
+  &__trigger {
+    & > svg {
+      width: 24px;
+      height: 24px;
+      color: var(--clr-light);
     }
+  }
 
-    &__item {
-        margin-bottom: 24px;
-    }
-
-    &__item:where(:not(:first-of-type)) {
-        border-top: 1px solid var(--clr-light);
-    }
-
-    &__item:where(:not(:first-of-type))>&__head {
-        margin-top: 24px;
-    }
-
-    &__content {
-        color: var(--clr-light);
-        padding-top: 16px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-
-        @media(max-width: vars.$lg){
-            line-height: 20px;
-        }
-    }
-
-    &__trigger {
-
-        &>svg {
-            width: 24px;
-            height: 24px;
-            color: var(--clr-light);
-        }
-    }
-
-    &__icon_close {
-        display: none;
-    }
+  &__icon_close {
+    display: none;
+  }
 }
