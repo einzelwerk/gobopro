@@ -47,29 +47,27 @@ $sm: $min-sm - 0.02px;
   // COLORS
 
   --clr-black: #000000;
-  --clr-white: #FFFFFF;
-  --clr-dark: #1A1B1F;
-  --clr-light: #7C7D84;
-  --clr-accent: #6CEABD;
+  --clr-white: #ffffff;
+  --clr-dark: #1a1b1f;
+  --clr-light: #7c7d84;
+  --clr-accent: #6ceabd;
   --clr-cta: #222222;
 
   // UTILITY CLASSES
 
-  .long-word{
+  .long-word {
     word-break: break-all;
     word-wrap: break-word;
   }
 
-  .pt-60{
-
-    @media(min-width: $lg){
+  .pt-60 {
+    @media (min-width: $lg) {
       padding-top: 60px;
     }
 
-    @media(max-width: $lg){
+    @media (max-width: $lg) {
       padding-top: 32px;
     }
-
   }
 
   .text-accent {
@@ -79,10 +77,10 @@ $sm: $min-sm - 0.02px;
   .btn-accent {
     background-color: var(--clr-accent);
     color: var(--clr-black);
-    transition: opacity .15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
 
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 
@@ -90,18 +88,18 @@ $sm: $min-sm - 0.02px;
     border: 1px solid var(--clr-accent);
     color: var(--clr-accent);
     background-color: transparent;
-    transition: opacity .15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
 
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 
   .btn_black {
-    transition: opacity .15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
 
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 

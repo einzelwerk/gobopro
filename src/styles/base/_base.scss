@@ -22,3 +22,13 @@
 main {
   background-color: var(--clr-dark);
 }
+
+::-moz-selection {
+  color: var(--clr-black);
+  background-color: var(--clr-accent);
+}
+
+::selection {
+  color: var(--clr-black);
+  background-color: var(--clr-accent);
+}

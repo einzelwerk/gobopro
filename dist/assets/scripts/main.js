@@ -442,30 +442,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initStickyWidget: () => (/* binding */ initStickyWidget)
 /* harmony export */ });
 function initStickyWidget() {
-  var stickyWidget = document.querySelector(".sticky-widget");
+  var stickyWidget = document.querySelector('.sticky-widget');
+  setTimeout(function () {
+    stickyWidget.style.display = 'flex';
+  }, 500);
 
   // eslint-disable-next-line
   if (!stickyWidget) return;
   if (window.innerWidth < 992) {
-    stickyWidget.classList.add("container");
+    stickyWidget.classList.add('container');
   } else {
-    stickyWidget.classList.remove("container");
+    stickyWidget.classList.remove('container');
   }
   var oldScrollY = window.scrollY;
-  window.addEventListener("scroll", function () {
+  window.addEventListener('scroll', function () {
     if (oldScrollY < window.scrollY && window.innerWidth < 992) {
-      stickyWidget.style.display = "flex";
+      stickyWidget.style.display = 'flex';
     } else if (oldScrollY > window.scrollY && window.innerWidth < 992) {
-      stickyWidget.style.display = "none";
+      stickyWidget.style.display = 'none';
     }
     oldScrollY = window.scrollY;
   });
-  window.addEventListener("resize", function () {
+  window.addEventListener('resize', function () {
     if (window.innerWidth < 992) {
-      stickyWidget.classList.add("container");
+      stickyWidget.classList.add('container');
     } else {
-      stickyWidget.classList.remove("container");
-      stickyWidget.style.display = "flex";
+      stickyWidget.classList.remove('container');
+      stickyWidget.style.display = 'flex';
     }
   });
 }

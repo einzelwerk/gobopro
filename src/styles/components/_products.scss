@@ -102,10 +102,23 @@
         }
 
         & > option {
+          color: var(--clr-white);
           background-color: var(--clr-dark);
+          border-radius: 24px;
 
-          &:where(:not(:last-child)) {
-            margin-bottom: 16px;
+          &:first-of-type {
+            color: var(--clr-white);
+          }
+
+          &:checked,
+          &:hover {
+            background: var(--clr-dark);
+            color: var(--clr-light);
+          }
+
+          &:hover {
+            color: var(--clr-light);
+            cursor: pointer;
           }
         }
       }
@@ -170,12 +183,4 @@
   width: 49%;
   background-color: var(--clr-accent);
   border-radius: 30px;
-}
-
-// FILTERS
-
-select {
-  & > option {
-    color: var(--clr-dark);
-  }
 }

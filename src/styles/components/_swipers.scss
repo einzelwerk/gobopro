@@ -1,11 +1,11 @@
 .btn-arrow {
-    opacity: .5;
+  opacity: 0.5;
 
-    &:hover {
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 }
 
-.btn-arrow--lighter{
-    opacity: .7;
+.btn-arrow--lighter {
+  border: 1px solid var(--clr-white);
 }
