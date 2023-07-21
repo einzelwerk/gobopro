@@ -69,6 +69,14 @@
   }
 }
 
+// BLOG SWIPER
+
+.blog-swiper-btn_next {
+  & > svg {
+    transform: rotate(180deg);
+  }
+}
+
 // GALLERY SWIPER
 
 .gallery__swiper-btn-block {
@@ -77,6 +85,13 @@
   align-items: center;
   width: 100%;
   margin-top: 24px;
+  margin-left: 0;
+}
+
+.gallery-swiper-btn_next {
+  & > svg {
+    transform: rotate(180deg);
+  }
 }
 
 // REVIEWS SWIPER
@@ -102,4 +117,26 @@
   width: 100%;
   justify-content: flex-start;
   margin-left: 30px;
+}
+
+.news-swiper-btn_next {
+  & > svg {
+    transform: rotate(180deg);
+  }
+}
+
+// LINKS SWIPER
+
+.links-swiper-btn_next {
+  & > svg {
+    transform: rotate(180deg);
+  }
+}
+
+// PRODUCT LIST SWIPER
+
+.product-list-swiper-btn_next {
+  & > svg {
+    transform: rotate(180deg);
+  }
 }
