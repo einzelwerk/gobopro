@@ -393,60 +393,8 @@
                 <p class="quiz__desc"></p>
               </div>
               <div class="quiz__answers">
-                <div class="slider"> <span class="rangeValue"></span>
-                  <input id="fader1" type="range" min="2" max="100" value="2" step="2" list="rangesettings">
-                  <datalist id="rangesettings"> 
-                    <option>2</option>
-                    <option>4</option>
-                    <option>6</option>
-                    <option>8</option>
-                    <option>10</option>
-                    <option>12</option>
-                    <option>14</option>
-                    <option>16</option>
-                    <option>18</option>
-                    <option>20</option>
-                    <option>22</option>
-                    <option>24</option>
-                    <option>26</option>
-                    <option>28</option>
-                    <option>30</option>
-                    <option>32</option>
-                    <option>34</option>
-                    <option>36</option>
-                    <option>38</option>
-                    <option>40</option>
-                    <option>42</option>
-                    <option>44</option>
-                    <option>46</option>
-                    <option>48</option>
-                    <option>50</option>
-                    <option>52</option>
-                    <option>54</option>
-                    <option>56</option>
-                    <option>58</option>
-                    <option>60</option>
-                    <option>62</option>
-                    <option>64</option>
-                    <option>66</option>
-                    <option>68</option>
-                    <option>70</option>
-                    <option>72</option>
-                    <option>74</option>
-                    <option>76</option>
-                    <option>78</option>
-                    <option>80</option>
-                    <option>82</option>
-                    <option>84</option>
-                    <option>86</option>
-                    <option>88</option>
-                    <option>90</option>
-                    <option>92</option>
-                    <option>94</option>
-                    <option>96</option>
-                    <option>98</option>
-                    <option>100</option>
-                  </datalist>
+                <div class="slider">
+                  <input type="range" min="2" max="100" id="range2" step="2" value="2"><span class="rangeValue"></span>
                 </div>
               </div>
               <div class="quiz__actions">
@@ -762,19 +710,8 @@
               <div class="mobile-filter__content-item">
                 <div class="mobile-filter__content-item__title">Projektionsentfernung</div>
                 <div class="mobile-filter__content-item__range">
-                  <div class="slider sliderFilter"><span class="rangeValueFilter"></span><span class="rangeMaxValueFilter">18M</span>
-                    <input id="fader1" type="range" min="2" max="18" value="2" step="2" list="rangesettings">
-                    <datalist id="rangesettings"> 
-                      <option>2</option>
-                      <option>4</option>
-                      <option>6</option>
-                      <option>8</option>
-                      <option>10</option>
-                      <option>12</option>
-                      <option>14</option>
-                      <option>16</option>
-                      <option>18</option>
-                    </datalist>
+                  <div class="slider sliderFilter">
+                    <input class="filterRange" id="range2" type="range" min="2" max="18" value="2" step="2"><span class="rangeValueFilter"></span><span class="rangeMaxValueFilter">18M</span>
                   </div>
                 </div>
               </div>
@@ -801,34 +738,33 @@
             </div>
             <div class="products__container__mobile-filter"> <img src="./assets/images/filter-icon.svg">Filter</div>
             <div class="products__container__filters">
-              <select class="products__container__filters__item" id="line" name="line">
-                <option class="products__container__filters__item__option" value="Serie" selected="true" disabled="disabled">
-                   Serie</option>
-                <option class="products__container__filters__item__option" value="X-Serie">X-Serie</option>
-                <option class="products__container__filters__item__option" value="MH-Serie">MH-Serie</option>
-                <option class="products__container__filters__item__option" value="GBP-Serie">GBP-Serie</option>
+              <select class="products__container__filters__item" name="line">
+                <option class="products__container__filters__item-option" selected disabled="disabled">Serie</option>
+                <option class="products__container__filters__item-option" value="X-Serie">X-Serie</option>
+                <option class="products__container__filters__item-option" value="MH-Serie">MH-Serie</option>
+                <option class="products__container__filters__item-option" value="GBP-Serie">GBP-Serie</option>
               </select>
-              <select class="products__container__filters__item" id="remote" name="remote">
-                <option class="products__container__filters__item__option" value="Fernbedienung" selected="true" disabled="disabled">Fernbedienung</option>
-                <option class="products__container__filters__item__option" value="Yes">Ja</option>
-                <option class="products__container__filters__item__option" value="No">Nein</option>
+              <select class="products__container__filters__item" name="remote">
+                <option class="products__container__filters__item-option" selected disabled="disabled">Fernbedienung</option>
+                <option class="products__container__filters__item-option" value="Yes">Ja</option>
+                <option class="products__container__filters__item-option" value="No">Nein</option>
               </select>
-              <select class="products__container__filters__item" id="changer" name="changer">
-                <option class="products__container__filters__item__option" value="Gobo-Wechsler" selected="true" disabled="disabled">Gobo-Wechsler</option>
-                <option class="products__container__filters__item__option" value="Yes">Ja</option>
-                <option class="products__container__filters__item__option" value="No">Nein</option>
+              <select class="products__container__filters__item" name="changer">
+                <option class="products__container__filters__item-option" selected disabled="disabled">Gobo-Wechsler</option>
+                <option class="products__container__filters__item-option" value="Yes">Ja</option>
+                <option class="products__container__filters__item-option" value="No">Nein</option>
               </select>
-              <select class="products__container__filters__item" id="distance" name="distance">
-                <option class="products__container__filters__item__option" value="Projektionsentfernung" selected="true" disabled="disabled">Projektionsentfernung</option>
-                <option class="products__container__filters__item__option" value="2">2 metres</option>
-                <option class="products__container__filters__item__option" value="5">5 metres</option>
-                <option class="products__container__filters__item__option" value="10">10 metres</option>
+              <select class="products__container__filters__item" name="distance">
+                <option class="products__container__filters__item-option" selected disabled="disabled">Projektionsentfernung</option>
+                <option class="products__container__filters__item-option" value="2">2 metres</option>
+                <option class="products__container__filters__item-option" value="5">5 metres</option>
+                <option class="products__container__filters__item-option" value="10">10 metres</option>
               </select>
-              <select class="products__container__filters__item" id="rotation" name="rotation">
-                <option class="products__container__filters__item__option" value="Bildrotation" selected="true" disabled="disabled">Bildrotation</option>
-                <option class="products__container__filters__item__option" value="90">90 degrees</option>
-                <option class="products__container__filters__item__option" value="180">180 degrees</option>
-                <option class="products__container__filters__item__option" value="360">360 degrees</option>
+              <select class="products__container__filters__item" name="rotation">
+                <option class="products__container__filters__item-option" selected disabled="disabled">Bildrotation</option>
+                <option class="products__container__filters__item-option" value="90">90 degrees</option>
+                <option class="products__container__filters__item-option" value="180">180 degrees</option>
+                <option class="products__container__filters__item-option" value="360">360 degrees</option>
               </select>
             </div>
             <ul class="catalogue__container__list products__container__list">

@@ -413,19 +413,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initRangeSlider: () => (/* binding */ initRangeSlider)
 /* harmony export */ });
-var sliderValue = document.querySelector(".slider span");
-var inputSliders = document.querySelectorAll(".slider input");
+var sliderEl = document.querySelector('#range2');
+var sliderFilter = document.querySelector('.filterRange');
+var sliderValue = document.querySelector('.rangeValue');
+var sliderValueFilter = document.querySelector('.rangeValueFilter');
 function initRangeSlider() {
-  inputSliders.forEach(function (inputSlider) {
-    inputSlider.addEventListener('input', function () {
-      // eslint-disable-next-line
-      var value = inputSlider.value;
-      var w = value * parseInt(window.getComputedStyle(inputSlider).getPropertyValue('width'), 10) / 100;
-      // inputSlider.style.boxShadow = `inset ${w}px 0 #6CEABD`;
-      // eslint-disable-next-line
-      inputSlider.style.background = "linear-gradient(to right, #6CEABD ".concat(w, "%, #ccc ").concat(w, "%)");
-      sliderValue.textContent = "".concat(value, "M");
-    });
+  sliderValue.textContent = '2M';
+  sliderEl.addEventListener('input', function (event) {
+    var tempSliderValue = event.target.value;
+    sliderValue.textContent = "".concat(tempSliderValue, "M");
+    var progress = tempSliderValue / sliderEl.max * 100;
+    sliderEl.style.background = "linear-gradient(to right, #6ceabd ".concat(progress, "%, #ccc ").concat(progress, "%)");
+  });
+  sliderValueFilter.textContent = '2M';
+  sliderFilter.addEventListener('input', function (event) {
+    var tempSliderValue = event.target.value;
+    sliderValueFilter.textContent = "".concat(tempSliderValue, "M");
+    var progress = tempSliderValue / sliderFilter.max * 100;
+    sliderFilter.style.background = "linear-gradient(to right, #6ceabd ".concat(progress, "%, #ccc ").concat(progress, "%)");
   });
 }
 

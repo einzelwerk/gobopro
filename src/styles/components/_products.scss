@@ -101,6 +101,25 @@
           background-image: url('../../assets/images/select-arrow-up.svg');
         }
 
+        &-options {
+          position: absolute;
+          top: 56px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          padding: 16px;
+          border-radius: 20px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--bg, #1a1b1f);
+        }
+
+        &-option {
+          color: var(--clr-white);
+        }
+
         & > option {
           color: var(--clr-white);
           background-color: var(--clr-dark);
