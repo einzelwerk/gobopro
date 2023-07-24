@@ -308,6 +308,7 @@
 }
 
 .label-active {
+  display: none;
   & > img {
     width: 20px;
     height: 20px;
