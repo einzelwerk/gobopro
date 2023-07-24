@@ -4,6 +4,8 @@ const sliderValue = document.querySelector('.rangeValue');
 const sliderValueFilter = document.querySelector('.rangeValueFilter');
 
 export function initRangeSlider() {
+  if (!sliderEl || !sliderFilter || !sliderValue || !sliderValueFilter) return;
+
   sliderValue.textContent = '2M';
 
   sliderEl.addEventListener('input', (event) => {

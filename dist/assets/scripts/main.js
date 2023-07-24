@@ -418,6 +418,7 @@ var sliderFilter = document.querySelector('.filterRange');
 var sliderValue = document.querySelector('.rangeValue');
 var sliderValueFilter = document.querySelector('.rangeValueFilter');
 function initRangeSlider() {
+  if (!sliderEl || !sliderFilter || !sliderValue || !sliderValueFilter) return;
   sliderValue.textContent = '2M';
   sliderEl.addEventListener('input', function (event) {
     var tempSliderValue = event.target.value;
