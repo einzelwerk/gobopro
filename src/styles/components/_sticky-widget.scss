@@ -69,6 +69,10 @@
       &:hover {
         #{$this}__tooltip {
           display: flex;
+
+          @media (max-width: vars.$lg) {
+            display: none;
+          }
         }
       }
 
