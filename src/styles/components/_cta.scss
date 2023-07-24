@@ -167,7 +167,8 @@
       margin-top: auto;
     }
 
-    & > a {
+    & > a,
+    & > button {
       display: flex;
       background-color: #222222;
       padding: 14px 32px;
