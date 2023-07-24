@@ -297,37 +297,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   quizToggle: () => (/* binding */ quizToggle)
 /* harmony export */ });
 function quizToggle() {
-  var quiz = document.querySelector(".quiz");
-  var quizClose = document.querySelector(".quiz__close");
-  var quizBtns = document.querySelectorAll(".take__quiz");
+  var quiz = document.querySelector('.quiz');
+  var quizClose = document.querySelector('.quiz__close');
+  var quizBtns = document.querySelectorAll('.take__quiz');
   if (!quiz || !quizBtns) return;
   quizBtns.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      window.scrollTo(0, 0);
-      quiz.classList.add("visible");
-      document.body.style.overflow = "hidden";
+    btn.addEventListener('click', function () {
+      quiz.classList.add('visible');
+      document.body.style.overflow = 'hidden';
     });
   });
-  quizClose.addEventListener("click", function () {
-    quiz.classList.remove("visible");
-    document.body.style.overflow = "auto";
+  quizClose.addEventListener('click', function () {
+    quiz.classList.remove('visible');
+    document.body.style.overflow = 'auto';
   });
 }
 function contactToggle() {
-  var contactModal = document.querySelector(".contact-modal");
-  var contactModalClose = document.querySelector(".contact-modal__close");
-  var contactModalBtns = document.querySelectorAll(".contact-form");
+  var contactModal = document.querySelector('.contact-modal');
+  var contactModalClose = document.querySelector('.contact-modal__close');
+  var contactModalBtns = document.querySelectorAll('.contact-form');
   if (!contactModal || !contactModalBtns) return;
   contactModalBtns.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      window.scrollTo(0, 0);
-      contactModal.classList.add("visible");
-      document.body.style.overflow = "hidden";
+    btn.addEventListener('click', function () {
+      contactModal.classList.add('visible');
+      document.body.style.overflow = 'hidden';
     });
   });
-  contactModalClose.addEventListener("click", function () {
-    contactModal.classList.remove("visible");
-    document.body.style.overflow = "auto";
+  contactModalClose.addEventListener('click', function () {
+    contactModal.classList.remove('visible');
+    document.body.style.overflow = 'auto';
   });
 }
 
