@@ -206,6 +206,7 @@
 
 .select-box {
   display: flex;
+  width: 235px;
   flex-direction: column;
   position: relative;
   flex: 1 0 auto;
@@ -221,7 +222,8 @@
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: var(--bg, #1a1b1f);
-
+  position: absolute;
+  top: 100%;
   order: 1;
 }
 
@@ -253,9 +255,11 @@
 
 .select-box .options-container.active {
   max-height: 240px;
+  flex: 1 0 auto;
   opacity: 1;
   position: absolute;
   top: 100%;
+  z-index: 100;
 }
 
 .select-box .options-container.active + .selected::after {
