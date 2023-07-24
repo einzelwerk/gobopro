@@ -814,8 +814,13 @@ function initLinksSwiper() {
 }
 function initDetailedProductSwiper() {
   var detailedSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.detailed-swiper', {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
     autoplay: {
       delay: 5000
+    },
+    navigation: {
+      nextEl: '.detailed-swiper-btn_next',
+      prevEl: '.detailed-swiper-btn_prev'
     },
     breakpoints: {
       320: {
