@@ -9,7 +9,7 @@ section#products.products.section
             img(src='@/assets/images/filter-icon.svg')
             | Filter
         .products__container__filters
-            .select-box
+            .select-box(data-default="serie")
                 .options-container
                     .option
                         input#automobiles.radio(type='radio' name='series')
@@ -22,7 +22,7 @@ section#products.products.section
                         label(for='x') X-Serie
                 .selected
                     | Serie
-            .select-box
+            .select-box(data-default="remote")
                 .options-container
                     .option
                         input#film.radio(type='radio' name='remote')
@@ -32,7 +32,7 @@ section#products.products.section
                         label(for='no') Nein
                 .selected
                     | Fernbedienung
-            .select-box
+            .select-box(data-default="changer")
                 .options-container
                     .option
                         input#film.radio(type='radio' name='changer')
@@ -42,7 +42,7 @@ section#products.products.section
                         label(for='no') Nein
                 .selected
                     | Gobo-Wechsler
-            .select-box
+            .select-box(data-default="distance")
                 .options-container
                     .option
                         input#film.radio(type='radio' name='distance')
@@ -55,7 +55,7 @@ section#products.products.section
                         label(for='10') 10 metres
                 .selected
                     | Projektionsentfernung
-            .select-box
+            .select-box(data-default="rotation")
                 .options-container
                     .option
                         input#film.radio(type='radio' name='rotation')

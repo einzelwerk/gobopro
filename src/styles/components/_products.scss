@@ -297,6 +297,7 @@
 
 .select-box label {
   cursor: pointer;
+  width: 100%;
 }
 
 .selected [type='radio']:not(:checked) + label,
