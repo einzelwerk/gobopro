@@ -373,6 +373,38 @@ function initPortfolioGallery() {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/productFilters.js":
+/*!***********************************************!*\
+  !*** ./src/scripts/modules/productFilters.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initProductsFilters: () => (/* binding */ initProductsFilters)
+/* harmony export */ });
+var selected = document.querySelectorAll('.selected');
+function initProductsFilters() {
+  if (!selected) return;
+  selected.forEach(function (element) {
+    element.addEventListener('click', function () {
+      element.previousElementSibling.classList.toggle('active');
+      var _loop = function _loop(i) {
+        element.previousElementSibling.children[i].addEventListener('click', function () {
+          // eslint-disable-next-line
+          element.innerHTML = element.previousElementSibling.children[i].innerHTML;
+          element.previousElementSibling.classList.remove('active');
+        });
+      };
+      for (var i = 0; i < element.previousElementSibling.children.length; i += 1) {
+        _loop(i);
+      }
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/productInfoAcc.js":
 /*!***********************************************!*\
   !*** ./src/scripts/modules/productInfoAcc.js ***!
@@ -11467,6 +11499,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_portfolioGallery__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/portfolioGallery */ "./src/scripts/modules/portfolioGallery.js");
 /* harmony import */ var _modules_filterToggle__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/filterToggle */ "./src/scripts/modules/filterToggle.js");
 /* harmony import */ var _modules_stickyWidget__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/stickyWidget */ "./src/scripts/modules/stickyWidget.js");
+/* harmony import */ var _modules_productFilters__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/productFilters */ "./src/scripts/modules/productFilters.js");
+
 
 
 
@@ -11531,6 +11565,10 @@ __webpack_require__.r(__webpack_exports__);
 // STICKY WIDGET
 
 (0,_modules_stickyWidget__WEBPACK_IMPORTED_MODULE_12__.initStickyWidget)();
+
+// PRODUCTS FILTERS
+
+(0,_modules_productFilters__WEBPACK_IMPORTED_MODULE_13__.initProductsFilters)();
 })();
 
 /******/ })()

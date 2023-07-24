@@ -1,6 +1,19 @@
 import 'normalize.css';
 import { initAcc } from './modules/acc';
-import { initBenefitsSwiper, initBlogSwiper, initCatalogueSwiper, initDetailedProductSwiper, initGallerySwiper, initInstructionsSwiper, initLinksSwiper, initNecessitiesSwiper, initNewsSwiper, initPartnersSwiper, initReviewsSwiper, initUsageSwiper } from './modules/swipers';
+import {
+  initBenefitsSwiper,
+  initBlogSwiper,
+  initCatalogueSwiper,
+  initDetailedProductSwiper,
+  initGallerySwiper,
+  initInstructionsSwiper,
+  initLinksSwiper,
+  initNecessitiesSwiper,
+  initNewsSwiper,
+  initPartnersSwiper,
+  initReviewsSwiper,
+  initUsageSwiper,
+} from './modules/swipers';
 import { chooseLanguage } from './modules/languages';
 import { quizToggle, contactToggle } from './modules/modalToggle';
 import { footerLinksToggle } from './modules/footerNavLinks';
@@ -11,6 +24,7 @@ import { initRangeSlider } from './modules/quizSlider';
 import { initPortfolioGallery } from './modules/portfolioGallery';
 import { initFilterToggle } from './modules/filterToggle';
 import { initStickyWidget } from './modules/stickyWidget';
+import { initProductsFilters } from './modules/productFilters';
 
 // HEADER-RELATED
 
@@ -62,3 +76,7 @@ initPortfolioGallery();
 // STICKY WIDGET
 
 initStickyWidget();
+
+// PRODUCTS FILTERS
+
+initProductsFilters();

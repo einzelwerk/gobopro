@@ -237,15 +237,15 @@
 
 .selected::after {
   content: '';
-  background: url('select-arrow-down.svg');
+  background: url('../../assets/images/select-arrow-down.svg');
   background-size: contain;
   background-repeat: no-repeat;
 
   position: absolute;
   height: 100%;
   width: 16px;
-  right: 10px;
-  top: 15px;
+  right: 16px;
+  top: 16px;
 
   transition: all 0.4s;
 }
@@ -274,7 +274,7 @@
 
 .select-box .option,
 .selected {
-  padding: 16px;
+  padding: 14px 12px 14px 16px;
   cursor: pointer;
 }
 
@@ -285,6 +285,17 @@
 
 .select-box label {
   cursor: pointer;
+}
+
+.selected [type='radio']:not(:checked) + label,
+.option [type='radio']:not(:checked) + label {
+  padding-left: 0;
+}
+
+.selected > label::before,
+.option label::before {
+  padding-left: 0;
+  display: none;
 }
 
 .select-box .option .radio {

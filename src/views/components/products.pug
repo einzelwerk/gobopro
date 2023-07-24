@@ -12,34 +12,62 @@ section#products.products.section
             .select-box
                 .options-container
                     .option
-                        input#automobiles.radio(type='radio' name='category')
-                        label(for='automobiles') GBP-Serie
+                        input#automobiles.radio(type='radio' name='series')
+                        label(for='gbp') GBP-Serie
                     .option
-                        input#film.radio(type='radio' name='category')
-                        label(for='film') MH-Serie
+                        input#film.radio(type='radio' name='series')
+                        label(for='mh') MH-Serie
                     .option
-                        input#science.radio(type='radio' name='category')
-                        label(for='science') X-Serie
+                        input#science.radio(type='radio' name='series')
+                        label(for='x') X-Serie
                 .selected
                     | Serie
-        select.products__container__filters__item(name='remote')
-            option.products__container__filters__item-option(selected disabled='disabled') Fernbedienung
-            option.products__container__filters__item-option(value='Yes') Ja
-            option.products__container__filters__item-option(value='No') Nein
-        select.products__container__filters__item(name='changer')
-            option.products__container__filters__item-option(selected disabled='disabled') Gobo-Wechsler
-            option.products__container__filters__item-option(value='Yes') Ja
-            option.products__container__filters__item-option(value='No') Nein
-        select.products__container__filters__item(name='distance')
-            option.products__container__filters__item-option(selected disabled='disabled') Projektionsentfernung
-            option.products__container__filters__item-option(value='2') 2 metres
-            option.products__container__filters__item-option(value='5') 5 metres
-            option.products__container__filters__item-option(value='10') 10 metres
-        select.products__container__filters__item(name='rotation')
-            option.products__container__filters__item-option(selected disabled='disabled') Bildrotation
-            option.products__container__filters__item-option(value='90') 90 degrees
-            option.products__container__filters__item-option(value='180') 180 degrees
-            option.products__container__filters__item-option(value='360') 360 degrees
+            .select-box
+                .options-container
+                    .option
+                        input#film.radio(type='radio' name='remote')
+                        label(for='yes') Ja
+                    .option
+                        input#science.radio(type='radio' name='remote')
+                        label(for='no') Nein
+                .selected
+                    | Fernbedienung
+            .select-box
+                .options-container
+                    .option
+                        input#film.radio(type='radio' name='changer')
+                        label(for='yes') Ja
+                    .option
+                        input#science.radio(type='radio' name='changer')
+                        label(for='no') Nein
+                .selected
+                    | Gobo-Wechsler
+            .select-box
+                .options-container
+                    .option
+                        input#film.radio(type='radio' name='distance')
+                        label(for='2') 2 metres
+                    .option
+                        input#science.radio(type='radio' name='distance')
+                        label(for='5') 5 metres
+                    .option
+                        input#science.radio(type='radio' name='distance')
+                        label(for='10') 10 metres
+                .selected
+                    | Projektionsentfernung
+            .select-box
+                .options-container
+                    .option
+                        input#film.radio(type='radio' name='rotation')
+                        label(for='90') 90 degrees
+                    .option
+                        input#science.radio(type='radio' name='rotation')
+                        label(for='180') 180 degrees
+                    .option
+                        input#science.radio(type='radio' name='rotation')
+                        label(for='360') 360 degrees
+                .selected
+                    | Bildrotation
         ul.catalogue__container__list.products__container__list
             li.catalogue__container__list__item.products__container__list__item
                 .catalogue__container__list__item-picture
