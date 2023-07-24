@@ -41,6 +41,7 @@
 
       &__item {
         width: 410px;
+        height: fit-content;
 
         @media (max-width: vars.$xxl) {
           width: 360px;
