@@ -206,8 +206,9 @@
 
 .select-box {
   display: flex;
-  width: 235px;
   flex-direction: column;
+  position: relative;
+  flex: 1 0 auto;
 }
 
 .select-box .options-container {
@@ -253,7 +254,8 @@
 .select-box .options-container.active {
   max-height: 240px;
   opacity: 1;
-  overflow-y: scroll;
+  position: absolute;
+  top: 100%;
 }
 
 .select-box .options-container.active + .selected::after {

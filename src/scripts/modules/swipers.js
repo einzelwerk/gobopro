@@ -245,6 +245,38 @@ export function initCatalogueSwiper() {
   return catalogueSwiper;
 }
 
+export function initSimilarSwiper() {
+  const catalogueSwiper = new Swiper('.similar-swiper', {
+    modules: [Navigation],
+    autoplay: {
+      delay: 5000,
+    },
+    navigation: {
+      nextEl: '.similar-swiper-btn_next',
+      prevEl: '.similar-swiper-btn_prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        enabled: true,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        enabled: true,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        enabled: true,
+      },
+    },
+  });
+
+  return catalogueSwiper;
+}
+
 export function initNecessitiesSwiper() {
   const necessitiesSwiper = new Swiper('.necessities-swiper', {
     autoplay: {

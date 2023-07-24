@@ -12,6 +12,7 @@ import {
   initNewsSwiper,
   initPartnersSwiper,
   initReviewsSwiper,
+  initSimilarSwiper,
   initUsageSwiper,
 } from './modules/swipers';
 import { chooseLanguage } from './modules/languages';
@@ -51,6 +52,7 @@ initCatalogueSwiper();
 initNecessitiesSwiper();
 initLinksSwiper();
 initDetailedProductSwiper();
+initSimilarSwiper();
 
 // PRODUCTS PAGE
 
