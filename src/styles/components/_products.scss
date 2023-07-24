@@ -59,6 +59,11 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          height: 130px;
+
+          @media (max-width: vars.$lg) {
+            height: 110px;
+          }
         }
       }
     }

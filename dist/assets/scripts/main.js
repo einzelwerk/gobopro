@@ -101,22 +101,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initFilterToggle: () => (/* binding */ initFilterToggle)
 /* harmony export */ });
 function initFilterToggle() {
-  var filterToggle = document.querySelector(".products__container__mobile-filter");
-  var filterClose = document.querySelector(".mobile-filter__back");
-  var filterMobile = document.querySelector(".mobile-filter");
+  var filterToggle = document.querySelector('.products__container__mobile-filter');
+  var filterClose = document.querySelector('.mobile-filter__back');
+  var filterMobile = document.querySelector('.mobile-filter');
   if (!filterClose && !filterMobile && !filterToggle) return;
-  filterToggle.addEventListener("click", function () {
-    if (!filterMobile || filterMobile.style.display === "none" || filterMobile.style.display === "") {
-      filterMobile.style.display = "flex";
-      document.body.style.overflow = "hidden";
+  filterToggle.addEventListener('click', function () {
+    if (!filterMobile || filterMobile.style.display === 'none' || filterMobile.style.display === '') {
+      filterMobile.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
     } else {
-      filterMobile.style.display = "none";
-      document.body.style.overflow = "auto";
+      filterMobile.style.display = 'none';
+      document.body.style.overflow = 'auto';
     }
   });
-  filterClose.addEventListener("click", function () {
-    filterMobile.style.display = "none";
-    document.body.style.overflow = "auto";
+  filterClose.addEventListener('click', function () {
+    filterMobile.style.display = 'none';
+    document.body.style.overflow = 'auto';
   });
 }
 
@@ -390,7 +390,7 @@ function initProductsFilters() {
       var _loop = function _loop(i) {
         element.previousElementSibling.children[i].addEventListener('click', function () {
           // eslint-disable-next-line
-          element.innerHTML = element.previousElementSibling.children[i].innerHTML;
+          element.innerHTML = element.previousElementSibling.children[i].textContent;
           element.previousElementSibling.classList.remove('active');
         });
       };
