@@ -290,6 +290,13 @@
   cursor: pointer;
 }
 
+.option label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .select-box .option:hover {
   color: #ffffff;
   opacity: 0.6;
@@ -298,6 +305,13 @@
 .select-box label {
   cursor: pointer;
   width: 100%;
+}
+
+.label-active {
+  & > img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .selected [type='radio']:not(:checked) + label,
