@@ -20,9 +20,10 @@
 
   @media (max-width: vars.$lg) {
     flex-direction: row;
-    top: 89%;
+    top: auto;
     bottom: 1%;
     width: 90%;
+    height: 80px;
     left: 0;
     justify-content: space-around;
   }
