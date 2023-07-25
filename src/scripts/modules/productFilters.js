@@ -1,5 +1,5 @@
 const selected = document.querySelectorAll('.selected');
-// const activeOptions = document.querySelectorAll('.label-active');
+const activeOptions = document.querySelectorAll('.label-active');
 
 export function initProductsFilters() {
   if (!selected) return;
@@ -18,6 +18,14 @@ export function initProductsFilters() {
           element.innerHTML = element.previousElementSibling.children[i].textContent;
           element.previousElementSibling.classList.remove('active');
         });
+      }
+    });
+  });
+
+  activeOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+      if (option.classList.contains('active')) {
+        option.classList.remove('active');
       }
     });
   });

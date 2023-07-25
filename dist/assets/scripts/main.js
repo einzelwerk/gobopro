@@ -384,8 +384,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initProductsFilters: () => (/* binding */ initProductsFilters)
 /* harmony export */ });
 var selected = document.querySelectorAll('.selected');
-// const activeOptions = document.querySelectorAll('.label-active');
-
+var activeOptions = document.querySelectorAll('.label-active');
 function initProductsFilters() {
   if (!selected) return;
   selected.forEach(function (element) {
@@ -404,6 +403,13 @@ function initProductsFilters() {
       };
       for (var i = 0; i < element.previousElementSibling.children.length; i += 1) {
         _loop(i);
+      }
+    });
+  });
+  activeOptions.forEach(function (option) {
+    option.addEventListener('click', function () {
+      if (option.classList.contains('active')) {
+        option.classList.remove('active');
       }
     });
   });
