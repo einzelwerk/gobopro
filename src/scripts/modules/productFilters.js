@@ -26,6 +26,8 @@ export function initProductsFilters() {
     option.addEventListener('click', (event) => {
       if (option.classList.contains('active')) {
         option.classList.remove('active');
+        // eslint-disable-next-line
+        option.closest('.option').querySelector('input').checked = false;
         event.stopPropagation();
       }
     });
