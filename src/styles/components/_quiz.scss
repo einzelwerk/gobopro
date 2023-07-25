@@ -22,6 +22,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 850px;
+    padding: 64px;
     border-radius: 12px;
     border: 1px solid #3f4146;
     background: radial-gradient(
@@ -46,7 +47,6 @@
   }
 
   &__content {
-    padding: 64px;
     display: flex;
     flex-direction: column;
     gap: 48px;
@@ -58,10 +58,10 @@
   }
 
   &__content-form {
-    padding: 64px;
     display: flex;
     flex-direction: column;
     gap: 36px;
+    overflow-y: scroll;
 
     @media (max-width: vars.$sm) {
       padding: 80px 20px 20px 20px;
@@ -217,6 +217,8 @@
 
   &__actions {
     display: flex;
+    justify-content: center;
+    margin-top: 48px;
     gap: 12px;
 
     @media (max-width: vars.$md) {
