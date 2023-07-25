@@ -13,6 +13,8 @@ export function initProductsFilters() {
           if (!element.previousElementSibling.children[i].children[1].children[0].classList.contains('active')) {
             // eslint-disable-next-line
             element.previousElementSibling.children[i].children[1].children[0].classList.add('active');
+          } else {
+            element.previousElementSibling.children[i].children[1].children[0].classList.remove('active');
           }
           // eslint-disable-next-line
           element.innerHTML = element.previousElementSibling.children[i].textContent;
