@@ -7,7 +7,7 @@
 
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 1111;
   background-color: var(--clr-dark);
   font-family: 'Poppins';
 
@@ -311,8 +311,8 @@
     &__inner {
       display: flex;
       flex-direction: column;
-      height: 91dvh;
-      height: 91vh;
+      height: 93dvh;
+      height: 93vh;
     }
   }
 
@@ -348,7 +348,7 @@
   &__content {
     display: none;
     position: absolute;
-    top: 95px;
+    top: 70px;
     left: 0px;
     right: 0px;
     background-color: var(--clr-dark);
