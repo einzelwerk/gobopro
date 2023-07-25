@@ -46,7 +46,7 @@
                 .quiz__answers__item
                     input#night(type='checkbox')
                     label(for='night') Nacht
-        .quiz__content(data-page='3')
+        .quiz__content(data-page='3').inactive
             .quiz__steps
                 .quiz__steps__step.completed
                 .quiz__steps__step.completed
@@ -63,9 +63,9 @@
                 p.quiz__desc
             .quiz__answers
                 .slider
-                    input(type='range' name='distance' min='2' max='100' id='range2' step="2" value="2")
+                    input(type='range' name='distance' min='2' max='100' step="2" value="2")
                     span.rangeValue
-        .quiz__content(data-page='4').inactive
+        .quiz__content(data-page='4')
             .quiz__steps
                 .quiz__steps__step.completed
                 .quiz__steps__step.completed
