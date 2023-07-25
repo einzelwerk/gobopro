@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function initFilterToggle() {
   var filterToggle = document.querySelector('.products__container__mobile-filter');
-  var filterClose = document.querySelector('.mobile-filter__back');
+  var filterClose = document.querySelectorAll('.mobile-filter__back');
   var filterMobile = document.querySelector('.mobile-filter');
   if (!filterClose && !filterMobile && !filterToggle) return;
   filterToggle.addEventListener('click', function () {
@@ -114,9 +114,11 @@ function initFilterToggle() {
       document.body.style.overflow = 'auto';
     }
   });
-  filterClose.addEventListener('click', function () {
-    filterMobile.style.display = 'none';
-    document.body.style.overflow = 'auto';
+  filterClose.forEach(function (filter) {
+    filter.addEventListener('click', function () {
+      filterMobile.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
   });
 }
 

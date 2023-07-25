@@ -1,6 +1,6 @@
 export function initFilterToggle() {
   const filterToggle = document.querySelector('.products__container__mobile-filter');
-  const filterClose = document.querySelector('.mobile-filter__back');
+  const filterClose = document.querySelectorAll('.mobile-filter__back');
   const filterMobile = document.querySelector('.mobile-filter');
 
   if (!filterClose && !filterMobile && !filterToggle) return;
@@ -15,8 +15,10 @@ export function initFilterToggle() {
     }
   });
 
-  filterClose.addEventListener('click', () => {
-    filterMobile.style.display = 'none';
-    document.body.style.overflow = 'auto';
+  filterClose.forEach((filter) => {
+    filter.addEventListener('click', () => {
+      filterMobile.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
   });
 }
