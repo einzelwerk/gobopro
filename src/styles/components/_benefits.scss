@@ -35,7 +35,7 @@
 
     &-wrap {
       flex: none;
-      max-width: 450px;
+      max-width: 384px;
       margin-right: 80px;
       margin-bottom: 60px;
 
@@ -94,6 +94,10 @@
     padding: 20px 20px 24px;
     border: 1px solid #3f4146;
     border-radius: 20px;
+
+    @media (min-width: vars.$xxl) {
+      width: 398px;
+    }
 
     @media (max-width: vars.$xxl) {
       padding-right: 0;
