@@ -23,9 +23,10 @@ export function initProductsFilters() {
   });
 
   activeOptions.forEach((option) => {
-    option.addEventListener('click', () => {
+    option.addEventListener('click', (event) => {
       if (option.classList.contains('active')) {
         option.classList.remove('active');
+        event.stopPropagation();
       }
     });
   });

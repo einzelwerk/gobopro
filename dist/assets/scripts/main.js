@@ -407,9 +407,10 @@ function initProductsFilters() {
     });
   });
   activeOptions.forEach(function (option) {
-    option.addEventListener('click', function () {
+    option.addEventListener('click', function (event) {
       if (option.classList.contains('active')) {
         option.classList.remove('active');
+        event.stopPropagation();
       }
     });
   });
