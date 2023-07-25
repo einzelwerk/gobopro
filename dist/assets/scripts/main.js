@@ -313,6 +313,12 @@ function quizToggle() {
     quiz.classList.remove('visible');
     document.body.style.overflow = 'auto';
   });
+  quiz.addEventListener('click', function (event) {
+    if (event.target.classList.contains('quiz')) {
+      quiz.classList.remove('visible');
+      document.body.style.overflow = 'auto';
+    }
+  });
 }
 function contactToggle() {
   var contactModal = document.querySelector('.contact-modal');
@@ -328,6 +334,12 @@ function contactToggle() {
   contactModalClose.addEventListener('click', function () {
     contactModal.classList.remove('visible');
     document.body.style.overflow = 'auto';
+  });
+  contactModal.addEventListener('click', function (event) {
+    if (event.target.classList.contains('contact-modal')) {
+      contactModal.classList.remove('visible');
+      document.body.style.overflow = 'auto';
+    }
   });
 }
 

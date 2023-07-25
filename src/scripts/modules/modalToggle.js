@@ -16,6 +16,13 @@ export function quizToggle() {
     quiz.classList.remove('visible');
     document.body.style.overflow = 'auto';
   });
+
+  quiz.addEventListener('click', (event) => {
+    if (event.target.classList.contains('quiz')) {
+      quiz.classList.remove('visible');
+      document.body.style.overflow = 'auto';
+    }
+  });
 }
 
 export function contactToggle() {
@@ -35,5 +42,12 @@ export function contactToggle() {
   contactModalClose.addEventListener('click', () => {
     contactModal.classList.remove('visible');
     document.body.style.overflow = 'auto';
+  });
+
+  contactModal.addEventListener('click', (event) => {
+    if (event.target.classList.contains('contact-modal')) {
+      contactModal.classList.remove('visible');
+      document.body.style.overflow = 'auto';
+    }
   });
 }
