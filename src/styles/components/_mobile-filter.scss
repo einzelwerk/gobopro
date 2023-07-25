@@ -67,16 +67,12 @@
       &__toggle {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         color: var(--clr-white);
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0.16px;
-
-        & > .toggle-thumb + [type='checkbox']:checked {
-          background-color: var(--clr-accent);
-          color: var(--clr-black);
-        }
       }
 
       &__options {
