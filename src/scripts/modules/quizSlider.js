@@ -1,4 +1,4 @@
-window.initRangeSlider = function initRangeSlider() {
+window.initRangeSlider = () => {
   const sliderEl = document.querySelector('#range2');
   const sliderFilter = document.querySelector('.filterRange');
   const sliderValue = document.querySelector('.rangeValue');

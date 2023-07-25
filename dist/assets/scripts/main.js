@@ -478,7 +478,7 @@ function initProductAcc() {
   \*******************************************/
 /***/ (() => {
 
-window.initRangeSlider = function initRangeSlider() {
+window.initRangeSlider = function () {
   var sliderEl = document.querySelector('#range2');
   var sliderFilter = document.querySelector('.filterRange');
   var sliderValue = document.querySelector('.rangeValue');
