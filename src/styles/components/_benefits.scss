@@ -100,7 +100,8 @@
       height: 352px;
 
       @media (max-width: vars.$lg) {
-        height: 308px;
+        height: auto;
+        gap: 30px;
       }
     }
 
