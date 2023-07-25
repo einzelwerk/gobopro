@@ -4,215 +4,219 @@
 @use '../utils/functions' as fn;
 
 footer {
-    font-family: "Poppins";
-    background-color: var(--clr-dark);
-    overflow-y: hidden;
+  font-family: 'Poppins';
+  background-color: var(--clr-dark);
+  overflow-y: hidden;
 }
 
 .footer-3 {
-    &__container {
-        margin-block: 120px 32px;
+  &__container {
+    margin-block: 120px 32px;
 
-        @media (max-width: vars.$md) {
-            margin-block: 32px;
-        }
+    @media (max-width: vars.$md) {
+      margin-block: 32px;
     }
+  }
 
-    &__left {
+  &__left {
+    &__socials {
+      display: flex;
+      justify-content: space-between;
+      width: 160px;
+      margin-top: 144px;
 
-        &__socials {
-            display: flex;
-            justify-content: space-between;
-            width: 160px;
-            margin-top: 144px;
-
-            @media (max-width: vars.$md) {
-                margin-top: 32px;
-            }
-
-            &__item {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 40px;
-                height: 40px;
-                cursor: pointer;
-
-
-                &>svg {
-                    fill: var(--clr-dark);
-
-                    &:hover {
-                        &>path {
-                            fill: var(--clr-accent);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-bottom: 64px;
-
-        @media (max-width: vars.$xl) {
-            gap: 16px;
-        }
-
-        @media (max-width: vars.$md) {
-            margin-block: 32px 24px;
-        }
-    }
-
-    &__item {
-
-        @media (max-width: vars.$xl) {
-            width: 30%;
-        }
-
-        @media (max-width: vars.$lg) {
-            width: 47%;
-        }
-
-        @media (max-width: vars.$md) {
-            width: 100%;
-            padding-top: 16px;
-
-            &:where(:not(:first-of-type)) {
-                border-top: 1px solid var(--clr-light);
-            }
-        }
-
-
-        &__title {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 20px;
-            color: var(--clr-light);
-
-            &>button {
-                @media (min-width: vars.$md) {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    &__nav {
-        padding-top: 16px;
-
-        @media (max-width: vars.$md) {
-            display: none;
-        }
-
-        &-link {
-            margin-bottom: 16px;
-            color: var(--clr-white);
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-
-            &:hover {
-                color: var(--clr-light);
-            }
-
-        }
-    }
-
-    &__contacts {
-
-        &-title {
-            display: flex;
-            align-items: center;
-            color: var(--clr-light);
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 20px;
-            margin-bottom: 12px;
-
-            &_icon {
-                width: 20px;
-                height: 20px;
-                color: var(--clr-light);
-                margin-right: 16px;
-            }
-        }
-
-        &-item {
-            margin-bottom: 24px;
-        }
-
-        &-link {
-            color: var(--clr-white);
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-
-            &:hover {
-                color: var(--clr-accent);
-            }
-        }
-    }
-
-    &__quiz {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        padding: 8px 39px;
-        border-radius: 20px;
-        cursor: pointer;
+      @media (max-width: vars.$md) {
         margin-top: 32px;
-        background-color: var(--clr-accent);
+      }
 
-        @media (max-width: vars.$md) {
-            margin-top: 0;
-            margin-bottom: 8px;
-        }
-    }
-
-    &__bottom {
+      &__item {
         display: flex;
-        justify-content: space-between;
-        color: var(--clr-light);
-        border-top: 1px solid var(--clr-light);
-        padding-top: 32px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
 
-        @media (max-width: vars.$md) {
-            flex-direction: column;
-            gap: 24px;
-        }
-    }
+        & > svg {
+          fill: var(--clr-dark);
 
-    &__links {
-        display: flex;
-        gap: 16px;
-
-        &-link {
-            transition: color .25s ease-in-out;
-
-            &:hover {
-                color: var(--clr-white);
+          &:hover {
+            & > path {
+              fill: var(--clr-accent);
             }
+          }
         }
+      }
     }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin-bottom: 64px;
+
+    @media (min-width: vars.$xl) and (max-width: vars.$xxl) {
+      gap: 64px;
+    }
+
+    @media (max-width: vars.$xl) {
+      gap: 16px;
+    }
+
+    @media (max-width: vars.$md) {
+      margin-block: 32px 24px;
+    }
+  }
+
+  &__item {
+    &_left {
+      @media (min-width: vars.$xxl) {
+        margin-right: 76px;
+      }
+    }
+
+    @media (max-width: vars.$xl) {
+      width: 30%;
+    }
+
+    @media (max-width: vars.$lg) {
+      width: 47%;
+    }
+
+    @media (max-width: vars.$md) {
+      width: 100%;
+      padding-top: 16px;
+
+      &:where(:not(:first-of-type)) {
+        border-top: 1px solid var(--clr-light);
+      }
+    }
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--clr-light);
+
+      & > button {
+        @media (min-width: vars.$md) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    padding-top: 16px;
+
+    @media (max-width: vars.$md) {
+      display: none;
+    }
+
+    &-link {
+      margin-bottom: 16px;
+      color: var(--clr-white);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      &:hover {
+        color: var(--clr-light);
+      }
+    }
+  }
+
+  &__contacts {
+    &-title {
+      display: flex;
+      align-items: center;
+      color: var(--clr-light);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 12px;
+
+      &_icon {
+        width: 20px;
+        height: 20px;
+        color: var(--clr-light);
+        margin-right: 16px;
+      }
+    }
+
+    &-item {
+      margin-bottom: 24px;
+    }
+
+    &-link {
+      color: var(--clr-white);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      &:hover {
+        color: var(--clr-accent);
+      }
+    }
+  }
+
+  &__quiz {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 39px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 32px;
+    background-color: var(--clr-accent);
+
+    @media (max-width: vars.$md) {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    color: var(--clr-light);
+    border-top: 1px solid var(--clr-light);
+    padding-top: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    @media (max-width: vars.$md) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 16px;
+
+    &-link {
+      transition: color 0.25s ease-in-out;
+
+      &:hover {
+        color: var(--clr-white);
+      }
+    }
+  }
 }
 
 @media (max-width: vars.$md) {
-    .footer-3__item:first-child {
-        order: -2;
-    }
+  .footer-3__item:first-child {
+    order: -2;
+  }
 
-    .footer-3__item:nth-of-type(6) {
-        order: -1;
-        border-top: none;
-    }
+  .footer-3__item:nth-of-type(6) {
+    order: -1;
+    border-top: none;
+  }
 }
