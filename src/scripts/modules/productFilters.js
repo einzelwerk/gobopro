@@ -1,4 +1,5 @@
 const selected = document.querySelectorAll('.selected');
+// const activeOptions = document.querySelectorAll('.label-active');
 
 export function initProductsFilters() {
   if (!selected) return;

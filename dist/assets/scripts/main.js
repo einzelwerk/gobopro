@@ -382,6 +382,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initProductsFilters: () => (/* binding */ initProductsFilters)
 /* harmony export */ });
 var selected = document.querySelectorAll('.selected');
+// const activeOptions = document.querySelectorAll('.label-active');
+
 function initProductsFilters() {
   if (!selected) return;
   selected.forEach(function (element) {
