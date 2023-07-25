@@ -2,7 +2,7 @@
     .quiz__container
         .quiz__close
             img(src='./assets/images/X.svg' alt='Close modal')
-        .quiz__content(data-page='1')
+        .quiz__content(data-page='1').inactive
             .quiz__steps
                 .quiz__steps__step.active
                 .quiz__steps__step
@@ -65,7 +65,7 @@
                 .slider
                     input(type='range' min='2' max='100' id='range2' step="2" value="2")
                     span.rangeValue
-        .quiz__content(data-page='4').inactive
+        .quiz__content(data-page='4')
             .quiz__steps
                 .quiz__steps__step.completed
                 .quiz__steps__step.completed

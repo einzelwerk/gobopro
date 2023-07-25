@@ -1,9 +1,9 @@
-const sliderEl = document.querySelector('#range2');
-const sliderFilter = document.querySelector('.filterRange');
-const sliderValue = document.querySelector('.rangeValue');
-const sliderValueFilter = document.querySelector('.rangeValueFilter');
+window.addEventListener('load', () => {
+  const sliderEl = document.querySelector('#range2');
+  const sliderFilter = document.querySelector('.filterRange');
+  const sliderValue = document.querySelector('.rangeValue');
+  const sliderValueFilter = document.querySelector('.rangeValueFilter');
 
-export function initRangeSlider() {
   if (!sliderEl || !sliderFilter || !sliderValue || !sliderValueFilter) return;
 
   sliderValue.textContent = '2M';
@@ -27,4 +27,4 @@ export function initRangeSlider() {
 
     sliderFilter.style.background = `linear-gradient(to right, #6ceabd ${progress}%, #ccc ${progress}%)`;
   });
-}
+});

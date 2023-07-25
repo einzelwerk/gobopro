@@ -98,6 +98,10 @@
 
     &.bigger-cards {
       height: 352px;
+
+      @media (max-width: vars.$lg) {
+        height: 308px;
+      }
     }
 
     @media (min-width: vars.$xxl) {
@@ -109,7 +113,7 @@
     }
 
     @media (max-width: vars.$lg) {
-      height: 228px;
+      height: 280px;
       padding: 16px 16px 20px 16px;
     }
   }
