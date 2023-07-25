@@ -24,9 +24,6 @@
                 .quiz__answers__item
                     input#outside-usage(type='radio' name="area")
                     label(for='outside-usage') Drau&szlig;en
-            .quiz__actions
-                button.btn.btn-regular Zurück
-                button.btn.btn-accent Weiter
         .quiz__content(data-page='2').inactive
             .quiz__steps
                 .quiz__steps__step.completed
@@ -49,9 +46,6 @@
                 .quiz__answers__item
                     input#night(type='checkbox')
                     label(for='night') Nacht
-            .quiz__actions
-                button.btn.btn-regular Zurück
-                button.btn.btn-accent Weiter
         .quiz__content(data-page='3').inactive
             .quiz__steps
                 .quiz__steps__step.completed
@@ -71,9 +65,6 @@
                 .slider
                     input(type='range' min='2' max='100' id='range2' step="2" value="2")
                     span.rangeValue
-            .quiz__actions
-                button.btn.btn-regular Zurück
-                button.btn.btn-accent Weiter
         .quiz__content(data-page='4').inactive
             .quiz__steps
                 .quiz__steps__step.completed
@@ -134,9 +125,6 @@
                         option 19
                         option 19.5
                         option 20
-            .quiz__actions
-                button.btn.btn-regular Zurück
-                button.btn.btn-accent Weiter
         .quiz__content(data-page='5').inactive
             .quiz__steps
                 .quiz__steps__step.completed
@@ -159,9 +147,6 @@
                 .quiz__answers__item
                     input#lightsensor2(type='radio' name="lightsensor")
                     label(for='lightsensor2') Nein
-            .quiz__actions
-                button.btn.btn-regular Zurück
-                button.btn.btn-accent Weiter
         .quiz__content(data-page='6').inactive
             .quiz__steps
                 .quiz__steps__step.completed
@@ -194,9 +179,6 @@
                 .quiz__answers__item
                     input#image5(type='radio' name="images")
                     label(for='image5') Bis zu 9 statische Bilder
-            .quiz__actions
-                button.btn.btn-regular Zurück
-                button.btn.btn-accent Weiter
         .quiz__content(data-page='7').inactive
             .quiz__steps
                 .quiz__steps__step.completed
@@ -214,9 +196,6 @@
                 p.quiz__desc
             .quiz__answers
                 textarea(placeholder="Ihre Nachricht")
-            .quiz__actions
-                button.btn.btn-regular Zurück
-                button.btn.btn-accent Weiter
         .quiz__content(data-page='8').inactive
             .quiz__steps
                 .quiz__steps__step.completed
@@ -235,9 +214,6 @@
                     a.text-accent(href="mailto:info@gobopro.de") &nbsp;info@gobopro.de&nbsp;
                     | zukommen zu lassen.
                 p.quiz__desc 
-            .quiz__actions
-                button.btn.btn-regular Zurück
-                button.btn.btn-accent Weiter
         .quiz__content.quiz__content-form(data-page='9').inactive
             .quiz__picture
                 img(src='@/assets/images/quiz-1.png')
@@ -269,4 +245,7 @@
                         a.quiz__contacts__item__detail(href="mailto:info@gobopro.de") info@gobopro.de
             .quiz__send 
                 button.btn.btn-accent Back to Home
+        .quiz__actions
+            button.btn.btn-regular Zurück
+            button.btn.btn-accent Weiter
 

@@ -82,6 +82,7 @@
   &__item {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding-right: 24px;
     background: radial-gradient(
       128.11% 128.11% at 50% -32.4%,
@@ -90,10 +91,14 @@
       rgba(108, 234, 189, 0) 100%
     );
     align-items: flex-start;
-    justify-content: space-between;
     padding: 20px 20px 24px;
     border: 1px solid #3f4146;
     border-radius: 20px;
+    height: 279px;
+
+    &.bigger-cards {
+      height: 352px;
+    }
 
     @media (min-width: vars.$xxl) {
       width: 398px;
@@ -104,17 +109,13 @@
     }
 
     @media (max-width: vars.$lg) {
-      height: 320px;
+      height: 228px;
+      padding: 16px 16px 20px 16px;
     }
   }
 
   &__icon {
     display: inline-block;
-    margin-bottom: 68px;
-
-    @media (max-width: vars.$lg) {
-      margin-bottom: 32px;
-    }
   }
 
   &__name {
