@@ -478,29 +478,27 @@ function initProductAcc() {
   \*******************************************/
 /***/ (() => {
 
-window.addEventListener('load', function () {
-  function initRangeSlider() {
-    var sliderEl = document.querySelector('#range2');
-    var sliderFilter = document.querySelector('.filterRange');
-    var sliderValue = document.querySelector('.rangeValue');
-    var sliderValueFilter = document.querySelector('.rangeValueFilter');
-    if (!sliderEl || !sliderFilter || !sliderValue || !sliderValueFilter) return;
-    sliderValue.textContent = '2M';
-    sliderEl.addEventListener('input', function (event) {
-      var tempSliderValue = event.target.value;
-      sliderValue.textContent = "".concat(tempSliderValue, "M");
-      var progress = tempSliderValue / sliderEl.max * 100;
-      sliderEl.style.background = "linear-gradient(to right, #6ceabd ".concat(progress, "%, #ccc ").concat(progress, "%)");
-    });
-    sliderValueFilter.textContent = '2M';
-    sliderFilter.addEventListener('input', function (event) {
-      var tempSliderValue = event.target.value;
-      sliderValueFilter.textContent = "".concat(tempSliderValue, "M");
-      var progress = tempSliderValue / sliderFilter.max * 100;
-      sliderFilter.style.background = "linear-gradient(to right, #6ceabd ".concat(progress, "%, #ccc ").concat(progress, "%)");
-    });
-  }
-});
+window.initRangeSlider = function initRangeSlider() {
+  var sliderEl = document.querySelector('#range2');
+  var sliderFilter = document.querySelector('.filterRange');
+  var sliderValue = document.querySelector('.rangeValue');
+  var sliderValueFilter = document.querySelector('.rangeValueFilter');
+  if (!sliderEl || !sliderFilter || !sliderValue || !sliderValueFilter) return;
+  sliderValue.textContent = '2M';
+  sliderEl.addEventListener('input', function (event) {
+    var tempSliderValue = event.target.value;
+    sliderValue.textContent = "".concat(tempSliderValue, "M");
+    var progress = tempSliderValue / sliderEl.max * 100;
+    sliderEl.style.background = "linear-gradient(to right, #6ceabd ".concat(progress, "%, #ccc ").concat(progress, "%)");
+  });
+  sliderValueFilter.textContent = '2M';
+  sliderFilter.addEventListener('input', function (event) {
+    var tempSliderValue = event.target.value;
+    sliderValueFilter.textContent = "".concat(tempSliderValue, "M");
+    var progress = tempSliderValue / sliderFilter.max * 100;
+    sliderFilter.style.background = "linear-gradient(to right, #6ceabd ".concat(progress, "%, #ccc ").concat(progress, "%)");
+  });
+};
 
 /***/ }),
 
