@@ -104,7 +104,7 @@ function initFilterToggle() {
   var filterToggle = document.querySelector('.products__container__mobile-filter');
   var filterClose = document.querySelectorAll('.mobile-filter__back');
   var filterMobile = document.querySelector('.mobile-filter');
-  if (!filterClose && !filterMobile && !filterToggle) return;
+  if (!filterClose || !filterMobile || !filterToggle) return;
   filterToggle.addEventListener('click', function () {
     if (!filterMobile || filterMobile.style.display === 'none' || filterMobile.style.display === '') {
       filterMobile.style.display = 'flex';

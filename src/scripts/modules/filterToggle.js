@@ -3,7 +3,7 @@ export function initFilterToggle() {
   const filterClose = document.querySelectorAll('.mobile-filter__back');
   const filterMobile = document.querySelector('.mobile-filter');
 
-  if (!filterClose && !filterMobile && !filterToggle) return;
+  if (!filterClose || !filterMobile || !filterToggle) return;
 
   filterToggle.addEventListener('click', () => {
     if (!filterMobile || filterMobile.style.display === 'none' || filterMobile.style.display === '') {
