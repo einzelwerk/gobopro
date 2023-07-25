@@ -4,8 +4,8 @@
 @use '../utils/functions' as fn;
 
 .mobile-filter {
-  position: absolute;
-  top: 80px;
+  position: fixed;
+  top: 65px;
   left: 0;
   right: 0;
   bottom: -5px;
