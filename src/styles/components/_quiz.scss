@@ -478,13 +478,14 @@ span.error:empty {
 
 // MISC
 
-.quiz__content-form:nth-of-type(8) .quiz__container,
-.quiz__content-form:nth-of-type(9) .quiz__container {
-  height: 80vh;
-  display: flex;
+.quiz__container {
+  @media (max-width: vars.$lg) {
+    height: 80vh;
+    display: flex;
+  }
 }
 
-.quiz__content-form:nth-of-type(8) .quiz-form,
-.quiz__content-form:nth-of-type(9) .quiz-form {
+.quiz__content-form:nth-of-type(8),
+.quiz__content-form:nth-of-type(9) {
   overflow-y: scroll;
 }
