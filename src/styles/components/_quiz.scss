@@ -477,17 +477,3 @@ span.error:empty {
 }
 
 // MISC
-
-.quiz__container {
-  @media (max-width: vars.$xl) {
-    height: 80vh;
-    display: flex;
-  }
-}
-
-.quiz__content-form:nth-of-type(8),
-.quiz__content-form:nth-of-type(9) {
-  @media (max-width: vars.$xl) {
-    overflow-y: scroll;
-  }
-}
