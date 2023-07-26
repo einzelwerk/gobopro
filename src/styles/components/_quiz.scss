@@ -479,7 +479,7 @@ span.error:empty {
 // MISC
 
 .quiz__container {
-  @media (max-width: vars.$lg) {
+  @media (max-width: vars.$xl) {
     height: 80vh;
     display: flex;
   }
