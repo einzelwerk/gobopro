@@ -107,6 +107,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    margin-bottom: 12px;
   }
 
   &__question {
@@ -139,6 +140,7 @@
     line-height: 30px;
     letter-spacing: -0.4px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 48px;
 
     @media (max-width: vars.$sm) {
       overflow-y: auto;
@@ -147,7 +149,6 @@
     &__item {
       display: flex;
       align-items: center;
-      gap: 12px;
     }
 
     & > textarea {
@@ -463,4 +464,10 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: -0.28px;
+}
+
+// ERROR CLASS
+
+.error:empty {
+  display: none;
 }
