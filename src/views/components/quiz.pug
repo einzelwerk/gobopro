@@ -2,7 +2,7 @@
     .quiz__container
         .quiz__close
             img(src='./assets/images/X.svg' alt='Close modal')
-        .quiz__content(data-page='1')
+        .quiz__content(data-page='1').inactive
             .quiz__steps
                 .quiz__steps__step.active
                 .quiz__steps__step
@@ -173,7 +173,7 @@
                     a.text-accent(href="mailto:info@gobopro.de") &nbsp;info@gobopro.de&nbsp;
                     | zukommen zu lassen.
                 p.quiz__desc 
-        .quiz__content.quiz__content-form(data-page='9').inactive
+        .quiz__content.quiz__content-form(data-page='9')
             .quiz__picture
                 img(src='@/assets/images/quiz-1.png')
             .quiz__heading
