@@ -475,3 +475,16 @@
 span.error:empty {
   display: none;
 }
+
+// MISC
+
+.quiz [data-total='8'] .quiz__container,
+.quiz [data-total='9'] .quiz__container {
+  height: 80vh;
+  display: flex;
+}
+
+.quiz [data-total='8'] .quiz-form,
+.quiz [data-total='9'] .quiz-form {
+  overflow-y: scroll;
+}
