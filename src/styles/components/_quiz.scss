@@ -65,9 +65,9 @@
     flex-direction: column;
     gap: 36px;
 
-    @media (max-width: vars.$xl) {
-      overflow-y: scroll;
-    }
+    // @media (max-width: vars.$xl) {
+    //   overflow-y: scroll;
+    // }
 
     @media (max-width: vars.$sm) {
       gap: 24px;
@@ -487,5 +487,7 @@ span.error:empty {
 
 .quiz__content-form:nth-of-type(8),
 .quiz__content-form:nth-of-type(9) {
-  overflow-y: scroll;
+  @media (max-width: vars.$xl) {
+    overflow-y: scroll;
+  }
 }
