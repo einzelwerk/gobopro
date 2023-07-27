@@ -435,6 +435,10 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: -0.28px;
+
+  @media (max-width: vars.$sm) {
+    left: 4px;
+  }
 }
 
 .rangeValueFilter {
