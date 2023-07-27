@@ -316,7 +316,7 @@
   }
 }
 
-.option [type='radio']:checked + .label-active {
+.option input[type='radio']:checked + .label-active {
   display: block;
 }
 
