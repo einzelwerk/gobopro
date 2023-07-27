@@ -16,12 +16,14 @@
   display: none;
 
   &__container {
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 850px;
+    max-height: 85vh;
+    overflow: auto;
     padding: 64px;
     border-radius: 12px;
     border: 1px solid #3f4146;
@@ -65,9 +67,9 @@
     flex-direction: column;
     gap: 36px;
 
-    @media (max-width: vars.$xl) {
-      overflow-y: scroll;
-    }
+    // @media (max-width: vars.$xl) {
+    //   overflow-y: scroll;
+    // }
 
     @media (max-width: vars.$sm) {
       gap: 24px;
