@@ -15,3 +15,5 @@ window.initRangeSlider = (selector) => {
     sliderEl.style.background = `linear-gradient(to right, #6ceabd ${progress}%, #ccc ${progress}%)`;
   });
 };
+
+window.initRangeSlider('.distanceslider');

@@ -11598,6 +11598,20 @@ __webpack_require__.r(__webpack_exports__);
 // PRODUCTS FILTERS
 
 (0,_modules_productFilters__WEBPACK_IMPORTED_MODULE_12__.initProductsFilters)();
+window.initRangeSlider = function (selector, valueDisplay) {
+  var sliderEl = document.querySelector(selector);
+  var sliderValue = document.querySelector(valueDisplay);
+  if (!sliderEl) return;
+  sliderValue.textContent = '2M';
+  sliderEl.addEventListener('input', function (event) {
+    var tempSliderValue = event.target.value;
+    sliderValue.textContent = "".concat(tempSliderValue, "M");
+    var progress = tempSliderValue / sliderEl.max * 100;
+    sliderEl.style.background = "linear-gradient(to right, #6ceabd ".concat(progress, "%, #ccc ").concat(progress, "%)");
+  });
+};
+window.initRangeSlider('.distanceslider', '.rangeValue');
+window.initRangeSlider('.sizeslider', '.rangeSizeValue');
 })();
 
 /******/ })()
