@@ -33,6 +33,10 @@
         }
       }
 
+      &-picture {
+        border-radius: 20px;
+      }
+
       &-content {
         display: flex;
         flex-direction: column;
