@@ -151,7 +151,6 @@
 
   &__privacy {
     display: flex;
-    flex-wrap: wrap;
 
     @media (max-width: vars.$xl) {
       margin-top: 24px;
