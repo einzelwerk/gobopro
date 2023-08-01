@@ -11607,6 +11607,11 @@ window.initRangeSlider = function (selector, valueDisplay) {
     var tempSliderValue = event.target.value;
     sliderValue.textContent = "".concat(tempSliderValue, "M");
     var progress = tempSliderValue / sliderEl.max * 100;
+    if (window.innerWidth > 576) {
+      sliderValue.style.left = "".concat(progress - 4, "%");
+    } else {
+      sliderValue.style.left = "".concat(progress - 10, "%");
+    }
     sliderEl.style.background = "linear-gradient(to right, #6ceabd ".concat(progress, "%, #ccc ").concat(progress, "%)");
   });
 };

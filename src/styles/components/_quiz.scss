@@ -67,10 +67,6 @@
     flex-direction: column;
     gap: 36px;
 
-    // @media (max-width: vars.$xl) {
-    //   overflow-y: scroll;
-    // }
-
     @media (max-width: vars.$sm) {
       gap: 24px;
     }

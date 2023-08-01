@@ -95,6 +95,11 @@ window.initRangeSlider = (selector, valueDisplay) => {
 
     const progress = (tempSliderValue / sliderEl.max) * 100;
 
+    if (window.innerWidth > 576) {
+      sliderValue.style.left = `${progress - 4}%`;
+    } else {
+      sliderValue.style.left = `${progress - 10}%`;
+    }
     sliderEl.style.background = `linear-gradient(to right, #6ceabd ${progress}%, #ccc ${progress}%)`;
   });
 };
