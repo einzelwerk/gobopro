@@ -4,119 +4,123 @@
 @use '../utils/functions' as fn;
 
 .contacts-2 {
-    font-family: Poppins;
-    margin-block: 100px 60px;
+  font-family: Poppins;
+  margin-block: 100px 60px;
+  text-align: center;
+
+  @media (max-width: vars.$lg) {
+    margin-block: 32px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__title {
+    color: var(--clr-accent);
     text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -0.48px;
+    margin-bottom: 60px;
 
     @media (max-width: vars.$lg) {
-        margin-block: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    justify-content: space-between;
+
+    @media (max-width: vars.$lg) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+
+    @media (max-width: vars.$lg) {
+      width: 100%;
     }
 
-    &__container {
-        display: flex;
-        flex-direction: column;
+    @media (max-width: vars.$sm) {
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--clr-light);
     }
 
-    &__text-block {
-        display: flex;
-        flex-direction: column;
+    &-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__name {
+    color: var(--clr-white);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 8px;
+
+    @media (max-width: vars.$lg) {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__text {
+    color: #bababb;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 20px;
+
+    @media (max-width: vars.$lg) {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__info {
+    color: var(--clr-white);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--clr-accent);
     }
 
-    &__title-block {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
+    @media (max-width: vars.$lg) {
+      font-size: 16px;
     }
-
-    &__title {
-        color: var(--clr-accent);
-        text-align: center;
-        font-size: 48px;
-        font-weight: 400;
-        line-height: 60px;
-        letter-spacing: -0.48px;
-        margin-bottom: 60px;
-
-        @media (max-width: vars.$lg) {
-            margin-bottom: 24px;
-        }
-    }
-
-    &__list {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        gap: 30px;
-        justify-content: space-between;
-
-        @media (max-width: vars.$lg) {
-            flex-direction: column;
-            gap: 24px;
-        }
-    }
-
-    &__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 1 0 0;
-
-        @media (max-width: vars.$lg) {
-            width: 100%;
-        }
-
-        @media (max-width: vars.$sm) {
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--clr-light);
-        }
-
-        &-text-block {
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
-    &__icon {
-        width: 48px;
-        height: 48px;
-    }
-
-    &__name {
-        color: var(--clr-white);
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 30px;
-
-        @media (max-width: vars.$lg) {
-            font-size: 18px;
-        }
-    }
-
-    &__text {
-        color: #BABABB;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-
-        @media (max-width: vars.$lg) {
-            font-size: 16px;
-        }
-    }
-
-    &__info {
-        color: var(--clr-white);
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        cursor: pointer;
-
-        &:hover {
-            color: var(--clr-accent);
-        }
-
-        @media (max-width: vars.$lg) {
-            font-size: 16px;
-        }
-    }
+  }
 }
