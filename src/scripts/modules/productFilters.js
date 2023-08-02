@@ -17,7 +17,7 @@ export function initProductsFilters() {
         });
       }
 
-      if (lastEl && lastEl !== this) {
+      if (lastEl && lastEl !== element) {
         lastEl.previousElementSibling.classList.remove('active');
       }
 

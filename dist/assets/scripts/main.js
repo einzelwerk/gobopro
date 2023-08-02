@@ -398,7 +398,6 @@ __webpack_require__.r(__webpack_exports__);
 var selected = document.querySelectorAll('.selected');
 var activeOptions = document.querySelectorAll('.label-active');
 function initProductsFilters() {
-  var _this = this;
   if (!selected) return;
   var lastEl = null;
   selected.forEach(function (element) {
@@ -414,7 +413,7 @@ function initProductsFilters() {
       for (var i = 0; i < element.previousElementSibling.children.length; i += 1) {
         _loop(i);
       }
-      if (lastEl && lastEl !== _this) {
+      if (lastEl && lastEl !== element) {
         lastEl.previousElementSibling.classList.remove('active');
       }
       lastEl = element;
