@@ -398,10 +398,12 @@ __webpack_require__.r(__webpack_exports__);
 var selected = document.querySelectorAll('.selected');
 var activeOptions = document.querySelectorAll('.label-active');
 function initProductsFilters() {
+  var _this = this;
   if (!selected) return;
+  var lastEl = null;
   selected.forEach(function (element) {
     element.addEventListener('click', function () {
-      element.previousElementSibling.classList.toggle('active');
+      element.previousElementSibling.classList.add('active');
       var _loop = function _loop(i) {
         element.previousElementSibling.children[i].addEventListener('click', function () {
           // eslint-disable-next-line
@@ -412,6 +414,10 @@ function initProductsFilters() {
       for (var i = 0; i < element.previousElementSibling.children.length; i += 1) {
         _loop(i);
       }
+      if (lastEl && lastEl !== _this) {
+        lastEl.previousElementSibling.classList.remove('active');
+      }
+      lastEl = element;
     });
   });
   activeOptions.forEach(function (option) {

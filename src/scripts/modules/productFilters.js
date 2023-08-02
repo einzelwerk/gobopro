@@ -4,9 +4,10 @@ const activeOptions = document.querySelectorAll('.label-active');
 export function initProductsFilters() {
   if (!selected) return;
 
+  let lastEl = null;
   selected.forEach((element) => {
     element.addEventListener('click', () => {
-      element.previousElementSibling.classList.toggle('active');
+      element.previousElementSibling.classList.add('active');
 
       for (let i = 0; i < element.previousElementSibling.children.length; i += 1) {
         element.previousElementSibling.children[i].addEventListener('click', () => {
@@ -15,6 +16,12 @@ export function initProductsFilters() {
           element.previousElementSibling.classList.remove('active');
         });
       }
+
+      if (lastEl && lastEl !== this) {
+        lastEl.previousElementSibling.classList.remove('active');
+      }
+
+      lastEl = element;
     });
   });
 
