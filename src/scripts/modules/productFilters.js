@@ -7,7 +7,7 @@ export function initProductsFilters() {
   let lastEl = null;
   selected.forEach((element) => {
     element.addEventListener('click', () => {
-      element.previousElementSibling.classList.add('active');
+      element.previousElementSibling.classList.toggle('active');
 
       for (let i = 0; i < element.previousElementSibling.children.length; i += 1) {
         element.previousElementSibling.children[i].addEventListener('click', () => {

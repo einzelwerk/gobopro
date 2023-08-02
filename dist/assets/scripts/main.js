@@ -402,7 +402,7 @@ function initProductsFilters() {
   var lastEl = null;
   selected.forEach(function (element) {
     element.addEventListener('click', function () {
-      element.previousElementSibling.classList.add('active');
+      element.previousElementSibling.classList.toggle('active');
       var _loop = function _loop(i) {
         element.previousElementSibling.children[i].addEventListener('click', function () {
           // eslint-disable-next-line
