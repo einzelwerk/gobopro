@@ -404,12 +404,6 @@ function initProductsFilters() {
       element.previousElementSibling.classList.toggle('active');
       var _loop = function _loop(i) {
         element.previousElementSibling.children[i].addEventListener('click', function () {
-          if (element.previousElementSibling.children[i].children[1].children[0].closest('.option').querySelector('input').checked === false) {
-            // eslint-disable-next-line
-            element.previousElementSibling.children[i].children[1].children[0].classList.add('active');
-            // eslint-disable-next-line
-            element.previousElementSibling.children[i].children[1].children[0].closest('.option').querySelector('input').checked = true;
-          }
           // eslint-disable-next-line
           element.innerHTML = element.previousElementSibling.children[i].textContent;
           element.previousElementSibling.classList.remove('active');
