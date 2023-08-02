@@ -46,7 +46,7 @@
                 .quiz__answers__item
                     input#night(type='checkbox')
                     label(for='night') Nacht
-        .quiz__content(data-page='3')
+        .quiz__content(data-page='3').inactive
             .quiz__steps
                 .quiz__steps__step.completed
                 .quiz__steps__step.completed
@@ -173,7 +173,7 @@
                     a.text-accent(href="mailto:info@gobopro.de") &nbsp;info@gobopro.de&nbsp;
                     | zukommen zu lassen.
                 p.quiz__desc 
-        .quiz__content.quiz__content-form(data-page='9').inactive
+        .quiz__content.quiz__content-form(data-page='9')
             .quiz__picture
                 img(src='@/assets/images/quiz-1.png')
             .quiz__heading
