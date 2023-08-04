@@ -49,6 +49,10 @@
 
       &:nth-of-type(even) {
         flex-direction: row-reverse;
+
+        .product-detailed__container__item-picture > img {
+          transform: scaleX(-1);
+        }
       }
 
       &-details {
