@@ -4,58 +4,71 @@
 @use '../utils/functions' as fn;
 
 .reviews {
-    font-family: "Poppins";
-    background: radial-gradient(128.11% 128.11% at 50% -32.4%, #6CEABD 0%, rgba(108, 234, 189, 0.36) 43.11%, rgba(108, 234, 189, 0) 100%);
-    padding-block: 120px;
+  font-family: 'Poppins';
+  background: radial-gradient(
+    128.11% 128.11% at 50% -32.4%,
+    #6ceabd 0%,
+    rgba(108, 234, 189, 0.36) 43.11%,
+    rgba(108, 234, 189, 0) 100%
+  );
+  padding-block: 120px;
+
+  @media (max-width: vars.$md) {
+    padding-block: 32px;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    color: var(--clr-white);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 32px;
 
     @media (max-width: vars.$md) {
-        padding-block: 32px;
+      font-size: 28px;
     }
+  }
 
-    &__container {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+  &__img {
+    & > img {
+      width: 64px;
+      height: 64px;
+      border-radius: 200px;
     }
+  }
 
-    &__title {
-        color: var(--clr-white);
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 36px;
-        text-align: center;
-        margin-bottom: 32px;
+  &__name {
+    color: var(--clr-white);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 16px;
+  }
 
-        @media (max-width: vars.$md) {
-            font-size: 28px;
-        }
+  &__position {
+    color: #bababb;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 4px;
+  }
+
+  &__rating {
+    margin-top: 32px;
+
+    @media (max-width: vars.$lg) {
+      margin-top: 20px;
     }
-
-    &__name {
-        color: var(--clr-white);
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-        margin-top: 16px;
-    }
-
-    &__position {
-        color: #BABABB;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        margin-top: 4px;
-    }
-
-    &__rating {
-        margin-top: 32px;
-
-        @media (max-width: vars.$lg){
-            margin-top: 20px;
-        }
-    }
+  }
 }
