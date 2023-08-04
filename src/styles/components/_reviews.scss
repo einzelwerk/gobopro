@@ -45,6 +45,11 @@
       width: 64px;
       height: 64px;
       border-radius: 200px;
+
+      @media (max-width: vars.$lg) {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
