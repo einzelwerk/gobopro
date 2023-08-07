@@ -329,6 +329,10 @@
   margin: 24px;
 }
 
+.f-thumbs__slide {
+  box-sizing: border-box;
+}
+
 .f-button.is-prev {
   content: url(../../assets/images/gallery-prev.svg);
   padding: 10px;
