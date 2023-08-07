@@ -390,6 +390,15 @@
   border-radius: 15px;
   height: 1px;
   background: #ccc;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: -12px;
+    bottom: -12px;
+  }
 }
 
 .quiz [type='range']::-webkit-slider-thumb,
