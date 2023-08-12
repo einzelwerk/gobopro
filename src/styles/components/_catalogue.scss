@@ -113,7 +113,7 @@
             z-index: 11;
 
             @media (max-width: vars.$md) {
-              display: none;
+              left: 10px;
             }
 
             &__item {
