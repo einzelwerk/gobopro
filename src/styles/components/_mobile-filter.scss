@@ -78,8 +78,11 @@
       &__options {
         display: flex;
         gap: 8px;
+        flex-wrap: wrap;
 
         &__option {
+          display: flex;
+          align-items: center;
           color: var(--clr-white);
           font-size: 14px;
           font-weight: 400;
