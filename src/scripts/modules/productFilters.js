@@ -32,6 +32,11 @@ export function initProductsFilters() {
         // eslint-disable-next-line
         option.closest('.option').querySelector('input').checked = false;
         event.stopPropagation();
+      } else {
+        option.classList.add('active');
+        // eslint-disable-next-line
+        option.closest('.option').querySelector('input').checked = true;
+        event.stopPropagation();
       }
     });
   });
