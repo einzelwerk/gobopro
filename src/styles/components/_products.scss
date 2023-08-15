@@ -316,7 +316,7 @@
   }
 }
 
-.option input[type='radio']:checked + .label-active {
+.option input[type='radio']:checked ~ label .label-active {
   display: block;
 }
 
@@ -332,5 +332,15 @@
 }
 
 .select-box .option .radio {
+  display: none;
+}
+
+.select-active {
+  position: absolute;
+  top: 14px;
+  right: 40px;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
   display: none;
 }

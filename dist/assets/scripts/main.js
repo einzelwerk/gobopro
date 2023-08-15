@@ -396,7 +396,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initProductsFilters: () => (/* binding */ initProductsFilters)
 /* harmony export */ });
 var selected = document.querySelectorAll('.selected');
-var activeOptions = document.querySelectorAll('.label-active');
 function initProductsFilters() {
   if (!selected) return;
   var lastEl = null;
@@ -408,6 +407,9 @@ function initProductsFilters() {
           // eslint-disable-next-line
           element.innerHTML = element.previousElementSibling.children[i].textContent;
           element.previousElementSibling.classList.remove('active');
+          if (element.textContent.trim() !== element.parentElement.dataset["default"]) {
+            element.parentElement.children[0].classList.add('active');
+          }
         });
       };
       for (var i = 0; i < element.previousElementSibling.children.length; i += 1) {
@@ -419,20 +421,12 @@ function initProductsFilters() {
       lastEl = element;
     });
   });
-  activeOptions.forEach(function (option) {
-    option.addEventListener('click', function (event) {
-      if (option.classList.contains('active')) {
-        option.classList.remove('active');
-        // eslint-disable-next-line
-        option.closest('.option').querySelector('input').checked = false;
-        event.stopPropagation();
-      } else {
-        option.classList.add('active');
-        // eslint-disable-next-line
-        option.closest('.option').querySelector('input').checked = true;
-        event.stopPropagation();
-      }
-    });
+  document.body.addEventListener('click', function (event) {
+    if (event.target.classList.contains('select-image')) {
+      event.target.parentNode.classList.remove('active');
+      // eslint-disable-next-line
+      event.target.parentNode.nextElementSibling.nextElementSibling.textContent = "".concat(event.target.parentNode.parentNode.dataset["default"]);
+    }
   });
 }
 

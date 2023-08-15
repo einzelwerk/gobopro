@@ -9,102 +9,87 @@ section#products.products.section
             img(src='@/assets/images/filter-icon.svg')
             | Filter
         .products__container__filters
-            .select-box(data-default="serie")
+            .select-box(data-default="Serie")
+                span.select-active
+                    img.select-image(src='@/assets/images/X.svg')
                 .options-container
                     .option
-                        input#automobiles.radio(type='radio' name='series')
+                        input#gbp.radio(type='radio' name='series')
                         label(for='gbp') 
                             | GBP-Serie
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
                     .option
-                        input#film.radio(type='radio' name='series')
+                        input#mh.radio(type='radio' name='series')
                         label(for='mh') 
                             | MH-Serie
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
                     .option
-                        input#science.radio(type='radio' name='series')
+                        input#x.radio(type='radio' name='series')
                         label(for='x') 
                             | X-Serie
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
                 .selected
                     | Serie
-            .select-box(data-default="remote")
+            .select-box(data-default="Remote")
+                span.select-active
+                    img.select-image(src='@/assets/images/X.svg')
                 .options-container
                     .option
-                        input#film.radio(type='radio' name='remote')
+                        input#yes.radio(type='radio' name='remote')
                         label(for='yes') 
                             | Ja
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
                     .option
-                        input#science.radio(type='radio' name='remote')
+                        input#no.radio(type='radio' name='remote')
                         label(for='no') 
                             | Nein
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
                 .selected
                     | Fernbedienung
-            .select-box(data-default="changer")
+            .select-box(data-default="Changer")
+                span.select-active
+                    img.select-image(src='@/assets/images/X.svg')
                 .options-container
                     .option
                         input#film.radio(type='radio' name='changer')
-                        label(for='yes') 
-                            | Ja
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
+                        label(for='3') 
+                            | 3
                     .option
                         input#science.radio(type='radio' name='changer')
-                        label(for='no') 
-                            | Nein
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
+                        label(for='4') 
+                            | 4
                 .selected
                     | Gobo-Wechsler
-            .select-box(data-default="distance")
+            .select-box(data-default="Distance")
+                span.select-active
+                    img.select-image(src='@/assets/images/X.svg')
                 .options-container
                     .option
                         input#film.radio(type='radio' name='distance')
                         label(for='2') 
                             | 2 metres
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
                     .option
                         input#science.radio(type='radio' name='distance')
                         label(for='5') 
                             | 5 metres
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
                     .option
                         input#science.radio(type='radio' name='distance')
                         label(for='10') 
                             | 10 metres
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
                 .selected
                     | Projektionsentfernung
-            .select-box(data-default="rotation")
+            .select-box(data-default="Rotation")
+                span.select-active
+                    img.select-image(src='@/assets/images/X.svg')
                 .options-container
                     .option
                         input#film.radio(type='radio' name='rotation')
                         label(for='90') 
                             | 90 degrees
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
                     .option
                         input#science.radio(type='radio' name='rotation')
                         label(for='180')
                             | 180 degrees
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
                     .option
                         input#science.radio(type='radio' name='rotation')
                         label(for='360') 
                             | 360 degrees
-                            span.label-active
-                                img(src='@/assets/images/X.svg')
+
                 .selected
                     | Bildrotation
         ul.catalogue__container__list.products__container__list

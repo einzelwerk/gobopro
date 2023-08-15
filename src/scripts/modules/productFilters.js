@@ -1,5 +1,4 @@
 const selected = document.querySelectorAll('.selected');
-const activeOptions = document.querySelectorAll('.label-active');
 
 export function initProductsFilters() {
   if (!selected) return;
@@ -14,6 +13,9 @@ export function initProductsFilters() {
           // eslint-disable-next-line
           element.innerHTML = element.previousElementSibling.children[i].textContent;
           element.previousElementSibling.classList.remove('active');
+          if (element.textContent.trim() !== element.parentElement.dataset.default) {
+            element.parentElement.children[0].classList.add('active');
+          }
         });
       }
 
@@ -24,20 +26,11 @@ export function initProductsFilters() {
       lastEl = element;
     });
   });
-
-  activeOptions.forEach((option) => {
-    option.addEventListener('click', (event) => {
-      if (option.classList.contains('active')) {
-        option.classList.remove('active');
-        // eslint-disable-next-line
-        option.closest('.option').querySelector('input').checked = false;
-        event.stopPropagation();
-      } else {
-        option.classList.add('active');
-        // eslint-disable-next-line
-        option.closest('.option').querySelector('input').checked = true;
-        event.stopPropagation();
-      }
-    });
+  document.body.addEventListener('click', (event) => {
+    if (event.target.classList.contains('select-image')) {
+      event.target.parentNode.classList.remove('active');
+      // eslint-disable-next-line
+      event.target.parentNode.nextElementSibling.nextElementSibling.textContent = `${event.target.parentNode.parentNode.dataset.default}`;
+    }
   });
 }
