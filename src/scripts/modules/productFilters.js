@@ -31,6 +31,10 @@ export function initProductsFilters() {
       event.target.parentNode.classList.remove('active');
       // eslint-disable-next-line
       event.target.parentNode.nextElementSibling.nextElementSibling.textContent = `${event.target.parentNode.parentNode.dataset.default}`;
+      const e = new Event('change');
+      const element = event.target.parentNode.nextElementSibling.querySelector('input:checked');
+      element.checked = false;
+      element.dispatchEvent(e);
     }
   });
 }
