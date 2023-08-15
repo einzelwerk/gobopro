@@ -426,6 +426,10 @@ function initProductsFilters() {
       event.target.parentNode.classList.remove('active');
       // eslint-disable-next-line
       event.target.parentNode.nextElementSibling.nextElementSibling.textContent = "".concat(event.target.parentNode.parentNode.dataset["default"]);
+      var e = new Event('change');
+      var element = event.target.parentNode.nextElementSibling.querySelector('input:checked');
+      element.checked = false;
+      element.dispatchEvent(e);
     }
   });
 }
