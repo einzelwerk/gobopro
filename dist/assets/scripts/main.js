@@ -103,21 +103,22 @@ __webpack_require__.r(__webpack_exports__);
 var cataloguePictures = document.querySelectorAll('.catalogue__container__list__item-picture');
 function initCatalogueLens() {
   cataloguePictures.forEach(function (picture) {
+    var oldPicture = picture.children[0].src;
     picture.addEventListener('mouseenter', function () {
       // eslint-disable-next-line
-      picture.children[0].src = './assets/images/lens-hover-3.jpg';
+      picture.children[0].src = './assets/images/lens-hover-1.jpg';
     });
     picture.addEventListener('mouseleave', function () {
       // eslint-disable-next-line
-      picture.children[0].src = './assets/images/catalogue-1.png';
+      picture.children[0].src = oldPicture;
     });
     picture.addEventListener('pointerenter', function () {
       // eslint-disable-next-line
-      picture.children[0].src = './assets/images/lens-hover-4.jpg';
+      picture.children[0].src = './assets/images/lens-hover-1.jpg';
     });
     picture.addEventListener('pointerleave', function () {
       // eslint-disable-next-line
-      picture.children[0].src = './assets/images/catalogue-1.png';
+      picture.children[0].src = oldPicture;
     });
   });
 }
