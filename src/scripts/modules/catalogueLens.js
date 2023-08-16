@@ -1,6 +1,8 @@
 const cataloguePictures = document.querySelectorAll('.catalogue__container__list__item-picture');
 
 export function initCatalogueLens() {
+  if (!cataloguePictures) return;
+
   cataloguePictures.forEach((picture) => {
     const oldPicture = picture.children[0].src;
 

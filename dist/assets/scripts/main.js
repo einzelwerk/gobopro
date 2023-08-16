@@ -102,6 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var cataloguePictures = document.querySelectorAll('.catalogue__container__list__item-picture');
 function initCatalogueLens() {
+  if (!cataloguePictures) return;
   cataloguePictures.forEach(function (picture) {
     var oldPicture = picture.children[0].src;
     picture.addEventListener('mouseenter', function () {
