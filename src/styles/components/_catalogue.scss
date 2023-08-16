@@ -69,20 +69,20 @@
             height: 420px;
           }
 
-          & > img:first-of-type {
+          & > .catalogue__item--main {
             z-index: 20;
           }
 
-          & > img:last-of-type {
+          & > .catalogue__item--hover {
             opacity: 0;
           }
 
-          & > img:first-of-type:hover {
+          & > .catalogue__item--main:hover {
             opacity: 0;
           }
 
           &:hover {
-            & > img:last-of-type {
+            & > .catalogue__item--hover {
               opacity: 1;
               object-fit: cover;
             }
