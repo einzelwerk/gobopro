@@ -90,42 +90,6 @@ function toggleMenu() {
 
 /***/ }),
 
-/***/ "./src/scripts/modules/catalogueLens.js":
-/*!**********************************************!*\
-  !*** ./src/scripts/modules/catalogueLens.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   initCatalogueLens: () => (/* binding */ initCatalogueLens)
-/* harmony export */ });
-var cataloguePictures = document.querySelectorAll('.catalogue__container__list__item-picture');
-function initCatalogueLens() {
-  if (!cataloguePictures) return;
-  cataloguePictures.forEach(function (picture) {
-    var oldPicture = picture.children[0].src;
-    picture.addEventListener('mouseenter', function () {
-      // eslint-disable-next-line
-      picture.children[0].src = './assets/images/lens-hover-1.jpg';
-    });
-    picture.addEventListener('mouseleave', function () {
-      // eslint-disable-next-line
-      picture.children[0].src = oldPicture;
-    });
-    picture.addEventListener('pointerenter', function () {
-      // eslint-disable-next-line
-      picture.children[0].src = './assets/images/lens-hover-1.jpg';
-    });
-    picture.addEventListener('pointerleave', function () {
-      // eslint-disable-next-line
-      picture.children[0].src = oldPicture;
-    });
-  });
-}
-
-/***/ }),
-
 /***/ "./src/scripts/modules/filterToggle.js":
 /*!*********************************************!*\
   !*** ./src/scripts/modules/filterToggle.js ***!
@@ -11568,8 +11532,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_filterToggle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/filterToggle */ "./src/scripts/modules/filterToggle.js");
 /* harmony import */ var _modules_stickyWidget__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/stickyWidget */ "./src/scripts/modules/stickyWidget.js");
 /* harmony import */ var _modules_productFilters__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/productFilters */ "./src/scripts/modules/productFilters.js");
-/* harmony import */ var _modules_catalogueLens__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/catalogueLens */ "./src/scripts/modules/catalogueLens.js");
-
 
 
 
@@ -11638,10 +11600,6 @@ __webpack_require__.r(__webpack_exports__);
 // PRODUCTS FILTERS
 
 (0,_modules_productFilters__WEBPACK_IMPORTED_MODULE_12__.initProductsFilters)();
-
-// LENS CATALOGUE
-
-(0,_modules_catalogueLens__WEBPACK_IMPORTED_MODULE_13__.initCatalogueLens)();
 
 // MISCELLANEOUS
 

@@ -25,7 +25,6 @@ import { initPortfolioGallery } from './modules/portfolioGallery';
 import { initFilterToggle } from './modules/filterToggle';
 import { initStickyWidget } from './modules/stickyWidget';
 import { initProductsFilters } from './modules/productFilters';
-import { initCatalogueLens } from './modules/catalogueLens';
 
 // HEADER-RELATED
 
@@ -81,10 +80,6 @@ initStickyWidget();
 // PRODUCTS FILTERS
 
 initProductsFilters();
-
-// LENS CATALOGUE
-
-initCatalogueLens();
 
 // MISCELLANEOUS
 
