@@ -25,6 +25,7 @@ import { initPortfolioGallery } from './modules/portfolioGallery';
 import { initFilterToggle } from './modules/filterToggle';
 import { initStickyWidget } from './modules/stickyWidget';
 import { initProductsFilters } from './modules/productFilters';
+import { initCatalogueLens } from './modules/catalogueLens';
 
 // HEADER-RELATED
 
@@ -81,6 +82,12 @@ initStickyWidget();
 
 initProductsFilters();
 
+// LENS CATALOGUE
+
+initCatalogueLens();
+
+// MISCELLANEOUS
+
 window.initRangeSlider = (selector, valueDisplay) => {
   const sliderEl = document.querySelector(selector);
   const sliderValue = document.querySelector(valueDisplay);
@@ -106,3 +113,19 @@ window.initRangeSlider = (selector, valueDisplay) => {
 
 window.initRangeSlider('.distanceslider', '.rangeValue');
 window.initRangeSlider('.sizeslider', '.rangeSizeValue');
+
+// ANCHOR SCROLL
+
+window.addEventListener('load', () => {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      document.querySelector(anchor.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'start',
+      });
+    });
+  });
+});
