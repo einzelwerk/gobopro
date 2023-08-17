@@ -223,7 +223,12 @@
 
     &-lang {
       position: relative;
-      padding: 12px 16px;
+      // padding: 12px 9px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: var(--clr-white);
       font-weight: 500;
       border: 1px solid var(--clr-light);
