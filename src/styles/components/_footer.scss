@@ -53,8 +53,9 @@ footer {
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 70px;
     margin-bottom: 64px;
+    justify-content: space-between;
 
     @media (min-width: vars.$xl) and (max-width: vars.$xxl) {
       gap: 64px;
