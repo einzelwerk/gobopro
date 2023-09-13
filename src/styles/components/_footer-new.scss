@@ -1,0 +1,36 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.footer-3__new {
+  &__contacts {
+    &-title {
+      display: flex;
+      align-items: center;
+      color: var(--clr-light);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+
+    &-item {
+      margin-bottom: 0;
+
+      @media (max-width: vars.$md) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.footer-3 {
+  &__contacts {
+    &-list {
+      &__messengers {
+        display: flex;
+        gap: 12px;
+      }
+    }
+  }
+}
