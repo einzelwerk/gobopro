@@ -1,0 +1,90 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.header-1-4__new {
+  &__right {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+  }
+
+  &-contact {
+    display: flex;
+    gap: 20px;
+
+    &__links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      @media (max-width: vars.$md) {
+        display: none;
+      }
+    }
+  }
+
+  &__contacts {
+    &-btn {
+      @media (min-width: vars.$lg) and (max-width: vars.$xxl) {
+        padding: 8px 3px;
+      }
+    }
+    &-mobile {
+      display: none;
+      @media (max-width: vars.$lg) {
+        display: flex;
+      }
+    }
+    &-communication {
+      display: flex;
+      flex-direction: column;
+      @media (max-width: vars.$lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu__bottom-new {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  margin-top: auto;
+  gap: 16px;
+
+  &__contacts {
+    display: flex;
+    color: var(--clr-white);
+    width: 100%;
+    justify-content: space-between;
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__messengers {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__config {
+    & > button {
+      display: flex;
+      width: 100%;
+      padding: 8px 20px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 24px;
+      color: var(--clr-dark);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.16px;
+    }
+  }
+}

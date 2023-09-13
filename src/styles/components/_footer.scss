@@ -204,6 +204,10 @@ footer {
     display: flex;
     gap: 16px;
 
+    @media (max-width: vars.$md) {
+      flex-wrap: wrap;
+    }
+
     &-link {
       transition: color 0.25s ease-in-out;
 
