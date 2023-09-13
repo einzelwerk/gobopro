@@ -3,6 +3,11 @@
 @use '../utils/functions' as fn;
 
 .header-1-4__new {
+  &__nav {
+    &-list {
+      gap: 28px;
+    }
+  }
   &__right {
     display: flex;
     gap: 30px;
@@ -39,6 +44,7 @@
     &-communication {
       display: flex;
       flex-direction: column;
+      font-size: 14px;
       @media (max-width: vars.$lg) {
         display: none;
       }
