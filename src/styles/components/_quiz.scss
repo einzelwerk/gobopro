@@ -144,7 +144,7 @@
     padding-top: 48px;
 
     @media (max-width: vars.$sm) {
-      overflow-y: auto;
+      // overflow-y: auto;
     }
 
     &__item {
@@ -413,6 +413,10 @@
   border-radius: 50%;
   border: none;
   transition: 0.2s ease-in-out;
+  background-clip: padding-box;
+  border: 0.4rem solid transparent;
+  box-sizing: border-box;
+  transform: scale(3);
 }
 
 .quiz [type='range']::-moz-range-thumb,
@@ -425,6 +429,10 @@
   border-radius: 50%;
   border: none;
   transition: 0.2s ease-in-out;
+  background-clip: padding-box;
+  border: 0.4rem solid transparent;
+  box-sizing: border-box;
+  transform: scale(3);
 }
 
 .rangeValue {
