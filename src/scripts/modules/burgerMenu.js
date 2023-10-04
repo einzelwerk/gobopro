@@ -8,14 +8,14 @@ export function toggleMenu() {
   menu.addEventListener('click', () => {
     if (menu.classList.contains('menu_active')) {
       menu.classList.remove('menu_active');
-      burgerMenuIcon.src = './assets/images/hamburger-open.svg';
+      burgerMenuIcon.src = '/assets/images/hamburger-open.svg';
       content.style.display = 'none';
       content.style.transform = `translateX(-200px)`;
       document.body.style.overflow = 'auto';
       return;
     }
     menu.classList.add('menu_active');
-    burgerMenuIcon.src = './assets/images/burger-close.svg';
+    burgerMenuIcon.src = '/assets/images/burger-close.svg';
     content.style.display = 'flex';
     content.style.transform = `translateX(0px)`;
     document.body.style.overflow = 'hidden';
