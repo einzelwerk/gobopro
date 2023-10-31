@@ -88,6 +88,9 @@
     width: 100%;
     gap: 48px 30px;
     justify-content: space-between;
+    @media (max-width: vars.$xl) {
+      justify-content: center;
+    }
   }
 
   &__item {

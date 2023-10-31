@@ -1,7 +1,7 @@
 // Breakpoints
 $xxl-num: 1440;
 $xl-num: 1200;
-$lg-num: 992;
+$lg-num: 1015;
 $md-num: 768;
 $sm-num: 576;
 $min: 360;
@@ -25,11 +25,11 @@ $sm: $min-sm - 0.02px;
   --cont-padding: 15px;
 
   @media (max-width: $xxl) {
-    --container: 1140px;
+    --container: 1240px;
   }
 
   @media (max-width: $xl) {
-    --container: 950px;
+    --container: 1150px;
   }
 
   @media (max-width: $lg) {
