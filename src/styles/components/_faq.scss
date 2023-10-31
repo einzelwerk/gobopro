@@ -55,10 +55,10 @@
   &__body {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.1s ease-in-out;
+    transition: max-height 0.2s ease-in-out;
 
     &-active {
-      max-height: 160px;
+      max-height: 320px;
     }
   }
 
