@@ -4,6 +4,7 @@
 
 .header-1-4 {
   $this: &;
+  
 
   position: sticky;
   top: 0;
@@ -11,12 +12,26 @@
   background-color: var(--clr-dark);
   font-family: 'Poppins';
 
+  &__nav-link {
+    color: var(--clr-light);
+    &:hover {
+      color: var(--clr-white);
+    }
+  }
+
   &__nav-item {
     color: var(--clr-light);
     font-weight: 400;
     transition: background-color 0.25s ease-in-out;
     flex-wrap: nowrap;
     text-wrap: nowrap;
+
+    &__link {
+      color: var(--clr-light);
+      &:hover {
+        color: var(--clr-white);
+      }
+    }
 
     &:hover {
       #{$this}__nav-submenu {
