@@ -12,12 +12,12 @@
   background-color: var(--clr-dark);
   font-family: 'Poppins';
 
-  &__nav-link {
-    color: var(--clr-light);
-    &:hover {
-      color: var(--clr-white);
-    }
-  }
+  // &__nav-link {
+  //   color: var(--clr-light);
+  //   &:hover {
+  //     color: var(--clr-white);
+  //   }
+  // }
 
   &__nav-item {
     color: var(--clr-light);
@@ -26,12 +26,12 @@
     flex-wrap: nowrap;
     text-wrap: nowrap;
 
-    &__link {
-      color: var(--clr-light);
-      &:hover {
-        color: var(--clr-white);
-      }
-    }
+    // &__link {
+    //   color: var(--clr-light);
+    //   &:hover {
+    //     color: var(--clr-white);
+    //   }
+    // }
 
     &:hover {
       #{$this}__nav-submenu {

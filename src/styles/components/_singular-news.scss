@@ -64,6 +64,13 @@
     &__content {
       width: 60%;
 
+      a {
+        color: var(--clr-white);
+        &:hover {
+          color: var(--clr-accent);
+        }
+      }
+
       @media (max-width: vars.$lg) {
         width: 100%;
         order: 2;
