@@ -26,13 +26,6 @@
     flex-wrap: nowrap;
     text-wrap: nowrap;
 
-    // &__link {
-    //   color: var(--clr-light);
-    //   &:hover {
-    //     color: var(--clr-white);
-    //   }
-    // }
-
     &:hover {
       #{$this}__nav-submenu {
         background-color: var(--clr-dark);
