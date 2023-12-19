@@ -245,6 +245,22 @@ export function initCatalogueSwiper() {
   return catalogueSwiper;
 }
 
+export function initColorPaletteSwiper() {
+  const colorPaletteSwiper = new Swiper('.color-palette-swiper', {
+    modules: [Navigation],
+    autoplay: {
+      delay: 5000,
+    },
+    slidesPerView: 8,
+    navigation: {
+      nextEl: '.color-palette-swiper-btn_next',
+      prevEl: '.color-palette-swiper-btn_prev',
+    },
+  });
+
+  return colorPaletteSwiper;
+}
+
 export function initSimilarSwiper() {
   const catalogueSwiper = new Swiper('.similar-swiper', {
     modules: [Navigation],

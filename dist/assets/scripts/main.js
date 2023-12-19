@@ -521,6 +521,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initBenefitsSwiper: () => (/* binding */ initBenefitsSwiper),
 /* harmony export */   initBlogSwiper: () => (/* binding */ initBlogSwiper),
 /* harmony export */   initCatalogueSwiper: () => (/* binding */ initCatalogueSwiper),
+/* harmony export */   initColorPaletteSwiper: () => (/* binding */ initColorPaletteSwiper),
 /* harmony export */   initDetailedProductSwiper: () => (/* binding */ initDetailedProductSwiper),
 /* harmony export */   initGallerySwiper: () => (/* binding */ initGallerySwiper),
 /* harmony export */   initInstructionsSwiper: () => (/* binding */ initInstructionsSwiper),
@@ -761,6 +762,20 @@ function initCatalogueSwiper() {
     }
   });
   return catalogueSwiper;
+}
+function initColorPaletteSwiper() {
+  var colorPaletteSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.color-palette-swiper', {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
+    autoplay: {
+      delay: 5000
+    },
+    slidesPerView: 8,
+    navigation: {
+      nextEl: '.color-palette-swiper-btn_next',
+      prevEl: '.color-palette-swiper-btn_prev'
+    }
+  });
+  return colorPaletteSwiper;
 }
 function initSimilarSwiper() {
   var catalogueSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.similar-swiper', {
@@ -11572,6 +11587,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initLinksSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initDetailedProductSwiper)();
 (0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initSimilarSwiper)();
+(0,_modules_swipers__WEBPACK_IMPORTED_MODULE_2__.initColorPaletteSwiper)();
 
 // PRODUCTS PAGE
 

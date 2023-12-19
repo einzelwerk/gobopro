@@ -4,6 +4,7 @@ import {
   initBenefitsSwiper,
   initBlogSwiper,
   initCatalogueSwiper,
+  initColorPaletteSwiper,
   initDetailedProductSwiper,
   initGallerySwiper,
   initInstructionsSwiper,
@@ -52,6 +53,7 @@ initNecessitiesSwiper();
 initLinksSwiper();
 initDetailedProductSwiper();
 initSimilarSwiper();
+initColorPaletteSwiper();
 
 // PRODUCTS PAGE
 
