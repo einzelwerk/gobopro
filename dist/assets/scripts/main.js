@@ -903,6 +903,53 @@ function initDetailedProductSwiper() {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/tabs.js":
+/*!*************************************!*\
+  !*** ./src/scripts/modules/tabs.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   paletteTabs: () => (/* binding */ paletteTabs)
+/* harmony export */ });
+function paletteTabs() {
+  var tabs = document.querySelectorAll('.lens__container__item-content__info__palette-tabs__item, .lens__container__item-content__info__palette-tabs__item--active');
+  var whiteTab = document.querySelector('#white-tab');
+  var blackTab = document.querySelector('#black-tab');
+  var tabsContainer = document.querySelector('.lens__container__item-content__info__palette-tabs');
+  var palette = document.querySelector('.lens__container__item-content__info__palette');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var activeTab = document.querySelector('.lens__container__item-content__info__palette-tabs__item--active');
+      if (activeTab) {
+        activeTab.classList.remove('lens__container__item-content__info__palette-tabs__item--active');
+        activeTab.classList.add('lens__container__item-content__info__palette-tabs__item');
+      }
+      tab.classList.add('lens__container__item-content__info__palette-tabs__item--active');
+      if (tab.id === 'white-tab') {
+        palette.style.backgroundColor = '#fff';
+        palette.style.color = '#1A1B1F';
+        tabsContainer.style.backgroundColor = '#d6d6d6';
+        whiteTab.style.backgroundColor = '#fff';
+        whiteTab.style.color = '#1A1B1F';
+        blackTab.style.backgroundColor = '#d6d6d6';
+        blackTab.style.color = '#fff';
+      } else if (tab.id === 'black-tab') {
+        palette.style.backgroundColor = '';
+        palette.style.color = '';
+        tabsContainer.style.backgroundColor = '';
+        whiteTab.style.backgroundColor = '';
+        whiteTab.style.color = '';
+        blackTab.style.backgroundColor = '';
+        blackTab.style.color = '';
+      }
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css":
 /*!***************************************************************!*\
   !*** ./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css ***!
@@ -11554,12 +11601,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_modalToggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/modalToggle */ "./src/scripts/modules/modalToggle.js");
 /* harmony import */ var _modules_footerNavLinks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/footerNavLinks */ "./src/scripts/modules/footerNavLinks.js");
 /* harmony import */ var _modules_burgerMenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/burgerMenu */ "./src/scripts/modules/burgerMenu.js");
-/* harmony import */ var _modules_headerAcc__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/headerAcc */ "./src/scripts/modules/headerAcc.js");
-/* harmony import */ var _modules_productInfoAcc__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/productInfoAcc */ "./src/scripts/modules/productInfoAcc.js");
-/* harmony import */ var _modules_portfolioGallery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/portfolioGallery */ "./src/scripts/modules/portfolioGallery.js");
-/* harmony import */ var _modules_filterToggle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/filterToggle */ "./src/scripts/modules/filterToggle.js");
-/* harmony import */ var _modules_stickyWidget__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/stickyWidget */ "./src/scripts/modules/stickyWidget.js");
-/* harmony import */ var _modules_productFilters__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/productFilters */ "./src/scripts/modules/productFilters.js");
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/tabs */ "./src/scripts/modules/tabs.js");
+/* harmony import */ var _modules_headerAcc__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/headerAcc */ "./src/scripts/modules/headerAcc.js");
+/* harmony import */ var _modules_productInfoAcc__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/productInfoAcc */ "./src/scripts/modules/productInfoAcc.js");
+/* harmony import */ var _modules_portfolioGallery__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/portfolioGallery */ "./src/scripts/modules/portfolioGallery.js");
+/* harmony import */ var _modules_filterToggle__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/filterToggle */ "./src/scripts/modules/filterToggle.js");
+/* harmony import */ var _modules_stickyWidget__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/stickyWidget */ "./src/scripts/modules/stickyWidget.js");
+/* harmony import */ var _modules_productFilters__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/productFilters */ "./src/scripts/modules/productFilters.js");
+
 
 
 
@@ -11578,7 +11627,7 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_modules_languages__WEBPACK_IMPORTED_MODULE_3__.chooseLanguage)();
 (0,_modules_burgerMenu__WEBPACK_IMPORTED_MODULE_6__.toggleMenu)();
-(0,_modules_headerAcc__WEBPACK_IMPORTED_MODULE_7__.initHeaderAcc)();
+(0,_modules_headerAcc__WEBPACK_IMPORTED_MODULE_8__.initHeaderAcc)();
 
 // FOOTER-RELATED
 
@@ -11604,11 +11653,12 @@ __webpack_require__.r(__webpack_exports__);
 
 // PRODUCTS PAGE
 
-(0,_modules_filterToggle__WEBPACK_IMPORTED_MODULE_10__.initFilterToggle)();
+(0,_modules_filterToggle__WEBPACK_IMPORTED_MODULE_11__.initFilterToggle)();
 
 // PRODUCT PAGE
 
-(0,_modules_productInfoAcc__WEBPACK_IMPORTED_MODULE_8__.initProductAcc)();
+(0,_modules_productInfoAcc__WEBPACK_IMPORTED_MODULE_9__.initProductAcc)();
+(0,_modules_tabs__WEBPACK_IMPORTED_MODULE_7__.paletteTabs)();
 
 // QUIZ
 
@@ -11620,15 +11670,15 @@ __webpack_require__.r(__webpack_exports__);
 
 // PORTFOLIO GALLERY
 
-(0,_modules_portfolioGallery__WEBPACK_IMPORTED_MODULE_9__.initPortfolioGallery)();
+(0,_modules_portfolioGallery__WEBPACK_IMPORTED_MODULE_10__.initPortfolioGallery)();
 
 // STICKY WIDGET
 
-(0,_modules_stickyWidget__WEBPACK_IMPORTED_MODULE_11__.initStickyWidget)();
+(0,_modules_stickyWidget__WEBPACK_IMPORTED_MODULE_12__.initStickyWidget)();
 
 // PRODUCTS FILTERS
 
-(0,_modules_productFilters__WEBPACK_IMPORTED_MODULE_12__.initProductsFilters)();
+(0,_modules_productFilters__WEBPACK_IMPORTED_MODULE_13__.initProductsFilters)();
 
 // MISCELLANEOUS
 

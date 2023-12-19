@@ -20,6 +20,7 @@ import { chooseLanguage } from './modules/languages';
 import { quizToggle, contactToggle } from './modules/modalToggle';
 import { footerLinksToggle } from './modules/footerNavLinks';
 import { toggleMenu } from './modules/burgerMenu';
+import { paletteTabs } from './modules/tabs';
 import { initHeaderAcc } from './modules/headerAcc';
 import { initProductAcc } from './modules/productInfoAcc';
 import { initPortfolioGallery } from './modules/portfolioGallery';
@@ -62,6 +63,7 @@ initFilterToggle();
 // PRODUCT PAGE
 
 initProductAcc();
+paletteTabs();
 
 // QUIZ
 
