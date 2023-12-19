@@ -251,7 +251,20 @@ export function initColorPaletteSwiper() {
     autoplay: {
       delay: 5000,
     },
-    slidesPerView: 8,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+      },
+      480: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 6,
+      },
+      1024: {
+        slidesPerView: 8,
+      },
+    },
     navigation: {
       nextEl: '.color-palette-swiper-btn_next',
       prevEl: '.color-palette-swiper-btn_prev',
