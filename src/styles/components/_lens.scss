@@ -123,9 +123,10 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
-            padding: 16px 0px 30px 30px;
+            padding: 16px 30px 30px 30px;
             border-radius: 20px;
             color: var(--text, #BABABB);
+            width: max-content;
 
 
             &-title {
@@ -164,10 +165,12 @@
             }
 
             &-colors {
-              display: flex;
-              flex-wrap: wrap;
+              display: grid;
+              // flex-wrap: wrap;
+              grid-template-columns: repeat(5, 1fr);
               gap: 12px;
-              width: 100%;
+              width: max-content;
+              // width: 100%;
 
               &__item {
                 width: 84px;
@@ -179,6 +182,12 @@
                 align-items: center;
                 justify-content: center;
                 font-size: 12px;
+              }
+              &__item-empty {
+                width: 84px;
+                height: 84px;
+                background: transparent;
+                border-radius: 50%;
               }
             }
           }
