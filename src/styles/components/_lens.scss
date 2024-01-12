@@ -192,10 +192,12 @@
                 &:nth-child(17) {
                   color: #000;
                 }
-                &--title {
+
+                p:first-child {
                   font-size: 16px;
                 }
               }
+
               &__item-empty {
                 width: 84px;
                 height: 84px;
